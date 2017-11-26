@@ -1,0 +1,344 @@
+/* COMPONENTS */
+
+.form-control-focus() {
+  &:focus {
+	background-color: @input-bg;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid @input-border;	 
+	color: @input-color;	  
+  }	  
+}
+
+//
+// Forms
+// --------------------------------------------------
+
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  .unitize(margin-bottom, @line-height-computed);
+  .unitize(font-size, (@font-size-base * 1.5));
+  line-height: inherit;
+  color: @legend-color;
+  border: 0;
+  border-bottom: 1px solid @legend-border-color;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  .unitize(margin-bottom, @padding-sm-vertical);
+  font-weight: @font-semibold-weight;
+  color: @text-color-light;
+}
+
+//CHECKOUT / RADIO
+.checkbox-label, 
+.radio-label {
+    position: relative;
+    display: block;
+	.unitize(margin-top, @padding-base-vertical);
+	.unitize(margin-bottom, @padding-base-vertical);	
+	
+	label {
+		min-height: 20px;
+		.unitize(padding-left, 20);	
+		margin-bottom: 0;
+		font-weight: @font-base-weight;
+		cursor: pointer;
+		line-height: @line-height-base;
+	}
+}
+
+
+// Normalize form controls
+//
+// While most of our form styles require extra classes, some basic normalization
+// is required to ensure optimum display with or without those classes to better
+// address browser inconsistencies.
+
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"] {
+  .box-sizing(border-box);
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9; // IE8-9
+  line-height: normal;
+  
+ 	.checkbox-label &,
+	.checkbox-label-inline &,
+	.radio-label &,
+	.radio-label-inline & {
+		position: absolute;
+		margin-left: -20px;	
+		top: 0px;
+	}
+}
+
+input[type="file"] {
+  display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Focus for file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  .tab-focus();
+}
+
+// Adjust output element
+output {
+  display: block;
+  .unitize(padding-top, (@padding-base-vertical + 1));
+  .unitize(font-size, @font-size-base);
+  line-height: @line-height-base;
+  color: @input-color;
+}
+
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+
+.form-control,
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea {
+  display: block;
+  width: 100%;
+  .unitize-height(@input-height-base);
+  .unitize-padding(@input-padding-base-vertical, @input-padding-base-horizontal);
+  .unitize(font-size, @font-size-base);
+  line-height: @input-line-height-base;
+  color: @input-color;
+  background-color: @input-bg;
+  background-image: none; 
+  border: 1px solid @input-border-color;
+  .unitize(border-radius, @input-border-radius);
+  .box-shadow(@input-shadow);
+  .background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));
+  //.transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  //.form-control-focus();
+
+  // Placeholder
+  .placeholder();
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    border: 0;
+    background-color: transparent;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: @input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: @cursor-disabled;
+  }
+  
+  .form-control-focus();
+
+
+  // Reset height for `textarea`s
+  textarea& {
+    height: auto;
+  }
+  
+  &.has--error {
+	  background-color: transparent;
+	  .box-shadow(0 0 6px @button-danger-bg);
+  }
+  
+  &:-webkit-autofill {
+	  .box-shadow(inset -1px -1px 0px rgba(255, 255, 255, 0.2));
+	  .background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));	  
+	  border-color: @button-info-bg;
+	  color: @text-color-light;
+  }
+}
+
+  input:-webkit-autofill {
+	  .box-shadow(inset -1px -1px 0px rgba(255, 255, 255, 0.2));
+	  .background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));	  
+	  border-color: @button-info-bg;
+	  color: @text-color-light;
+  }
+
+textarea {
+	height: auto;
+}
+
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form-control` class can properly style them. Note that this cannot simply
+// be added to `.form-control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+
+// Special styles for iOS temporal inputs
+//
+// In Mobile Safari, setting `display: block` on temporal inputs causes the
+// text within the input to become vertically misaligned. As a workaround, we
+// set a pixel line-height that matches the given height of the input, but only
+// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
+//
+// Note that as of 9.3, iOS doesn't support `week`.
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    &.form-control {
+      line-height: @input-height-base;
+    }
+
+    &.input-sm,
+    .input-group-sm & {
+      line-height: @input-height-small;
+    }
+
+    &.input-lg,
+    .input-group-lg & {
+      line-height: @input-height-large;
+    }
+  }
+}
+
+
+.select-field {
+	.unitize(min-width, 100);
+	.unitize(height, @select-height-base);
+	
+	select {
+		background-color: @select-bg;
+		background-image: none;	
+		color: @text-color;	
+		.box-shadow(@input-shadow);
+		.background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));		
+		.unitize(font-size, @font-size-base);
+		line-height: 1;
+		
+		&:hover {
+			background-color: @select-hover-bg;
+			background-image: none;	
+		}
+		
+		option {
+			color: #000;
+			line-height: @line-height-base;
+		}
+	}
+	
+	&:after {
+		.unitize(height, @select-height-base);
+		.unitize(line-height, @select-height-base);
+	}
+}
+
+/* depracted since shopware 5.3 */
+.js--fancy-select {
+    background-color: transparent;
+    background-image: none;
+    .unitize(height, @select-height-base);
+	.unitize(line-height, @select-height-base);
+	color: @text-color;	
+	width: auto;
+	.box-shadow(@input-shadow);
+	.background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));
+	
+	.js--fancy-select-text {
+		.unitize(font-size, @font-size-base);
+		.unitize(padding-left, @padding-base-horizontal);
+	}
+	
+	.js--fancy-select-trigger {
+		border:0;
+	}
+	
+	&:hover {
+		border-color: @border-color;
+		background-color: transparent;
+		color: @text-color-light;
+	}
+	
+	&.has--error {
+		background-color: transparent;
+		.box-shadow(0 0 6px @button-danger-bg);
+	}
+	
+	select {
+		
+		option {
+			color: #000;
+		}
+	}
+}

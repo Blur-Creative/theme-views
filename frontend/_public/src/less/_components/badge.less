@@ -1,0 +1,50 @@
+.badge {
+	.unitize-height(@badge-size-base);
+	.unitize(line-height, @badge-size-base);
+	.unitize(font-size, @font-size-base);
+	.unitize(border-radius, (@badge-size-base / 2));
+	border: 0;
+	font-weight: @font-semibold-weight;
+	text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+	letter-spacing: 1px;
+	background-color: @badge-primary-bg;
+	color: @badge-primary-color;
+	.box-shadow(@badge-shadow);
+	.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
+	
+	&.is--primary {
+		background-color: @badge-primary-bg;
+		color: @badge-primary-color;
+		.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
+	}
+	
+	&.is--danger {
+		background-color: @badge-danger-bg;
+		color: @badge-danger-color;
+		.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
+	}
+	
+	&.is--warning {
+		background-color: @badge-warning-bg;
+		color: @badge-warning-color;
+		.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
+	}
+	
+	&.is--success {
+		background-color: @badge-success-bg;
+		color: @badge-success-color;
+		.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
+	}
+	
+	&.is--default {
+		background-color: @badge-default-bg;
+		color: @badge-default-color;
+		.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
+	}
+	
+	&.is--info {
+		background-color: @badge-info-bg;
+		color: @badge-info-color;
+		.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
+	}
+}

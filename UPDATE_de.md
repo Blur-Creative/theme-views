@@ -1,0 +1,73 @@
+v1.2.1
+----------
+- Feature: Das Header Listing Modul wurde hinzugefügt. In der Theme Konfiguration gibt es unter "Views Theme Optionen" -> "Header" nun die Möglichkeit die Kategorie-CMS Daten im Header mit entsprechenden Hintergrundbild anzuzeigen
+- Es gibt nun die Möglichkeit die Dimensionen dces Logos pro Viewport zu definieren
+
+
+v1.2.0
+----------
+- Das Theme Set 'Red Wedding' wurde überarbeitet
+- Die Textbausteine der Theme Konfiguration wurden komplett überarbeitet
+- Produkt Konfigurator Style Einstellungen wurden der Theme Config und der entsprechenden LESS-Datei hinzugefügt
+- Produkt Navigation Style Einstellungen wurden der Theme Config und der entsprechenden LESS-Datei hinzugefügt
+- Produkt Boxen Style Einstellungen wurden der Theme Config und der entsprechenden LESS-Datei hinzugefügt
+- Font Files wurden durch Google Fonts CDN ersetzt
+- Filter Style Einstellungen wurden der Theme Config und der entsprechenden LESS-Datei hinzugefügt
+- LESS-Variable @select-bg wurde der Theme Config und der entsprechenden LESS-Datei hinzugefügt
+- ein Darstellungs-Fehler des Zuletzt angesehen Container, wenn keine Artikel vorhanden sind, wurde behoben
+
+v1.1.6
+----------
+- Wichtiger Hinweis: wir empfehlen dringend ein Update auf die aktuelle Version des themes wenn Sie shopware 5.3+ nutzen. Bei älteren Version des themes kann es auf der detailseite zu Fehlern kommen.
+- Überarbeitung des Codes diverser Template Dateien der Detail Seite 
+- Positionierung der Beschreibung (Popover) des Vorteils-Balken wurde verbessert
+- Es wird nun, zur besseren Sichtbarkeit, ein anderer Cursor angezeigt wenn man mit der Maus über einen Vorteil fährt welcher eine Beschreibung hinterlegt hat
+
+v1.1.5
+----------
+- Feature: Es gibt jetzt die Möglichkeit unter "Views Theme Optionen" -> "Layout" das Seiten Layout zu ändern (Full Width oder Boxed) und ein Hintergrund-Bild hinzuzufügen
+- folgende Schriftarten wurden dem Theme hinzugefügt: Ubuntu, Patua One, Lato und Raleway
+- Es wurde eine Auswahl der Schriftarten unter @font-base-stack und @font-headline-stack hinzugefügt
+- Die Schriftart Open Sans wurde um zwei Schriftbreiten erweitert
+- ein Darstellungs-Fehler der Wunschzettel Produkt-Übersicht wurde behoben
+
+v1.1.4
+----------
+- Kaufen / Detail-Button im Listing wurde der Product Box Image / List hinzugefügt (Nur ab Shopware 5.3)
+- Code der buttons.less wurde überarbeitet
+- ein Darstellungs-Fehler der select Varianten Auswahl wurde behoben
+
+v1.1.3
+----------
+- Kaufen / Detail-Button im Listing wurde der Product Box Basic / Minimal hinzugefügt (Nur ab Shopware 5.3)
+- Product Box Basic wurde überarbeitet
+- Product Box Minimal wurde überarbeitet
+
+
+v1.1.2
+----------
+- Changelog-Notiz wurde geändert
+
+v1.1.1
+----------
+- Changelog-Notiz wurde dem Theme hinzugeüft
+
+v1.1.0
+----------
+- Ein Theme interner Textbaustein für den Checkout Confirm Button wurde hinzugefügt
+- Ein Fehler der Abstände im Header zu Content-Bereich wurde behoben
+- Darstellungs-Fehler der Pageination im Listing wurde behoben
+- Ein Fehler des Abstandes im Cart Action Bereich wurde behoben (betraf Desktop und Tablet)
+- Die Darstellung des Mwst und Total Preises in der Checkout Confirm Produkt-Tabelle wurde angepasst (betraf Desktop und Tablet)
+- Die Darstellung des Listing Filters wurde im Zuge des Shopware 5.3 updates überarbeitet
+- Der Filter Button im Listing wurde im Zuge des Shopware 5.3 updates überarbeitet
+- In der Theme Konfiguration wurde im Tab "konfigurationen" ein Konfigurations-Punkt für die Anzeige des Filters in der Sidebar hinzugefügt
+- In der Theme Konfiguration wurde im Tab "konfigurationen" ein Konfigurations-Punkt für das asynchrone Laden des JavaScripts hinzugefügt
+- Der Sidebar Filter wurde an das Theme angepasst
+- veraltete Template-Datei action-filter-panel.tpl wurde entfernt
+
+v1.0.7
+----------
+- veraltete Template-Datei action-sorting.tpl wurde entfernt
+- Die Darstellung des CSS select Feldes wurde im Zuge des Shopware 5.3 updates angepasst
+- Der Code der Template-Datei buy.tpl wurde aufgeräumt

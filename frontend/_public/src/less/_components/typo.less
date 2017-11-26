@@ -1,0 +1,41 @@
+h1, h2, h3, h4, h5, h6 {
+	color: @text-color-light;
+	font-weight: @font-semibold-weight;
+	.unitize-margin(@grid-gutter-size, 0)
+}
+
+h1 {
+	.unitize(font-size, @font-size-h3);
+	color: @text-color;
+	font-weight: @font-light-weight;
+	
+	@media (min-width: @tabletLandscapeViewportWidth) {
+		.unitize(font-size, @font-size-h1);
+	}
+}
+h2 {
+	.unitize(font-size, @font-size-h2);
+}
+h3 {
+	.unitize(font-size, @font-size-h3);
+	font-weight: @font-semibold-weight;
+}
+h4 {
+	.unitize(font-size, @font-size-h4);
+}
+h5 {
+	.unitize(font-size, @font-size-h5);
+}
+h5 {
+	.unitize(font-size, @font-size-h6);
+}
+
+.text--center {
+	text-align: center;
+}
+.text--left {
+	text-align: left;
+}
+.text--right {
+	text-align: right;
+}

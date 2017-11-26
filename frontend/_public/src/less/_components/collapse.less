@@ -1,0 +1,25 @@
+.collapse--header {
+	background-color: @brand-secondary-light;
+	background-image: none;
+	.background-gardient(rgba(255,255,255,0.04), rgba(0,0,0,0.04));
+	box-shadow: none;
+	margin: 0;
+	border-color: @border-color-light;
+	.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+	
+	&.is--active {
+		box-shadow: none;
+		border: 1px solid @border-color-light;
+		background-color: @brand-secondary-light;
+		background-image: none;
+		.background-gardient(rgba(255,255,255,0.04), rgba(0,0,0,0.04));
+		margin: 0;
+	}
+}
+
+.collapse--content {
+	background-color: transparent;
+	box-shadow: none;
+	border-color: @border-color-light;
+	top: auto;
+}

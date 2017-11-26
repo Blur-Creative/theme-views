@@ -1,0 +1,83 @@
+.content-main {
+	box-shadow: none;
+	.unitize(margin-top, @padding-md-vertical);
+	
+	.is--act-finish & {
+		@media (min-width: @tabletViewportWidth) {
+			.unitize(margin-top, @padding-lg-vertical);
+		}		
+	}
+	
+	.content-main--inner {
+		padding-left: 0;
+		padding-right: 0;
+				
+		.sidebar-main {
+			@media (min-width: @tabletViewportWidth) {
+				.unitize-width(@sidebar-width-tablet);
+			}	
+		
+			@media (min-width: @desktopViewportWidth) {
+				.unitize-width(@sidebar-width-desktop);
+			}
+
+			.is--ctl-account.is--user &, 
+			.is--ctl-note.is--user & {
+				@media (min-width: @tabletViewportWidth) {
+					.unitize-width(@sidebar-width-tablet);
+				}	
+			
+				@media (min-width: @desktopViewportWidth) {
+					.unitize-width(@sidebar-width-desktop);
+				}				
+			}
+		}
+		
+		.content--wrapper {
+			@media (min-width: @tabletViewportWidth) {
+				.unitize(margin-left, (@sidebar-width-tablet + @grid-gutter-size));
+			}
+			
+			@media (min-width: @desktopViewportWidth) {
+				.unitize(margin-left, (@sidebar-width-desktop + @grid-gutter-size));
+			}
+
+			.is--ctl-account.is--user &, 
+			.is--ctl-note.is--user & {
+				@media (min-width: @tabletViewportWidth) {
+					.unitize(margin-left, (@sidebar-width-tablet + @grid-gutter-size));
+				}
+				
+				@media (min-width: @desktopViewportWidth) {
+					.unitize(margin-left, (@sidebar-width-desktop + @grid-gutter-size));
+				}		
+			}
+			
+			.is--ctl-detail &,
+			.is--ctl-checkout &,
+			.is--ctl-register &,
+			.is--ctl-index &,
+			.is--ctl-note &,
+			.is--ctl-search &, 
+			.is--ctl-blog & {
+				margin-left: 0;
+			}
+			
+			.account--content,
+			.account--profile,
+			.account--address {
+				float: left;
+				width: 100%;
+				.unitize(padding-top, @padding-md-vertical);
+				
+				@media (min-width: @tabletViewportWidth) {
+					.unitize(padding-top, @padding-md-vertical);
+				}				
+			}
+		}
+
+		.is--ctl-detail & {
+			background-color:transparent;
+		}
+	}
+}

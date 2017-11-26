@@ -1,0 +1,283 @@
+/*** GRID ***/
+
+@desktopViewportWidth:			1260px;
+
+@grid-columns:          		12;
+@grid-gutter-width:				30px;
+@grid-gutter-size:				30;
+
+@container-lg:					(1260 + @grid-gutter-size);
+
+@emotion-wrapper-max-width:		1260;
+
+
+@product-box-basic-image-width:				160;
+
+/** IMAGE HEIGHT **/
+
+/*
+@product-box-minimal-image-height-phone:					200;
+@product-box-minimal-image-height-phone-landscape:			200;
+@product-box-minimal-image-height-tablet:					200;
+@product-box-minimal-image-height-tablet-landscape:			320;
+@product-box-minimal-image-height-desktop:					300;
+
+@product-box-big-image-height-phone:						400;
+@product-box-big-image-height-phone-landscape:				300;
+@product-box-big-image-height-tablet:						330;
+@product-box-big-image-height-tablet-landscape:				500;
+@product-box-big-image-height-desktop:						420;
+
+@product-box-slider-image-height-phone:						235;
+@product-box-slider-image-height-phone-landscape:			350;
+@product-box-slider-image-height-tablet:					260;
+@product-box-slider-image-height-tablet-landscape:			275;
+@product-box-slider-image-height-desktop:					275;
+
+@detail-main-image-height-phone:							400;
+@detail-main-image-height-phone-landscape:					600;
+@detail-main-image-height-tablet:							1000;
+@detail-main-image-height-tablet-landscape:					460;
+@detail-image-thumbnails-height:							70;
+*/
+
+@product-box-basic-image-radius:			3;
+@product-box-minimal-image-radius:			@product-box-basic-image-radius;
+
+
+
+@buybox-container-height:					48;
+@detail-variant-option-size:				50;
+
+@theme-icon-set:							'blurcons';
+
+/*
+@product-badge-discount-bg:					#e65f5f;
+@product-badge-discount-color:				#ffffff;
+
+@product-badge-newcomer-bg:					#292e33;
+@product-badge-newcomer-color:				#ffffff;
+
+@product-badge-recommend-bg:				#73b353;
+@product-badge-recommend-color:				#ffffff;
+
+@product-badge-download-bg:					transparent;
+@product-badge-download-color:				#2685c5;
+
+@product-badge-soldout-bg:					#eeeeee;
+@product-badge-soldout-color:				#666666;
+*/
+
+/* depracted */
+/*
+@product-box-image-image-height:			300;
+@product-box-image-image-height-large:		500;
+
+
+@product-box-slider-image-height-large:		500;
+
+*/
+
+/*** COLORS ***/
+
+
+/*
+@image-background-color:		#ffffff;
+@manufacturer-background-color:	#ffffff;
+*/
+
+/*
+
+@box-base-shadow:				0 0 10px rgba(0,0,0,.15);
+
+@offcanvas-shadow:				0 0 30px rgba(0,0,0,.5);
+@main-navigation-shadow:		@box-base-shadow;
+
+@search-result-shadow:			@box-base-shadow;
+@filter-container-shadow:		@box-base-shadow;
+
+@product-box-basic-shadow:		0 0 10px rgba(0,0,0,.1);
+@step-container-icon-shadow:	0 0 5px rgba(0,0,0,0.3);
+
+@badge-shadow:					0 0 5px rgba(0,0,0,.30);
+
+*/
+
+
+
+
+
+@slider-dot-color:		@button-info-bg;
+
+/*
+@rating-star-color:		@button-warning-bg;
+*/
+
+/*** TYPOGRAPHY ***/
+
+
+
+/*** ICONGRAPHY ***/
+
+
+/*** COMPONENTS ***/
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+/*
+@padding-xs-vertical:		3px;
+@padding-xs-horizontal:		5px;
+
+@padding-sm-vertical:		5px;
+@padding-sm-horizontal:		10px;
+
+@padding-base-vertical:		10px;
+@padding-base-horizontal:	15px;
+
+@padding-md-vertical:		15px;
+@padding-md-horizontal:		20px;
+
+@padding-lg-vertical:		20px;
+@padding-lg-horizontal:		25px;
+
+@padding-xl-vertical:		25px;
+@padding-xl-horizontal:		30px;
+*/
+
+	
+/***- PANEL -***/
+
+/*
+@panel-title-padding-vertical:		10px;
+@panel-title-padding-horizontal:	15px;
+@panel-title-color:					@brand-secondary-light;
+@panel-body-padding:				15px;
+@panel-footer-padding:				@panel-body-padding;
+@panel-footer-color:				rgba(0,0,0,0.1);
+*/
+
+/*** FORMS ***/
+
+@input-color-placeholder:		rgba(255,255,255,0.62);
+@input-bg-disabled:             transparent;
+@cursor-disabled:               not-allowed;
+
+@legend-color: @brand-primary;
+@legend-border-color: @input-border;
+
+
+@line-height-computed:			floor((@font-size-base * @line-height-base));
+//@input-height-base:				(@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-lg * @line-height-lg) + (@padding-lg-vertical * 2) + 2);
+@input-height-small:             (floor(@font-size-sm * @line-height-sm) + (@padding-sm-vertical * 2) + 2);
+
+
+/*
+@input-color:					#fff;
+@input-bg:						transparent;
+@input-border:					rgba(255,255,255,0.42);
+@input-border-radius:			@border-radius-base;
+@select-height:					36px;
+*/
+
+
+
+
+
+/*** BUTTONS ***/
+
+/*
+@button-font-size-small:			14px;
+@button-font-size-medium:			16px;
+@button-font-size-large:			20px;
+@button-font-color:					@text-color;
+
+@button-box-shadow-active:			inset 5px 5px 8px rgba(0, 0, 0, 0.2), inset -1px 2px 0 rgba(255, 255, 255, 0.15), inset 1px -1px 0 rgba(255, 255, 255, 0.08);
+
+@button-padding-base-horizontal:	18px;
+@button-padding-base-vertical:		10px;
+
+@button-padding-small-horizontal:	18px;
+@button-padding-small-vertical:		6px;
+
+@button-padding-large-horizontal:	18px;
+@button-padding-large-vertical:		14px;
+
+@button-border-size-medium:			2px;
+@button-border-size-small:			1px;
+*/
+
+
+
+/*** BADGES ***/
+/*
+@badge-height:						20;
+*/
+
+/*
+	@button-box-shadow:					0 0 5px rgba(0, 0, 0, 0.3), inset 1px -2px 0 rgba(255,255,255,.15);
+	@text-color-light:		rgba(255,255,255,.62);
+	@button-default-color:	@brand-secondary-light; //#5c5c5c
+	@badge-default-color:	@button-default-color;
+@border-color:			rgba(255,255,255,0.42);
+@border-color-light:	rgba(255,255,255,0.15);
+@border-color-dark:		rgba(255,255,255,0.62);
+
+@button-primary-color:	#195088;
+@button-danger-color:	#b0310e;
+@button-warning-color:	#ae7300;
+@button-success-color:	#207100;
+
+@button-info-color:		#007c7b;
+//@brand-primary:			;
+//@brand-secondary:		;
+
+//@brand-primary-light:	#3c434a;
+//@brand-primary-dark:	#1c1f22;
+
+@brand-secondary-light:	#3c434a;
+@brand-secondary-dark:	#1c1f22;
+
+@text-color:			#fff;
+@text-color-secondary:	#607891;
+@text-color-danger:		#ec5114;
+@text-color-success:	#37c100;
+@text-color-info:		#00bbb9;
+@link-color:			#a3c1e0;
+
+@font-size-base: 				14px;
+@font-size-large:        		ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         		ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:        			ceil((@font-size-base * 2.5)); // ~18px
+@font-size-h1-sm:				ceil((@font-size-base * 1.4)); // ~20px
+@font-size-h2:					ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h3:					ceil((@font-size-base * 1.4)); // ~20px
+@font-size-h5:					ceil((@font-size-base * 1.1)); // ~16px
+
+@line-height-base: 			1.428571429;
+@line-height-sm:        	1.3333333; // extra decimals for Win 8.1 Chrome
+@line-height-lg:        	1.5;
+
+@border-radius-base:        5px;
+@border-radius-lg:       	8px;
+@border-radius-sm:       	3px;
+
+@icon-base-color:				rgba(255,255,255,0.42);
+@icon-size-base:				24px;
+@icon-size-micro:				10px;
+@icon-size-mini:				12px;
+@icon-size-xsmall:				16px;
+@icon-size-small:				20px;
+@icon-size-large:				32px;
+
+@badge-primary-color:	@button-primary-color;
+@badge-danger-color:	@button-danger-color;
+@badge-warning-color:	@button-warning-color;
+@badge-success-color:	@button-success-color;
+@badge-info-color:		@button-info-color;
+
+@sidebar-width-tablet:	205;
+@sidebar-width-desktop:	270;
+
+*/
