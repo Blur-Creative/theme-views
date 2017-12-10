@@ -298,3 +298,35 @@
 		}
 	}
 }
+
+.mobile--switches {
+    .unitize(padding-left, @padding-base-horizontal);
+    .unitize(padding-right, @padding-base-horizontal);
+    
+    .top-bar--language {
+        
+        .language--flag {
+            .unitize(margin-top, -7);
+        }
+        
+        .field--select {
+            .unitize(height, 30);
+        }
+        
+        .select-field {
+            min-width: auto;
+            max-width: unset;
+            .unitize(width, 42);
+            .unitize(height, 30);
+            
+            &:after {
+                .unitize(height, 30);
+                .unitize(line-height, 30);
+            }
+            
+            select {
+                .box-shadow(none);
+            }
+        }
+    }
+}
