@@ -43,7 +43,7 @@
 
 				{* Product rating *}
 				{block name="frontend_detail_comments_overview"}
-					{if !{config name=VoteDisable}}
+					{if !{config name=VoteDisable} && $sArticle.sVoteAverage.count > 0}
 						<div class="product--info-item product--rating-container">
 							<a href="#product--publish-comment" class="product--rating-link" rel="nofollow" title="{"{s namespace="frontend/detail/actions" name='DetailLinkReview'}{/s}"|escape}">
 								{include file='frontend/_includes/rating.tpl' points=$sArticle.sVoteAverage.average type="aggregated" count=$sArticle.sVoteAverage.count}
