@@ -1,0 +1,42 @@
+.premium-product {
+    
+    &.panel {
+        .panel.success;
+        
+        .product--table & {
+            .panel.success;
+        }
+    }
+    
+    .premium-product--product {
+        
+        .product--inner {
+            
+            .product--image {
+                background-color: @image-background-color;
+                .unitize(border-radius, @border-radius-sm);
+            }
+            
+            .premium-product--difference {
+                .btn--border;
+                .btn--border-primary;
+            }
+            
+            .premium--variant {
+                
+                .select-field {
+                    
+                    .premium--selection {
+                        .unitize(height, @select-height-base);
+                        .unitize(line-height, @select-height-base);
+                    }
+                }
+                
+                .premium--button {
+                    .unitize(height, @select-height-base);
+                    .unitize-padding(@padding-sm-vertical, @padding-sm-horizontal);
+                }
+            }
+        }
+    }
+}
