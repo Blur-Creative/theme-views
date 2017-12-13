@@ -1,3 +1,16 @@
+v1.2.2
+----------
+- Kontextbasierte Panels und diverse Panel-Größen wurden hinzugefügt (https://github.com/Blur-Creative/theme-views/wiki/Panels)
+
+behobene Probleme:
+- issue #7: Darstellung der Premium Produkte in der Warenkorb Tabelle wurde verbessert
+- issue #6: Premium Produkt Slider im Warenkorb wurde optimiert
+- issue #5: Ein Problem welches dazu führte dass Produkte in der Einkaufswelt nicht angeklickt werden konnten wurde behoben
+- issue #4: Menü-Scroller Anzeige (hauptnavigation) wurde verbessert
+- issue #3: Sprachwechsel-Anzeige wurde verbessert
+- issue #2: auf der Detail Seite wurde ein leeren Container angezeigt wenn keine Bewertungen vorhanden waren
+- issue #1: 'In den Warenkorb'-Button auf der Detail Seite bricht nun auf mobilen Geräten nicht mehr um
+
 v1.2.1
 ----------
 - Feature: Das Header Listing Modul wurde hinzugefügt. In der Theme Konfiguration gibt es unter "Views Theme Optionen" -> "Header" nun die Möglichkeit die Kategorie-CMS Daten im Header mit entsprechenden Hintergrundbild anzuzeigen
