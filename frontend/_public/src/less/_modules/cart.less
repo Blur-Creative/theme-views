@@ -93,7 +93,8 @@
 		}
 	}
 	
-	.row--product {
+	.row--product,
+    .row--premium-product {
 		@media (min-width: @tabletViewportWidth) {
 			.flexbox-container(@align:center);
 			.unitize(padding-left, @padding-base-horizontal);
@@ -138,7 +139,9 @@
 		}
 	
 		.table--media {
-			
+            float: none;
+            width: 100%;
+            
 			.table--media-outer {
 				background-color: @image-background-color;
 				border-color: @image-background-color;
@@ -240,7 +243,7 @@
 			padding-bottom: 0;
 			clear: both;
 			
-			.flexbox-container();
+			.flexbox-container(@align: center);
 			
 			@media (min-width: @phoneLandscapeViewportWidth) {
 				.unitize(padding-top, @padding-md-vertical);
@@ -254,8 +257,15 @@
 			}
 			
 			.column--actions-quantity {
-				.flexbox-item(@flex:0 24%);
+				.flexbox-item(@flex:0 100px);
 				
+                &.display--only {
+                    text-align: left;
+                    .unitize(padding-left, @padding-sm-horizontal);
+                    .unitize(padding-right, @padding-sm-horizontal);
+                    .unitize(font-size, @font-size-lg);
+                }
+                
 				.js--fancy-select {
 					width: 100%;
 					display: block;
