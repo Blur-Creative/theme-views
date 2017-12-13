@@ -1,0 +1,40 @@
+//contextual panel header method
+.panel-context-title-method(@bg, @color, @gardient-start, @gardient-end, @border-color) {
+    background-image: none;
+    background-color: @bg;
+    color: @color;
+    .background-gardient(@gardient-start, @gardient-end);
+    border-color: @border-color;    
+}
+
+//panel header mixin
+.panel--header {
+    //states
+    &.primary {
+        .panel-context-title-method(@panel-primary-title-bg, @panel-primary-title-color, @panel-primary-title-gardient-start, @panel-primary-title-gardient-end, @panel-primary-title-border-color);
+    }
+    &.secondary,
+    &.default {
+        .panel-context-title-method(@panel-header-bg, @panel-header-color, @panel-header-gardient-start, @panel-header-gardient-end, @border-color-light);
+    }
+    &.danger {
+        .panel-context-title-method(@panel-danger-title-bg, @panel-danger-title-color, @panel-danger-title-gardient-start, @panel-danger-title-gardient-end, @panel-danger-title-border-color);
+    }
+    &.warning {
+        .panel-context-title-method(@panel-warning-title-bg, @panel-warning-title-color, @panel-warning-title-gardient-start, @panel-warning-title-gardient-end, @panel-warning-title-border-color);
+    }
+    &.success {
+        .panel-context-title-method(@panel-success-title-bg, @panel-success-title-color, @panel-success-title-gardient-start, @panel-success-title-gardient-end, @panel-success-title-border-color);
+    }
+    //sizes
+    &.small {
+        line-height: @panel-sm-header-line-height;
+        .unitize(font-size, @panel-sm-header-font-size);
+        .unitize-padding(@panel-sm-header-padding-vertical, @panel-sm-header-padding-horizontal);
+    }
+    &.large {
+        line-height: @panel-lg-header-line-height;
+        .unitize(font-size, @panel-lg-header-font-size);
+        .unitize-padding(@panel-lg-header-padding-vertical, @panel-lg-header-padding-horizontal);
+    }  
+}

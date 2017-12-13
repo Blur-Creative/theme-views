@@ -275,7 +275,35 @@ SHOPWARE_EOD;
 		'panel-header-gardient-end' => 'rgba(0,0,0,0.04)',
 		'panel-header-color' => '@text-color-light',
 		'panel-footer-bg' => '@brand-secondary-dark',
-		//panel structure
+        //panel color primary
+        'panel-primary-title-bg' => '@button-primary-bg',
+        'panel-primary-title-color' => '@button-primary-color',
+        'panel-primary-title-gardient-start' => '@button-primary-gardient-start',
+        'panel-primary-title-gardient-end' => '@button-primary-gardient-end',
+        'panel-primary-title-border-color' => '@border-color-light',
+        'panel-primary-border-color' => '@button-primary-bg',
+        //panel color danger
+        'panel-danger-title-bg' => '@button-danger-bg',
+        'panel-danger-title-color' => '@button-danger-color',
+        'panel-danger-title-gardient-start' => '@button-danger-gardient-start',
+        'panel-danger-title-gardient-end' => '@button-danger-gardient-end',
+        'panel-danger-title-border-color' => '@border-color-light',
+        'panel-danger-border-color' => '@button-danger-bg',
+        //panel color warning
+        'panel-warning-title-bg' => '@button-warning-bg',
+        'panel-warning-title-color' => '@button-warning-color',
+        'panel-warning-title-gardient-start' => '@button-warning-gardient-start',
+        'panel-warning-title-gardient-end' => '@button-warning-gardient-end',
+        'panel-warning-title-border-color' => '@border-color-light',
+        'panel-warning-border-color' => '@button-warning-bg',
+        //panel color success
+        'panel-success-title-bg' => '@button-success-bg',
+        'panel-success-title-color' => '@button-success-color',
+        'panel-success-title-gardient-start' => '@button-success-gardient-start',
+        'panel-success-title-gardient-end' => '@button-success-gardient-end',
+        'panel-success-title-border-color' => '@border-color-light',
+        'panel-success-border-color' => '@button-success-bg', 
+        //panel structure
 		'panel-border-size' => '1',
 		'panel-border-radius' => '@border-radius-sm',
 		'panel-header-font-size' => '@font-size-lg',
@@ -286,6 +314,28 @@ SHOPWARE_EOD;
 		'panel-body-padding-horizontal' => '15',
 		'panel-footer-padding-vertical' => '@panel-header-padding-vertical',
 		'panel-footer-padding-horizontal' => '@panel-header-padding-horizontal',
+        //panel structure small
+		'panel-sm-border-size' => '1',
+		'panel-sm-border-radius' => '@border-radius-base',
+		'panel-sm-header-font-size' => '@font-size-base',
+		'panel-sm-header-line-height' => '@line-height-sm',
+		'panel-sm-header-padding-vertical' => '@padding-sm-vertical',
+		'panel-sm-header-padding-horizontal' => '@padding-sm-horizontal',
+		'panel-sm-body-padding-vertical' => '@padding-sm-horizontal',
+		'panel-sm-body-padding-horizontal' => '@padding-sm-horizontal',
+		'panel-sm-footer-padding-vertical' => '@panel-sm-header-padding-vertical',
+		'panel-sm-footer-padding-horizontal' => '@panel-sm-header-padding-horizontal',
+        //panel structure large
+		'panel-lg-border-size' => '2',
+		'panel-lg-border-radius' => '@border-radius-lg',
+		'panel-lg-header-font-size' => '@font-size-h5',
+		'panel-lg-header-line-height' => '@line-height-lg',
+		'panel-lg-header-padding-vertical' => '@padding-lg-vertical',
+		'panel-lg-header-padding-horizontal' => '@padding-lg-horizontal',
+		'panel-lg-body-padding-vertical' => '@padding-lg-horizontal',
+		'panel-lg-body-padding-horizontal' => '@padding-lg-horizontal',
+		'panel-lg-footer-padding-vertical' => '@panel-lg-header-padding-vertical',
+		'panel-lg-footer-padding-horizontal' => '@panel-lg-header-padding-horizontal',
 		//form label
 		'label-font-size' => '@font-size-base',
 		'label-color' => '@text-color-light',
@@ -3611,10 +3661,14 @@ SHOPWARE_EOD;
             ]
         );
 		
-		$panelColorFieldSet = $this->createPanelColorFieldSet();
-		$panelStructureFieldSet = $this->createPanelStructureFieldSet();
-        $tab->addElement($panelColorFieldSet);
-		$tab->addElement($panelStructureFieldSet);
+        $tab->addElement($this->createPanelColorFieldSet());
+        $tab->addElement($this->createPanelColorPrimaryFieldSet());
+        $tab->addElement($this->createPanelColorDangerFieldSet());
+        $tab->addElement($this->createPanelColorWarningFieldSet());
+        $tab->addElement($this->createPanelColorSuccessFieldSet());
+		$tab->addElement($this->createPanelStructureFieldSet());
+        $tab->addElement($this->createPanelSizeSmallFieldSet());
+        $tab->addElement($this->createPanelSizeLargeFieldSet());
 
         return $tab;
     }
@@ -3702,6 +3756,322 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@panel-footer-bg']
+                ] 
+            )
+        );
+		
+        return $fieldSet;
+    }
+    
+    private function createPanelColorPrimaryFieldSet()
+    {
+        $attributes = array_merge($this->fieldSetDefaults);
+        $fieldSet = $this->createFieldSet(
+            'panel_color_primary_field_set',
+            '__panel_color_primary_field_set__',
+            ['attributes' => $attributes]
+        );
+		
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-primary-title-bg',
+                '__panel-primary-title-bg__',
+                $this->themeColorDefaults['panel-primary-title-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-primary-title-bg']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-primary-title-color',
+                '__panel-primary-title-color__',
+                $this->themeColorDefaults['panel-primary-title-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-primary-title-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-primary-title-gardient-start',
+                '__panel-primary-title-gardient-start__',
+                $this->themeColorDefaults['panel-primary-title-gardient-start'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-primary-title-gardient-start']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-primary-title-gardient-end',
+                '__panel-primary-title-gardient-end__',
+                $this->themeColorDefaults['panel-primary-title-gardient-end'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-primary-title-gardient-end']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-primary-title-border-color',
+                '__panel-primary-title-border-color__',
+                $this->themeColorDefaults['panel-primary-title-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-primary-title-border-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-primary-border-color',
+                '__panel-primary-border-color__',
+                $this->themeColorDefaults['panel-primary-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-primary-border-color']
+                ] 
+            )
+        );
+		
+        return $fieldSet;
+    }
+    
+    private function createPanelColorDangerFieldSet()
+    {
+        $attributes = array_merge($this->fieldSetDefaults);
+        $fieldSet = $this->createFieldSet(
+            'panel_color_danger_field_set',
+            '__panel_color_danger_field_set__',
+            ['attributes' => $attributes]
+        );
+		
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-danger-title-bg',
+                '__panel-danger-title-bg__',
+                $this->themeColorDefaults['panel-danger-title-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-danger-title-bg']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-danger-title-color',
+                '__panel-danger-title-color__',
+                $this->themeColorDefaults['panel-danger-title-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-danger-title-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-danger-title-gardient-start',
+                '__panel-danger-title-gardient-start__',
+                $this->themeColorDefaults['panel-danger-title-gardient-start'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-danger-title-gardient-start']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-danger-title-gardient-end',
+                '__panel-danger-title-gardient-end__',
+                $this->themeColorDefaults['panel-danger-title-gardient-end'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-danger-title-gardient-end']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-danger-title-border-color',
+                '__panel-danger-title-border-color__',
+                $this->themeColorDefaults['panel-danger-title-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-danger-title-border-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-danger-border-color',
+                '__panel-danger-border-color__',
+                $this->themeColorDefaults['panel-danger-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-danger-border-color']
+                ] 
+            )
+        );
+		
+        return $fieldSet;
+    }
+    
+    private function createPanelColorWarningFieldSet()
+    {
+        $attributes = array_merge($this->fieldSetDefaults);
+        $fieldSet = $this->createFieldSet(
+            'panel_color_warning_field_set',
+            '__panel_color_warning_field_set__',
+            ['attributes' => $attributes]
+        );
+		
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-warning-title-bg',
+                '__panel-warning-title-bg__',
+                $this->themeColorDefaults['panel-warning-title-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-warning-title-bg']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-warning-title-color',
+                '__panel-warning-title-color__',
+                $this->themeColorDefaults['panel-warning-title-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-warning-title-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-warning-title-gardient-start',
+                '__panel-warning-title-gardient-start__',
+                $this->themeColorDefaults['panel-warning-title-gardient-start'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-warning-title-gardient-start']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-warning-title-gardient-end',
+                '__panel-warning-title-gardient-end__',
+                $this->themeColorDefaults['panel-warning-title-gardient-end'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-warning-title-gardient-end']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-warning-title-border-color',
+                '__panel-warning-title-border-color__',
+                $this->themeColorDefaults['panel-warning-title-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-warning-title-border-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-warning-border-color',
+                '__panel-warning-border-color__',
+                $this->themeColorDefaults['panel-warning-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-warning-border-color']
+                ] 
+            )
+        );
+		
+        return $fieldSet;
+    }
+    
+    private function createPanelColorSuccessFieldSet()
+    {
+        $attributes = array_merge($this->fieldSetDefaults);
+        $fieldSet = $this->createFieldSet(
+            'panel_color_success_field_set',
+            '__panel_color_success_field_set__',
+            ['attributes' => $attributes]
+        );
+		
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-success-title-bg',
+                '__panel-success-title-bg__',
+                $this->themeColorDefaults['panel-success-title-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-success-title-bg']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-success-title-color',
+                '__panel-success-title-color__',
+                $this->themeColorDefaults['panel-success-title-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-success-title-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-success-title-gardient-start',
+                '__panel-success-title-gardient-start__',
+                $this->themeColorDefaults['panel-success-title-gardient-start'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-success-title-gardient-start']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-success-title-gardient-end',
+                '__panel-success-title-gardient-end__',
+                $this->themeColorDefaults['panel-success-title-gardient-end'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-success-title-gardient-end']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-success-title-border-color',
+                '__panel-success-title-border-color__',
+                $this->themeColorDefaults['panel-success-title-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-success-title-border-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'panel-success-border-color',
+                '__panel-success-border-color__',
+                $this->themeColorDefaults['panel-success-border-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-success-border-color']
                 ] 
             )
         );
@@ -3829,6 +4199,254 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@panel-footer-padding-horizontal']
+                ] 
+            )
+        );
+		
+        return $fieldSet;
+    }
+	
+    private function createPanelSizeSmallFieldSet()
+    {
+        $attributes = array_merge($this->fieldSetDefaults);
+        $fieldSet = $this->createFieldSet(
+            'panel_small_size_field_set',
+            '__panel_small_size_field_set__',
+            ['attributes' => $attributes]
+        );
+		
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-border-size',
+                '__panel-sm-border-size__',
+                $this->themeColorDefaults['panel-sm-border-size'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-border-size']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-border-radius',
+                '__panel-sm-border-radius__',
+                $this->themeColorDefaults['panel-sm-border-radius'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-border-radius']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-header-font-size',
+                '__panel-sm-header-font-size__',
+                $this->themeColorDefaults['panel-sm-header-font-size'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-header-font-size']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-header-line-height',
+                '__panel-sm-header-line-height__',
+                $this->themeColorDefaults['panel-sm-header-line-height'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-header-line-height']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-header-padding-vertical',
+                '__panel-sm-header-padding-vertical__',
+                $this->themeColorDefaults['panel-sm-header-padding-vertical'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-header-padding-vertical']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-header-padding-horizontal',
+                '__panel-sm-header-padding-horizontal__',
+                $this->themeColorDefaults['panel-sm-header-padding-horizontal'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-header-padding-horizontal']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-body-padding-vertical',
+                '__panel-sm-body-padding-vertical__',
+                $this->themeColorDefaults['panel-sm-body-padding-vertical'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-body-padding-vertical']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-body-padding-horizontal',
+                '__panel-sm-body-padding-horizontal__',
+                $this->themeColorDefaults['panel-sm-body-padding-horizontal'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-body-padding-horizontal']
+                ] 
+            )
+        );
+		
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-footer-padding-vertical',
+                '__panel-sm-footer-padding-vertical__',
+                $this->themeColorDefaults['panel-sm-footer-padding-vertical'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-footer-padding-vertical']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-sm-footer-padding-horizontal',
+                '__panel-sm-footer-padding-horizontal__',
+                $this->themeColorDefaults['panel-sm-footer-padding-horizontal'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-sm-footer-padding-horizontal']
+                ] 
+            )
+        );
+		
+        return $fieldSet;
+    }
+	
+    private function createPanelSizeLargeFieldSet()
+    {
+        $attributes = array_merge($this->fieldSetDefaults);
+        $fieldSet = $this->createFieldSet(
+            'panel_large_size_field_set',
+            '__panel_large_size_field_set__',
+            ['attributes' => $attributes]
+        );
+		
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-border-size',
+                '__panel-lg-border-size__',
+                $this->themeColorDefaults['panel-lg-border-size'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-border-size']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-border-radius',
+                '__panel-lg-border-radius__',
+                $this->themeColorDefaults['panel-lg-border-radius'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-border-radius']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-header-font-size',
+                '__panel-lg-header-font-size__',
+                $this->themeColorDefaults['panel-lg-header-font-size'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-header-font-size']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-header-line-height',
+                '__panel-lg-header-line-height__',
+                $this->themeColorDefaults['panel-lg-header-line-height'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-header-line-height']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-header-padding-vertical',
+                '__panel-lg-header-padding-vertical__',
+                $this->themeColorDefaults['panel-lg-header-padding-vertical'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-header-padding-vertical']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-header-padding-horizontal',
+                '__panel-lg-header-padding-horizontal__',
+                $this->themeColorDefaults['panel-lg-header-padding-horizontal'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-header-padding-horizontal']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-body-padding-vertical',
+                '__panel-lg-body-padding-vertical__',
+                $this->themeColorDefaults['panel-lg-body-padding-vertical'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-body-padding-vertical']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-body-padding-horizontal',
+                '__panel-lg-body-padding-horizontal__',
+                $this->themeColorDefaults['panel-lg-body-padding-horizontal'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-body-padding-horizontal']
+                ] 
+            )
+        );
+		
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-footer-padding-vertical',
+                '__panel-lg-footer-padding-vertical__',
+                $this->themeColorDefaults['panel-lg-footer-padding-vertical'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-footer-padding-vertical']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'panel-lg-footer-padding-horizontal',
+                '__panel-lg-footer-padding-horizontal__',
+                $this->themeColorDefaults['panel-lg-footer-padding-horizontal'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@panel-lg-footer-padding-horizontal']
                 ] 
             )
         );
