@@ -109,6 +109,13 @@
 }
 
 /* Button sizes */
+.btn--base {
+	.unitize-padding(@button-base-padding-vertical, @button-base-padding-horizontal);
+	.unitize(font-size, @button-base-font-size);
+	line-height: @button-base-line-height;
+	height: auto;    
+}
+
 .btn--sm {
 	.unitize-padding(@button-sm-padding-vertical, @button-sm-padding-horizontal);
 	.unitize(font-size, @button-sm-font-size);		

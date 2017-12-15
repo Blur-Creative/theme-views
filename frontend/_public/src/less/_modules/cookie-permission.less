@@ -1,0 +1,17 @@
+.page-wrap--cookie-permission {
+    background-color: @cookie-permission-bg;
+    border-color: @cookie-permission-border-color;
+    .box-shadow(@cookie-permission-shadow);
+    
+    .cookie-permission--content {
+        color: @cookie-permission-color;
+    }
+    
+    .cookie-permission--accept-button {
+        .btn--sm;
+        
+        @media (min-width: @tabletViewportWidth) {
+            .btn--base;
+        }
+    }
+}

@@ -453,7 +453,12 @@ SHOPWARE_EOD;
 		'scroll-totop-button-radius' => '@border-radius-base',
 		'scroll-totop-position-bottom' => '30',
 		'scroll-totop-position-right' => '30',
-		'scroll-totop-button-shadow' => '0 0 10px rgba(0,0,0,.5)'
+		'scroll-totop-button-shadow' => '0 0 10px rgba(0,0,0,.5)',
+        //cookie permission
+        'cookie-permission-bg' => '@brand-secondary-light',
+        'cookie-permission-shadow' => '0 0 15px rgba(0,0,0,0.5)',
+        'cookie-permission-border-color' => '@border-color-light',
+        'cookie-permission-color' => '@text-color'
     ];
 	
     private $themeConfigDefaults = [
@@ -5898,6 +5903,7 @@ SHOPWARE_EOD;
 		$tabPanel->addTab($this->createSocialsOptionsTab());
 		$tabPanel->addTab($this->createUspBarTab());
 		$tabPanel->addTab($this->createScrollToTopTab());
+		$tabPanel->addTab($this->createCookiePermissionTab());
 		
         return $tabPanel;
     }
@@ -6924,7 +6930,96 @@ SHOPWARE_EOD;
 		
 		return $fieldset;
 	}
+    
+	public function createCookiePermissionTab()
+	{
+		
+		// Create the Tab
+		$tab = $this->createTab(
+			'cookie_permission_tab',
+			'__cookie_permission_tab__',
+			array(
+				'attributes' => array(
+					'layout' => 'anchor',
+					'flex' => 1,
+					'autoScroll' => true,
+				)
+			)
+		);	
+		
+		$tab->addElement($this->createCookiePermissionDisplayFieldset());
+
+		return $tab;
+	}
 	
+	public function createCookiePermissionDisplayFieldset()
+	{
+		
+		// Create the fieldset which is the container of our field
+		$fieldset = $this->createFieldSet(
+			'cookie_permission_display_options',
+			'__cookie_permission_display_options__',
+			array(
+				'attributes' => array(
+					'layout' => 'column',
+					'flex' => 0,
+					'autoScroll' => true,
+					'defaults' => array(
+						'columnWidth' => 0.5,
+						'labelWidth' => 150,
+						'margin' => '5 15 5 0'
+					)
+				)
+			)
+		);
+
+		$fieldset->addElement(
+			$this->createSelectField(
+				'cookie_permission_button_state',
+				'__cookie_permission_button_state__',
+                'default',
+                [
+                    ['value' => 'default', 'text' => '__cookie_permission_button_state_default__'],
+                    ['value' => 'primary', 'text' => '__cookie_permission_button_state_primary__'],
+                    ['value' => 'secondary', 'text' => '__cookie_permission_button_state_secondary__'],
+                    ['value' => 'success', 'text' => '__cookie_permission_button_state_success__'],
+                    ['value' => 'warning', 'text' => '__cookie_permission_button_state_warning__'],
+                    ['value' => 'danger', 'text' => '__cookie_permission_button_state_danger__'],
+                ]			
+			)
+		);        
+		$fieldset->addElement(
+            $this->createColorPickerField(
+                'cookie-permission-bg',
+                '__cookie-permission-bg__',
+				$this->themeColorDefaults['cookie-permission-bg']
+            )
+        );
+		$fieldset->addElement(
+            $this->createTextField(
+                'cookie-permission-shadow',
+                '__cookie-permission-shadow__',
+				$this->themeColorDefaults['cookie-permission-shadow']
+            )
+        );
+		$fieldset->addElement(
+            $this->createColorPickerField(
+                'cookie-permission-border-color',
+                '__cookie-permission-border-color__',
+				$this->themeColorDefaults['cookie-permission-border-color']
+            )
+        );
+		$fieldset->addElement(
+            $this->createColorPickerField(
+                'cookie-permission-color',
+                '__cookie-permission-color__',
+				$this->themeColorDefaults['cookie-permission-color']
+            )
+        );
+		
+		return $fieldset;
+	}
+    
 	public function createLayoutOptionsTab()
 	{
 		
