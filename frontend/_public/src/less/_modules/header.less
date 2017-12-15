@@ -334,6 +334,21 @@
 								display: block;
 							}
 						}
+                        
+                        &.account--link {
+                            
+                            .user-loggedin--badge {
+                                
+                                .icon-node {
+                                    .unitize(font-size, @icon-size-xxs);
+                                    color: @text-color-light;
+                                }
+                            }
+                            
+                            &:after {
+                                display: none;
+                            }
+                        }
 						
 						&.cart--link {
 							
@@ -344,11 +359,69 @@
 					}
 				}
 			}
+            
+            .account--dropdown-navigation {
+                @media (min-width: @tabletViewportWidth) {
+                    .unitize(width, 250);
+                    min-width: auto;
+                    max-width: none;
+                    top: 100%;
+                }
+                
+                .account--menu {
+                    @media (min-width: @tabletViewportWidth) {
+                        .dropdown-style(auto, 40px);
+                    }
+                    
+                    .account--menu-container {
+                        @media (min-width: @tabletViewportWidth) {
+                            .unitize(padding, 0);
+                        }
+                        
+                        .sidebar--navigation {
+                            .unitize(font-size, @font-size-base);
+                            background-color: transparent;
+                            
+                            .navigation--entry {
+                                border-bottom: 1px solid @border-color-light;
+                                
+                                .navigation--link {
+                                    .unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+                                
+                                    .icon-node {
+                                        .unitize(margin-right, @padding-sm-horizontal);
+                                        .unitize(font-size, @icon-size-sm);
+                                        color: @icon-color-info;                            
+                                        vertical-align: middle;
+                                    }
+                                    
+                                    .text-node {
+                                        vertical-align: middle;
+                                    }
+                                }
+                                            
+                                &.entry--logout {
+                                    .unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+                                    
+                                    .link--logout {
+                                        .btn--sm;
+                                        .btn--danger;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 			
 			.cart--quantity,
-			.notes--quantity {
-				right: 0;
+			.notes--quantity,
+            .user-loggedin--badge {
+                position: absolute;
+                .unitize(top, -4);
+                .unitize(right, 0);
 				left: auto;
+                .unitize(margin, 0);
 				
 				@media (min-width: @desktopViewportWidth) {
 					.unitize(right, @padding-base-horizontal);

@@ -9,12 +9,63 @@
 		}
 		
 		.close--off-canvas,
-		.entry--close-off-canvas, .filter--close-btn {
+		.entry--close-off-canvas,
+        .filter--close-btn {
 			background-color: @brand-secondary-light;
 			.background-gardient(rgba(0,0,0,0), rgba(0,0,0,0.1));
 			border-bottom: 1px solid @border-color-light;
+            display: block;
+            text-align: left;
 		}
+        
+        .navigation--headline {
+            .unitize(font-size, @font-size-h6);
+            .unitize(margin, 0);
+            .unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+            font-weight: @font-light-weight;
+            color: @text-color;
+        }
 		
+        //Account List Offcanvas styling
+        .account--menu-container {
+            
+            .sidebar--navigation {
+                background-color: transparent;
+                border: 0;
+                .unitize(font-size, @font-size-base);
+                
+                .navigation--entry {
+                    border-color: @border-color-light;
+                    
+                    .navigation--link {
+                        .unitize(padding-left, @padding-base-horizontal);
+                        .unitize(padding-right, @padding-base-horizontal);
+                        
+                        .icon-node {
+                            .unitize(margin-right, @padding-sm-horizontal);
+                            .unitize(font-size, @icon-size-sm);
+                            color: @icon-color-info;                            
+                            vertical-align: middle;
+                        }
+                        
+                        .text-node {
+                            vertical-align: middle;
+                        }
+                    }
+                    
+                    &.entry--logout {
+                        .unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+                        
+                        .link--logout {
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+        
+        //Ajax Cart Offcanvas styling
 		.ajax--cart {
 			background-color: @brand-secondary;
 			border-radius: 0;

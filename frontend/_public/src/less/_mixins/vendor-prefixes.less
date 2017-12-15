@@ -85,20 +85,36 @@
   &::-webkit-input-placeholder  { color: @color;font-weight:@weight;font-style:@style; } // Safari and Chrome
 }
 
-.dropdown-style {
+.dropdown-style(@arrow-left: 20px, @arrow-right: auto) {
 	.box-shadow(0 0 10px rgba(0,0,0,.15));
 	border-radius:@border-radius-base;
 	background-color:@brand-secondary-light;
 	border:0;
 	
+    .navigation--headline {
+        .unitize(margin, 0);
+        .unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+        border-color: @border-color-light;
+        font-weight: @font-light-weight;
+        .unitize(font-size, @font-size-h6);
+        color: @text-color-light;
+        line-height: @line-height-base;
+    }
+    
 	a {
 		color:@text-color;
+        transition: all .5s;
+        
+        &:hover {
+            color:@text-color-light;
+            background-color:@brand-secondary-dark;
+        }
 	}
 	
 	&::after {
 		background-color:@brand-secondary-light;
-		right:auto;
-		left:20px;
+        right: @arrow-right;
+        left: @arrow-left;
 		border:0;
 		.box-shadow(-2px 2px 4px 0 rgba(0, 0, 0, .2));
 	}
