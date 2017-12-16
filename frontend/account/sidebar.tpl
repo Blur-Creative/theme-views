@@ -2,12 +2,43 @@
 
 {* Link to the account overview page *}
 {block name="frontend_account_menu_link_overview"}
+{nocache}
+    {if {config name=useSltCookie} && !$userInfo && $inHeader}
+        <li class="navigation--entry entry--login">
+            <span class="navigation--signin">
+                <a href="{url module='frontend' controller='account'}#hide-registration"
+                   class="blocked--link btn is--primary navigation--signin-btn{if $register} registration--menu-entry entry--close-off-canvas{/if}"
+                   data-collapseTarget="#registration"
+                   data-action="close">
+                    {s name="AccountLogin"}{/s}
+                </a>
+                <span class="navigation--register">
+                    {s name="AccountOr"}{/s}
+                    <a href="{url module='frontend' controller='account'}#show-registration"
+                       class="blocked--link{if $register} registration--menu-entry entry--close-off-canvas{/if}"
+                       data-collapseTarget="#registration"
+                       data-action="open">
+                        {s name="AccountRegister"}{/s}
+                    </a>
+                </span>
+            </span>
+        </li>
+    {/if}
+    {if {config name=useSltCookie} && $userInfo && $inHeader}
+        <li class="navigation--entry entry--logout">
+            <a href="{url controller='account' action='logout'}" title="{s name="AccountLinkLogout2"}{/s}" class="btn is--small is--danger is--block link--logout">
+                <i class="icon--logout"></i> {s name="AccountLinkLogout2"}{/s}
+            </a>
+        </li>
+    {/if}
+
 	<li class="navigation--entry">
 		<a href="{url controller='account'}" title="{s name="AccountLinkOverview"}{/s}" class="navigation--link{if {controllerName|lower} == 'account' && $sAction == 'index'} is--active{/if}">
 			<span class="icon-node icon-th-steamed"></span>
 			<span class="text-node">{s name="AccountLinkOverview"}{/s}</span>
 		</a>
 	</li>
+{/nocache}
 {/block}
 
 {* Link to the account overview page *}
@@ -74,9 +105,11 @@
 
 {* Logout action *}
 {block name="frontend_account_menu_link_logout"}
-	<li class="navigation--entry entry--logout">
-		<a href="{url controller='account' action='logout'}" title="{s name="AccountLinkLogout2"}{/s}" class="btn is--small is--danger is--block link--logout">
-			<i class="icon--logout"></i> {s name="AccountLinkLogout2"}{/s}
-		</a>
-	</li>
+    {if !$inHeader}
+        <li class="navigation--entry entry--logout">
+            <a href="{url controller='account' action='logout'}" title="{s name="AccountLinkLogout2"}{/s}" class="btn is--small is--danger is--block link--logout">
+                <i class="icon--logout"></i> {s name="AccountLinkLogout2"}{/s}
+            </a>
+        </li>
+    {/if}
 {/block}

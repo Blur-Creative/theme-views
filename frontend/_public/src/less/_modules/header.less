@@ -399,6 +399,22 @@
                                         vertical-align: middle;
                                     }
                                 }
+                                
+                                &.entry--login {
+                                     .unitize(padding, (@grid-gutter-size / 2));
+                                     
+                                    .navigation--signin {
+                                        .unitize(margin, 0);
+                                        .unitize(padding, 0);
+                                        border: 0;
+                                        
+                                        .navigation--signin-btn {
+                                            .btn--sm;
+                                            .btn--success;
+                                            .unitize(margin-bottom, @padding-base-vertical);
+                                        }
+                                    }
+                                }
                                             
                                 &.entry--logout {
                                     .unitize-padding(@padding-base-vertical, @padding-base-horizontal);

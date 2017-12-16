@@ -32,15 +32,16 @@ SHOPWARE_EOD;
      * @var array
      */
     protected $javascript = [
-		'src/js/jquery.button-toggle.js',
-		'src/js/jquery.panel-auto-resizer.js',
-		'src/js/jquery.bc.sticky-nav.js',
-		'src/js/jquery.shopware-responsive.js',
-
         // Third party plugins / libraries
         'vendors/js/jquery.dotdotdot.min.js',
 		'vendors/js/jquery.webui-popover.js',
-		'vendors/js/jquery.matchHeight-min.js'
+		'vendors/js/jquery.matchHeight-min.js',
+        
+		'src/js/jquery.button-toggle.js',
+		'src/js/jquery.panel-auto-resizer.js',
+		'src/js/jquery.bc.sticky-nav.js',
+		'src/js/jquery.bc.drop-down.js',
+		'src/js/jquery.shopware-responsive.js'
     ];
 	
 	protected $inheritanceConfig = false;

@@ -19,6 +19,11 @@
 
 		//BC Sticky Nav
 		.addPlugin('*[data-sticky-navigation="true"]', 'bcStickyNav')
+        
+        .removePlugin('.navigation--entry.entry--account.with-slt', 'swDropdownMenu', [ 'm', 'l', 'xl' ])
+        .addPlugin('.navigation--entry.entry--account.with-slt', 'bcDropdown', {
+            dropdownCls: '.account--dropdown-navigation'
+        }, [ 'm', 'l', 'xl' ])
 		
 		//remove ajax product navigation. if you want to use comment it out
 		//.removePlugin('body', 'swAjaxProductNavigation')
