@@ -613,7 +613,11 @@
 			
 			@media (min-width: @tabletViewportWidth) {
 				order: 3;
-				.unitize(font-size, @font-size-h5);
+				.unitize(font-size, @font-size-h6);
+                
+                &.panel--th {
+                    .unitize(font-size, @font-size-base);
+                }
 			}
 		}
 		
