@@ -1,3 +1,13 @@
+v1.2.3
+----------
+behobene Probleme:
+- fixed issue #16: improve print order appearance
+- fixed issue #12: voucher/premium products inside confirm table
+- fixed issue #11: voucher product appearance inside cart table
+- fixed issue #10: include the new 'my account' layer to the Theme
+- fixed issue #9: adjust the Shop internal Cookie note to the Theme
+- fixed issue #8: adjust the Shopware Cookie Plugin to the theme
+
 v1.2.2
 ----------
 - Kontextbasierte Panels und diverse Panel-Größen wurden hinzugefügt (https://github.com/Blur-Creative/theme-views/wiki/Panels)
