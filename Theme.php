@@ -7115,6 +7115,31 @@ SHOPWARE_EOD;
             )
         );
         $collection->add($set);
+        
+        $set = new ConfigSet();
+        $set->setName('__theme_views_scheme_red_magic__')->setDescription(
+            '__theme_views_scheme_red_magic_description__'
+        )->setValues(
+            array_merge(
+                $this->themeColorDefaults,
+                [
+					//base colors
+                    'brand-secondary' => '#332a29',
+                    'brand-secondary-light' => '#4a3c3b',
+                    'brand-secondary-dark' => '#211b1b',
+					//button coiors
+					'button-primary-bg' => '#8c231a',
+                    'button-info-bg' => '#d6620d',
+					//text colors
+					'text-color-secondary' => '#99534c',
+					'text-color-info' => '#d6620d',
+					'link-color' => '#e08e87'
+					
+                ],
+                $this->themeConfigDefaults
+            )
+        );
+        $collection->add($set);
 		
         $set = new ConfigSet();
         $set->setName('__theme_views_scheme_graphit_green__')->setDescription(
