@@ -160,3 +160,27 @@
 		margin: 0;
 	}
 }
+
+.account--logout {
+    
+    .account--welcome {
+        @media (min-width: @tabletLandscapeViewportWidth) {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+
+        @media (min-width: @desktopViewportWidth) {
+            width: 60%;
+        }        
+    }
+        
+    .logout-action--back {
+        .unitize(margin-bottom, @padding-base-vertical);
+        
+        @media (min-width: @tabletViewportWidth) {
+            .unitize(margin-bottom, 0);
+        }
+    }
+}
