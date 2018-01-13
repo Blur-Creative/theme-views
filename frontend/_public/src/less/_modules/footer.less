@@ -93,8 +93,16 @@
 		
 		@media (min-width: @tabletViewportWidth) {
 			.unitize-padding(@grid-gutter-size, 0);
+            .flexbox-container(@wrap: wrap);
 		}
 		
+        &:before,
+        &:after {
+            @media (min-width: @tabletViewportWidth) {
+                display: none;
+            }
+        }
+        
 		.footer--column {
 			.unitize(padding-left, @padding-base-horizontal);
 			.unitize(padding-right, @padding-base-horizontal);
@@ -112,6 +120,13 @@
 			
 			@media (min-width: @tabletViewportWidth) {
 				border-bottom: 0;
+                .flexbox-item(1 50%);
+                width: auto;
+                float: none;
+			}
+            
+			@media (min-width: @tabletLandscapeViewportWidth) {
+                .flexbox-item(1 25%);
 			}
 			
 			.column--headline {
