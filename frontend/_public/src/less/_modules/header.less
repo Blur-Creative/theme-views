@@ -5,10 +5,15 @@
 	border: 0;
 	padding: 0;
 	.unitize(padding-top, @padding-md-vertical);
+	.unitize(padding-bottom, @padding-md-vertical);
     
 	@media (min-width: @desktopViewportWidth) {
 		.unitize(margin-bottom, @padding-md-vertical);
 	}
+    
+    .has--breadcrumb & {
+        .unitize(padding-bottom, 0);
+    }
 
 	.is--minimal-header &,
 	.is--ctl-checkout.is--minimal-header &,

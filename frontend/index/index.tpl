@@ -9,6 +9,10 @@
 	{block name="frontend_index_body_background_image"}
 		{if $theme.body_background_image} has--background-image{/if}
 	{/block}
+    
+	{block name="frontend_index_body_has_breadcrumb"}
+		{if count($sBreadcrumb)} has--breadcrumb{/if}
+	{/block}
 {/strip}
 {/block}
 
