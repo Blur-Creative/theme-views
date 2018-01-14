@@ -212,6 +212,9 @@
 												{if $theme.payment_option_paypal}
 													<li><img src="{link file='frontend/_public/src/img/icons/payment/paypal.png'}" /></li>
 												{/if}
+												{if $theme.payment_option_stripe}
+													<li><img src="{link file='frontend/_public/src/img/icons/payment/stripe.png'}" /></li>
+												{/if}
 												{if $theme.payment_option_amazon}
 													<li><img src="{link file='frontend/_public/src/img/icons/payment/amazonpay.png'}" /></li>
 												{/if}
@@ -248,6 +251,9 @@
 												{/if}
 												{if $theme.shipping_option_ups}
 													<li><img src="{link file='frontend/_public/src/img/icons/shipping/ups.png'}" /></li>
+												{/if}
+												{if $theme.shipping_option_fedex}
+													<li><img src="{link file='frontend/_public/src/img/icons/shipping/fedex.png'}" /></li>
 												{/if}
 											</ul>
 										</div>

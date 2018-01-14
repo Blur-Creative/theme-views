@@ -6280,6 +6280,14 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
+		
+		// Create Stripe checkbkox
+		$stripeCheckbox = $this->createCheckboxField(
+			'payment_option_stripe',
+			'__payment_options_stripe_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);
 
 		// Create Amazon checkbkox
 		$amznpayCheckbox = $this->createCheckboxField(
@@ -6315,6 +6323,7 @@ SHOPWARE_EOD;
 		$fieldset->addElement($mastercardCheckbox);
 		$fieldset->addElement($amexCheckbox);
 		$fieldset->addElement($paypalCheckbox);
+		$fieldset->addElement($stripeCheckbox);
 		$fieldset->addElement($amznpayCheckbox);
 		$fieldset->addElement($sofortpayCheckbox);
 		$fieldset->addElement($bitcoinCheckbox);
@@ -6390,8 +6399,15 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-	
 		
+		// Create Sofort Überweisung checkbkox
+		$fedexCheckbox = $this->createCheckboxField(
+			'shipping_option_fedex',
+			'__shipping_options_fedex_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);
+	
 		// Adding the fields to the fieldset
 		$fieldset->addElement($shippingsActiveCheckbox);
 		$fieldset->addElement($dhlCheckbox);
@@ -6399,6 +6415,7 @@ SHOPWARE_EOD;
 		$fieldset->addElement($hermesCheckbox);
 		$fieldset->addElement($glsCheckbox);
 		$fieldset->addElement($upsCheckbox);
+		$fieldset->addElement($fedexCheckbox);
 
 		return $fieldset;
 	}
