@@ -14,7 +14,7 @@
         {elseif $theme.fontBaseStack=='Lato'}
             <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
         {elseif $theme.fontBaseStack=='Patua One'}
-            <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Patua+One:400" rel="stylesheet">
         {/if}
     {/block}
 
@@ -29,7 +29,7 @@
             {elseif $theme.fontHeadlineStack=='Lato'}
                 <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
             {elseif $theme.fontHeadlineStack=='Patua One'}
-                <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Patua+One:400" rel="stylesheet">
             {/if}
         {/if}
     {/block}
