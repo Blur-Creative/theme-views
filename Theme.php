@@ -2360,6 +2360,7 @@ SHOPWARE_EOD;
 					['value' => 'Open Sans', 'text' => 'Open Sans'],
 					['value' => 'Ubuntu', 'text' => 'Ubuntu'],
 					['value' => 'Raleway', 'text' => 'Raleway'],
+					['value' => 'Oswald', 'text' => 'Oswald'],
 					['value' => 'Patua One', 'text' => 'Patua One'],
 					['value' => 'Lato', 'text' => 'Lato']
 				],
@@ -2378,6 +2379,7 @@ SHOPWARE_EOD;
 					['value' => 'Open Sans', 'text' => 'Open Sans'],
 					['value' => 'Ubuntu', 'text' => 'Ubuntu'],
 					['value' => 'Raleway', 'text' => 'Raleway'],
+                    ['value' => 'Oswald', 'text' => 'Oswald'],
 					['value' => 'Patua One', 'text' => 'Patua One'],
 					['value' => 'Lato', 'text' => 'Lato']
 				],
