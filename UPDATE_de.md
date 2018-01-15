@@ -4,7 +4,7 @@ v1.2.4
 
 **behobene Probleme und Verbesserungen:**
 - 'Oswald' Font von Google Fonts CDN wurde hinzugefügt
-- @line-height-base wurde allen <h> Elementen Global hinzugefügt
+- @line-height-base wurde allen *h* Elementen Global hinzugefügt
 - issue #33: 'Green Magic' Theme Vorlage wurde hinzugefügt
 - issue #32: 'Purple Magic' Theme Vorlage wurde hinzugefügt
 - issue #29: 'Stripe' Zahlart Icon wurde hinzugefügt
@@ -18,7 +18,7 @@ v1.2.4
 - issue #21: Die Überschrift-Font greift nun korrekt auf allen Überschriften und Titeln
 - issue #20: Darstellung der Footer Zeilen auf dem Tablet wurde verbessert
 - issue #15: Darstellung der Logout Seite wurde verbessert
-- issue #14: @line-height-base wurde allen <p> Elementen Global hinzugefügt
+- issue #14: @line-height-base wurde allen *p* Elementen Global hinzugefügt
 - issue #13: Übersetzung der Theme Konfiguration ins Englische
 
 v1.2.3
