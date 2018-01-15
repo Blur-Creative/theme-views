@@ -1,18 +1,41 @@
+v1.2.4
+----------
+- Es gibt 3 neue Theme Vorlagen (Red Magic, Purple Magic und Green Magic) welche sich an der Vorlage Blur Magic anlehnen
+
+**behobene Probleme und Verbesserungen:**
+- 'Oswald' Font von Google Fonts CDN wurde hinzugefügt
+- @line-height-base wurde allen <h> Elementen Global hinzugefügt
+- issue #33: 'Green Magic' Theme Vorlage wurde hinzugefügt
+- issue #32: 'Purple Magic' Theme Vorlage wurde hinzugefügt
+- issue #29: 'Stripe' Zahlart Icon wurde hinzugefügt
+- issue #28: 'FedEx' Versandart Icon wurde hinzugefügt
+- issue #27: Unterer Abstand beim Header, wenn kein Breadcrumb vorhanden ist, wurde hinzugefügt
+- issue #26: 'Red Magic' Theme Vorlage wurde hinzugefügt
+- issue #25: Projekt Lizenz auf GPLv3 geändert
+- issue #24: Lesbarkeit des Offcanvas Titels der 'Red Wedding' Theme Vorlage wurde verbessert
+- issue #23: Darstellung der Premium Produkte wurde weiter verbessert
+- issue #22: Offcanvas Hintergrund Farbe des Filters wurde korrigiert
+- issue #21: Die Überschrift-Font greift nun korrekt auf allen Überschriften und Titeln
+- issue #20: Darstellung der Footer Zeilen auf dem Tablet wurde verbessert
+- issue #15: Darstellung der Logout Seite wurde verbessert
+- issue #14: @line-height-base wurde allen <p> Elementen Global hinzugefügt
+- issue #13: Übersetzung der Theme Konfiguration ins Englische
+
 v1.2.3
 ----------
-behobene Probleme:
-- fixed issue #16: improve print order appearance
-- fixed issue #12: voucher/premium products inside confirm table
-- fixed issue #11: voucher product appearance inside cart table
-- fixed issue #10: include the new 'my account' layer to the Theme
-- fixed issue #9: adjust the Shop internal Cookie note to the Theme
-- fixed issue #8: adjust the Shopware Cookie Plugin to the theme
+**behobene Probleme:**
+- issue #16: "Bestellübersicht drucken" Ansicht verbessert
+- issue #12: Gutschein/Premium Produkt Darstellung innerhalb der Bestellbestätigungs-Artikelübersicht verbessert
+- issue #11: Gutschein Produkt Darstellung innerhalb der Warenkorb Artikelübersicht verbessert
+- issue #10: "Mein Konto" Dropdown Auswahl wurde in das Theme integriert
+- issue #9: Der Shop interne Cookie Hinweis wurde an das Theme angepasst
+- issue #8: Das Shopware Cookie Plugin wurde an das Theme angepasst
 
 v1.2.2
 ----------
 - Kontextbasierte Panels und diverse Panel-Größen wurden hinzugefügt (https://github.com/Blur-Creative/theme-views/wiki/Panels)
 
-behobene Probleme:
+**behobene Probleme:**
 - issue #7: Darstellung der Premium Produkte in der Warenkorb Tabelle wurde verbessert
 - issue #6: Premium Produkt Slider im Warenkorb wurde optimiert
 - issue #5: Ein Problem welches dazu führte dass Produkte in der Einkaufswelt nicht angeklickt werden konnten wurde behoben
