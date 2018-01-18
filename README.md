@@ -23,6 +23,7 @@ Feel free to use it or clone it from [GitHub](https://github.com/Blur-Creative/t
 ### Requirements
 
 - Shopware 5.2 or newer
+- Default **Bare** and **Responsive** Theme in thier latest Shopware Version
 
 > We always recommend to use the latest Version of Shopware and this Theme to get the latest features and bugfixes
 
