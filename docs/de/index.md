@@ -1,5 +1,6 @@
 # Dokumentation
 
-### Erste Schritte
+### Index
 
-- [Installation](erste-schritte/installation.md)
+- [Erste Schritte](erste-schritte/index.md)
+     - [Einrichtung](erste-schritte/einrichtung.md)
