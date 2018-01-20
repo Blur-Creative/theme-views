@@ -19,7 +19,7 @@
             {%- for doc in group.pages -%}
                 {%- assign doc_slug = doc.title | slugify -%}
                 <li>
-                    <a href="#{{ doc_slug }}">
+                    <a href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
                         {{ doc.title }}
                     </a>
                 </li>
