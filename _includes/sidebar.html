@@ -1,4 +1,4 @@
-<nav class="docs-sidebar mt-4 pt-4" id="sidemenu">
+<nav class="page-sidebar mt-4 pt-4" id="sidemenu">
     {%- assign page_slug = page.url | split: '/' | last | replace: '.html', ''  -%}
 
     {%- for group in site.data.nav -%}
@@ -9,39 +9,19 @@
             {%- assign active = 'active' -%}
         {%- endif -%}
 
-    <div class="toc-item{% unless active == nil %} {{ active }}{% endunless %} mt-1 mb-2">
-        <a class="toc-link" href="{{ site.baseurl }}/theme-views/de/{{ group.perm }}">
+        <a class="nav-main-link" href="{{ site.baseurl }}/theme-views/de/{{ group.perm }}">
             {{ group.title }}
         </a>
 
-        <ul class="nav mt-2 ml-3 d-none d-md-block">
+        <ul class="nav-sub-list mt-2 ml-3 d-none d-md-block">
             {%- for doc in group.pages -%}
                 {%- assign doc_slug = doc.title | slugify -%}
-                <li>
-                    <a href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
+                <li class="nav-sub-item">
+                    <a class="nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
                         {{ doc.title }}
                     </a>
                 </li>
             {%- endfor -%}
         </ul>
-    </div>
     {%- endfor -%}
 </nav>
-
-
-<ul>
-   {%- for item in site.data.nav.tree -%}
-      <li>
-        <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }} puhs</a>
-        {% if item.levelOne %}
-            <ul>
-                {% for subitem in item.levelOne %}
-                    <li>
-                        <a href="{{ subitem.url }}" alt="{{ subitem.title }}">{{ subitem.title }}</a>    
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-      </li>
-   {%- endfor -%}
-</ul>
