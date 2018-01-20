@@ -1,8 +1,6 @@
 <nav class="page-sidebar" id="sidemenu">
-    {{ page.id }}
-    {{ page.url }}
     
-    {%- assign page_slug = page.url | split: '/' | last | replace: '.html', ''  -%}
+    {%- assign page_slug = page.url | replace: '.html'  -%}
 
     {%- for group in site.data.nav -%}
         {%- assign link = group.pages | first -%}
@@ -11,6 +9,8 @@
         {%- if page_slug == group_slug -%}
             {%- assign active = 'active' -%}
         {%- endif -%}
+        
+        {{ page_slug }}
 
         <a class="nav-main-link" href="{{ site.baseurl }}/theme-views/de/{{ group.perm }}">
             {{ group.title }}
