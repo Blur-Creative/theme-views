@@ -1,7 +1,7 @@
 tree:
 
 - title: Dokumentation
-  url: de/index.md
-
-- title: Installation und Einrichtung
-  url: de/erste-schritte/install.md
+  url: index
+  levelOne:
+      - title: Installation und Einrichtung
+        url: erste-schritte/install

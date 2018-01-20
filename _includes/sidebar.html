@@ -2,6 +2,17 @@ its a sidebar! :)
 
 <ul>
    {%- for item in site.data.nav.tree -%}
-      <li><a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a></li>
+      <li>
+        <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }} puhs</a>
+        {% if item.levelOne %}
+            <ul>
+                {% for subitem in item.levelOne %}
+                    <li>
+                        <a href="{{ subitem.url }}" alt="{{ subitem.title }}">{{ subitem.title }}</a>    
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+      </li>
    {%- endfor -%}
 </ul>
