@@ -1,3 +1,5 @@
 - title: Dokumentation
+  perm: dokumentation
   pages:
       - title: Installation und Einrichtung
+        perm: erste-schritte/install
