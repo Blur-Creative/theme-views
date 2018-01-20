@@ -1,0 +1,7 @@
+tree:
+
+- title: Dokumentation
+  url: de/index.md
+
+- title: Installation und Einrichtung
+  url: de/erste-schritte/install.md
