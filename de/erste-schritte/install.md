@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: Installation und Einrichtung
 ---
 
-# Installation und Einrichtung
+# Installation
