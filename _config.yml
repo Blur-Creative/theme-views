@@ -1,4 +1,7 @@
+# generell
+
+name: Views Theme for Shopware 5
 title: Views
 description: a Shopware 5 responsive Theme
-
-theme: jekyll-theme-minimal
+license: GPL-3.0
+licenseUrl: https://www.gnu.org/licenses/gpl-3.0.en.html

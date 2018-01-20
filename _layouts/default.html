@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- {% include head.html %} -->
+</head>
+<body>
+
+    <!-- {% include header.html %}-->
+
+    {% if page.layout == "simple" %}
+        {{ content }}
+    {% else %}
+        <div class="container">
+            <main id="content" role="main">
+                {{ content }}
+            </main>
+        </div>
+    {% endif %}
+
+    <!-- {% include footer.html %} -->
+    <!-- {% include scripts.html %} -->
+
+</body>
+</html>
