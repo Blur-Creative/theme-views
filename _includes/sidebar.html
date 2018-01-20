@@ -1,1 +1,7 @@
 its a sidebar!
+
+<ul>
+   {% for item in site.data.nav %}
+      <li><a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a></li>
+   {% endfor %}
+</ul>
