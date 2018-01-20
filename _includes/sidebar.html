@@ -18,9 +18,11 @@
 
         <ul class="nav-sub-list">
             {%- for doc in group.pages -%}
-                {%- assign doc_slug = doc.title | slugify -%}
+                {%- assign doc_slug = '/de/' | append: doc.perm -%}
+                
+                {{ doc_slug }}
                 <li class="nav-sub-item">
-                    <a class="nav-sub-link{%- if page_slug == '/de/'{{ group.perm }} -%} active{%- endif -%}" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
+                    <a class="nav-sub-link{%- if page_slug == doc_slug -%} active{%- endif -%}" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
                         {{ doc.title }}
                     </a>
                 </li>
