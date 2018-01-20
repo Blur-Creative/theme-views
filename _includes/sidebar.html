@@ -1,4 +1,9 @@
 <nav class="page-sidebar" id="sidemenu">
+    {{ page.id }}
+    {{ page.url }}
+    {% page.id %}
+    {% page.url %}
+    
     {%- assign page_slug = page.url | split: '/' | last | replace: '.html', ''  -%}
 
     {%- for group in site.data.nav -%}
