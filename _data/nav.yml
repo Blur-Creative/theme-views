@@ -1,5 +1,11 @@
-- title: Dokumentation
-  perm: dokumentation
+- title: Los geht's!
+  perm: los-gehts
   pages:
-      - title: Installation und Einrichtung
-        perm: erste-schritte/install
+      - title: Download
+        perm: los-gehts/download
+      - title: Installation
+        perm: los-gehts/installation
+      - title: Einrichtung
+        perm: los-gehts/einrichtung
+- title: Einstellungen
+  perm: einstellungen
