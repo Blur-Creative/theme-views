@@ -1,4 +1,36 @@
-its a sidebar! :)
+<nav class="docs-sidebar mt-4 pt-4" id="sidemenu">
+    {%- assign page_slug = page.url | split: '/' | last | replace: '.html', ''  -%}
+
+    {%- for group in site.data.nav -%}
+        {%- assign link = group.pages | first -%}
+        {%- assign group_slug = group.title | slugify -%}
+        {%- assign active = nil -%}
+        {%- if page_slug == group_slug -%}
+            {%- assign active = 'active' -%}
+        {%- endif -%}
+
+    <div class="toc-item{% unless active == nil %} {{ active }}{% endunless %} mt-1 mb-2">
+        <a class="toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}.html">
+            {{ group.title }}
+        </a>
+
+        {% unless active == nil %}
+        <ul class="nav mt-2 ml-3 d-none d-md-block">
+            {%- for doc in group.pages -%}
+                {%- assign doc_slug = doc.title | slugify -%}
+                <li>
+                    <a href="#{{ doc_slug }}">
+                        {{ doc.title }}
+                    </a>
+                </li>
+            {%- endfor -%}
+        </ul>
+        {% endunless %}
+    </div>
+    {%- endfor -%}
+</nav>
+
+endnav
 
 <ul>
    {%- for item in site.data.nav.tree -%}

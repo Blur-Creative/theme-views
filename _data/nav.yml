@@ -1,7 +1,3 @@
-tree:
-
 - title: Dokumentation
-  url: index
-  levelOne:
+  pages:
       - title: Installation und Einrichtung
-        url: erste-schritte/install
