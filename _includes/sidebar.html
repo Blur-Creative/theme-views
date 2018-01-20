@@ -1,4 +1,4 @@
-<nav class="page-sidebar mt-4 pt-4" id="sidemenu">
+<nav class="page-sidebar" id="sidemenu">
     {%- assign page_slug = page.url | split: '/' | last | replace: '.html', ''  -%}
 
     {%- for group in site.data.nav -%}
@@ -13,7 +13,7 @@
             {{ group.title }}
         </a>
 
-        <ul class="nav-sub-list mt-2 ml-3 d-none d-md-block">
+        <ul class="nav-sub-list">
             {%- for doc in group.pages -%}
                 {%- assign doc_slug = doc.title | slugify -%}
                 <li class="nav-sub-item">
