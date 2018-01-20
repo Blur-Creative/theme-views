@@ -1,0 +1,5 @@
+---
+layout: docs
+---
+
+# Deutsche Dokumentation
