@@ -17,7 +17,7 @@ Wir werden alle drei Wege mit dir gehen.
 
 ### Installation über den Shopware Community Store
 
-Beschreibung folgt
+<u>Beschreibung folgt</u>
 
 ### Installation per manuellen Download
 
