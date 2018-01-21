@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Einstellungen
+title: Theme Konfiguration
 ---
 
 Beschreibung folgt

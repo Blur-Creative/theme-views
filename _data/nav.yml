@@ -6,4 +6,4 @@
       - title: Einrichtung
         perm: los-gehts/einrichtung
 - title: Einstellungen
-  perm: einstellungen
+  perm: theme-konfiguration
