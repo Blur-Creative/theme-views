@@ -39,3 +39,19 @@ body {
 .sidebar-button small {
     display: block;
 }
+
+.sidebar-header .sidebar-title {
+	font-weight: 300;
+	font-size: 24px;
+	margin-bottom: 0;
+}
+
+.sidebar-header .sidebar-description {
+	font-weight: 700;
+	color: #666;
+	font-size: 20px;
+}
+
+.sidebar-header {
+	border-bottom: 1px solid #ccc;
+}
