@@ -19,7 +19,7 @@
             {%- for doc in group.pages -%}
                 {%- assign doc_slug = '/de/' | append: doc.perm -%}
                 {%- if page_slug == doc_slug -%}
-                    {%- assign active = 'active ' | join: ' ' -%}
+                    {%- assign active = 'active ' -%}
                 {%- endif -%}
                 <li class="nav-sub-item">
                     <a class="{{ active | join: ' ' }}  nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">

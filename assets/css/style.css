@@ -14,6 +14,15 @@ body {
     font-weight: 700;
 }
 
+.page-sidebar .active.nav-sub-link {
+	color: #333;
+	font-weight: 500;
+}
+
+.page-sidebar .nav-main-link:hover {
+	color: #333;
+}
+
 .page-sidebar a {
 	color: #999;
 }
