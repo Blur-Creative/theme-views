@@ -1,8 +1,6 @@
 - title: Los geht's!
   perm: los-gehts
   pages:
-      - title: Download
-        perm: los-gehts/download
       - title: Installation
         perm: los-gehts/installation
       - title: Einrichtung
