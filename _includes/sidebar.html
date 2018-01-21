@@ -1,7 +1,7 @@
 <nav class="page-sidebar" id="sidemenu">
     
     {%- assign page_slug = page.url | replace: '.html'  -%}
-    {%- assign active = 'active ' | join: ' ' -%}
+    
 
     {%- for group in site.data.nav -%}
         {%- assign link = group.pages | first -%}
@@ -18,8 +18,11 @@
         <ul class="nav-sub-list">
             {%- for doc in group.pages -%}
                 {%- assign doc_slug = '/de/' | append: doc.perm -%}
+                {%- if page_slug == doc_slug -%}
+                    {%- assign active = 'active ' | join: ' ' -%}
+                {%- endif -%}
                 <li class="nav-sub-item">
-                    <a class="{% if page_slug == doc_slug %}{{ 'active' | join: ' ' }} {% endif %} nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
+                    <a class="{{ active | join: ' ' }}  nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
                         {{ doc.title }}
                     </a>
                 </li>
