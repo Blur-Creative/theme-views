@@ -1,8 +1,12 @@
 <nav class="page-sidebar" id="sidemenu">
     
-    {%- assign page_slug = page.url | replace: '.html'  -%}
+    <div>
+        <h2>
+            {{ site.data.vars.sidebar.title }}
+        </h2>
+    </div>
     
-
+    {%- assign page_slug = page.url | replace: '.html'  -%}
     {%- for group in site.data.nav -%}
         {%- assign link = group.pages | first -%}
         {%- assign group_slug = group.title | slugify -%}
