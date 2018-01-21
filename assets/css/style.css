@@ -31,3 +31,11 @@ body {
 	text-decoration: none;
 	color: #007bff;
 }
+
+.sidebar-button h6 {
+    margin-bottom: 0;
+}
+
+.sidebar-button small {
+    display: block;
+}
