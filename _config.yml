@@ -16,7 +16,7 @@
 title: Views Theme
 email: your-email@example.com
 description: a Shopware 5 responsive Theme  # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/theme-views" # the subpath of your site, e.g. /blog
 url: "http://views-docs.blurcreative.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: blurcreativede
 github_username:  Blur-Creative

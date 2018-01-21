@@ -3,6 +3,8 @@ layout: docs
 title: Einrichtung
 ---
 
+Nachdem das Theme installiert ist kannst du nun mit der Einrichtung beginnen
+
 ### Erstellen Child-Themes
 
 Um die Updatesicherheit bei eigenen Anpassungen am Theme sicher zu stellen, empfiehlt es sich ein Child-Theme anzulegen.
