@@ -18,11 +18,12 @@
         <ul class="nav-sub-list">
             {%- for doc in group.pages -%}
                 {%- assign doc_slug = '/de/' | append: doc.perm -%}
+                {%- assign active = nil -%}
                 {%- if page_slug == doc_slug -%}
                     {%- assign active = 'active ' -%}
                 {%- endif -%}
                 <li class="nav-sub-item">
-                    <a class="{{ active | join: ' ' }}  nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
+                    <a class="{% unless active == nil %}{{ active }} {% endunless %} nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
                         {{ doc.title }}
                     </a>
                 </li>
