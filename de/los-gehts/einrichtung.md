@@ -9,7 +9,7 @@ Nachdem das Theme installiert ist kannst du nun mit der Einrichtung beginnen
 
 Um die Updatesicherheit bei eigenen Anpassungen am Theme sicher zu stellen, empfiehlt es sich ein Child-Theme anzulegen.
 
-Hierzu gibt es bereits eine [Dokumentation von Shopware](http://community.shopware.com/Theme-Manager_detail_1808.html#Theme_erstellen).
+Hierzu gibt es bereits eine [Dokumentation von Shopware](http://community.shopware.com/Theme-Manager_detail_1808.html#Theme_erstellen){:target="_blank"}.
 Nun wollen wir allerdings ein Child-Theme abgeleitet vom Views Theme erstellen.
 Also muss bei dem Schritt 1 `Ableiten von:` das `Views` Theme ausgewählt werden.
 
