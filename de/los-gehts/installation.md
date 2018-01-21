@@ -19,6 +19,10 @@ Wir werden alle drei Wege mit dir gehen.
 
 <u>Beschreibung folgt</u>
 
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+  Tooltip on top
+</button>
+
 ### Installation per manuellen Download
 
 Beschreibung folgt
