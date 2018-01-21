@@ -5,5 +5,5 @@
         perm: los-gehts/installation
       - title: Einrichtung
         perm: los-gehts/einrichtung
-- title: Einstellungen
+- title: Theme Konfiguration
   perm: theme-konfiguration
