@@ -1,6 +1,6 @@
 <nav class="page-sidebar" id="sidemenu">
     
-    <header class="sidebar-header">
+    <header class="sidebar-header pb-3">
         <h2 class="sidebar-title">
             {{ site.sidebar_title }}
         </h2>
@@ -10,12 +10,6 @@
         <ul class="shields-list list-inline">
             <li class="list-inline-item">
                 <img src="https://img.shields.io/badge/version-{{ site.version }}-brightgreen.svg?style=flat" />
-            </li>
-            <li class="list-inline-item">
-                <img src="https://img.shields.io/github/issues/Blur-Creative/theme-views.svg?style=flat" />
-            </li>
-            <li class="list-inline-item">
-                <img src="https://img.shields.io/github/license/Blur-Creative/theme-views.svg?style=flat" />
             </li>
         </ul>
         <div class="btn-group sidebar-button-group" role="group" aria-label="Basic example">
@@ -40,32 +34,34 @@
         </div>
     </header>
     
-    {%- assign page_slug = page.url | replace: '.html'  -%}
-    {%- for group in site.data.nav -%}
-        {%- assign link = group.pages | first -%}
-        {%- assign group_slug = group.title | slugify -%}
-        {%- assign active = nil -%}
-        {%- if page_slug == group_slug -%}
-            
-        {%- endif -%}
-
-        <a class="nav-main-link" href="{{ site.baseurl }}/de/{{ group.perm }}">
-            {{ group.title }}
-        </a>
-
-        <ul class="nav-sub-list">
-            {%- for doc in group.pages -%}
-                {%- assign doc_slug = '/de/' | append: doc.perm -%}
-                {%- assign active = nil -%}
-                {%- if page_slug == doc_slug -%}
-                    {%- assign active = 'active ' -%}
-                {%- endif -%}
-                <li class="nav-sub-item">
-                    <a class="{% unless active == nil %}{{ active }} {% endunless %} nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
-                        {{ doc.title }}
-                    </a>
-                </li>
-            {%- endfor -%}
-        </ul>
-    {%- endfor -%}
+    <nav class="sidebar-nav py-3">
+        {%- assign page_slug = page.url | replace: '.html'  -%}
+        {%- for group in site.data.nav -%}
+            {%- assign link = group.pages | first -%}
+            {%- assign group_slug = group.title | slugify -%}
+            {%- assign active = nil -%}
+            {%- if page_slug == group_slug -%}
+                
+            {%- endif -%}
+    
+            <a class="nav-main-link" href="{{ site.baseurl }}/de/{{ group.perm }}">
+                {{ group.title }}
+            </a>
+    
+            <ul class="nav-sub-list">
+                {%- for doc in group.pages -%}
+                    {%- assign doc_slug = '/de/' | append: doc.perm -%}
+                    {%- assign active = nil -%}
+                    {%- if page_slug == doc_slug -%}
+                        {%- assign active = 'active ' -%}
+                    {%- endif -%}
+                    <li class="nav-sub-item">
+                        <a class="{% unless active == nil %}{{ active }} {% endunless %} nav-sub-link" href="{{ site.baseurl }}/theme-views/de/{{ doc.perm }}">
+                            {{ doc.title }}
+                        </a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        {%- endfor -%}
+    </nav>
 </nav>

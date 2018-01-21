@@ -55,3 +55,8 @@ body {
 .sidebar-header {
 	border-bottom: 1px solid #ccc;
 }
+
+.shields-list {
+	padding: 10px 0;
+	margin: 0;
+}
