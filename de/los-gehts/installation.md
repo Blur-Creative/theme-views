@@ -17,12 +17,7 @@ Wir werden alle drei Wege mit dir gehen.
 
 ### Über den Shopware Community Store
 
-1. Kaufe das Plugin über den [Shopware Community Store](https://store.shopware.com/blur467826946731/views/responsive-theme.html?number=Blur467826946731f){:target="_blank"}
-2. Wenn du den Kauf im Community Store bestätigt hast, logge dich in dein Shop Backend ein und öffne den Plugin-Manager
-3. Gehe auf `Meine Einkäufe` und anschließend auf das `Plugin Download` Symbol. Gehe danach auf `Installiert`
-4. Klicke dann auf `Installieren / Deinstallieren` (grünes Plus) und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann Eingerichtet werden
-
-<div class="card-deck pb-3">
+<div class="card-deck pb-4">
     <div class="card">
         <div class="card-header">
             1. Plugin kaufen
@@ -51,7 +46,7 @@ Wir werden alle drei Wege mit dir gehen.
     </div>
 </div>
 
-<div class="card-deck pb-3">
+<div class="card-deck pb-5">
     <div class="card">
         <div class="card-header">
             3. Plugin downloaden
@@ -74,7 +69,7 @@ Wir werden alle drei Wege mit dir gehen.
         </a>
         <div class="card-body">
             <p class="card-text">
-                Klicke dann auf <kbd>Installieren / Deinstallieren</kdb> und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann eingerichtet werden
+                Klicke dann auf <kbd>Installieren / Deinstallieren</kbd> und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann eingerichtet werden
             </p>      
         </div>
     </div>
