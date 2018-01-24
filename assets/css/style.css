@@ -33,31 +33,42 @@ body {
 	color: #007bff;
 }
 
-.sidebar-button h6 {
+.header-button h6 {
     margin-bottom: 0;
 }
 
-.sidebar-button small {
+.header-button small {
     display: block;
 }
 
-.sidebar-header .sidebar-title {
+.page-header .header-title {
 	font-weight: 300;
 	font-size: 24px;
 	margin-bottom: 0;
 }
 
-.sidebar-header .sidebar-description {
+.page-header .header-description {
 	font-weight: 700;
 	color: #666;
 	font-size: 20px;
-}
-
-.sidebar-header {
-	border-bottom: 1px solid #ccc;
 }
 
 .shields-list {
 	padding: 10px 0;
 	margin: 0;
 }
+
+.page-wrap > .row {
+    flex-wrap: nowrap;
+}
+
+.page-wrap .page-sidebar-wrap {
+	flex: 0 0 275px;
+	max-width: 275px;
+}
+
+.page-wrap .page-content-wrap {
+	flex: 1 100%;
+	max-width: 100%;
+}
+

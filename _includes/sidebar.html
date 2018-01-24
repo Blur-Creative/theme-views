@@ -1,39 +1,5 @@
 <nav class="page-sidebar" id="sidemenu">
     
-    <header class="sidebar-header pb-3">
-        <h2 class="sidebar-title">
-            {{ site.sidebar_title }}
-        </h2>
-        <div class="sidebar-description">
-            {{ site.sidebar_description }}
-        </div>
-        <ul class="shields-list list-inline">
-            <li class="list-inline-item">
-                <img src="https://img.shields.io/badge/version-{{ site.version }}-brightgreen.svg?style=flat" />
-            </li>
-        </ul>
-        <div class="btn-group sidebar-button-group" role="group" aria-label="Basic example">
-            <a href="https://github.com/Blur-Creative/theme-views/releases/download/v{{ site.version }}/BlurThemeViews.zip"  target="_blank" class="btn btn-light sidebar-button">
-                <h6>
-                    <small>Download</small>
-                    ZIP File
-                </h6>
-            </a>
-            <a href="{{ site.github_url }}" target="_blank" class="btn btn-light sidebar-button">
-                <h6>
-                    <small>View On</small>
-                    GitHub
-                </h6>
-            </a>
-            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="btn btn-light sidebar-button">
-                <h6>
-                    <small>Follow On</small>
-                    Twitter
-                </h6>                
-            </a>
-        </div>
-    </header>
-    
     <nav class="sidebar-nav py-3">
         {%- assign page_slug = page.url | replace: '.html'  -%}
         {%- for group in site.data.nav -%}
