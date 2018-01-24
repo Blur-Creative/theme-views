@@ -17,7 +17,7 @@ Wir werden alle drei Wege mit dir gehen.
 
 ### Über den Shopware Community Store
 
-<div class="card-deck pb-4 pt-5">
+<div class="card-group pb-4 pt-5">
     <div class="card">
         <div class="card-header">
             1. Plugin kaufen
@@ -44,9 +44,6 @@ Wir werden alle drei Wege mit dir gehen.
             </p>      
         </div>
     </div>
-</div>
-
-<div class="card-deck pb-5">
     <div class="card">
         <div class="card-header">
             3. Plugin downloaden
