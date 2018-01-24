@@ -94,3 +94,18 @@ body {
     padding: 30px 50px;
 }
 
+.body-missing {
+	background-color: #f6f6f6;
+	color: #888;
+}
+
+h1 {
+	color: #333;
+	font-weight: 100;
+}
+
+.missing-page-wrap {padding-top: 10rem;padding-bottom: 10rem;}
+
+.missing-page-wrap > .row {
+	align-items: center;
+}
