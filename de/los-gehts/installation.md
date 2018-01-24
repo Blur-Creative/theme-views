@@ -24,23 +24,40 @@ Wir werden alle drei Wege mit dir gehen.
 
 <div class="card-deck">
     <div class="card">
-        <img class="card-img-top" src="scs-theme-views-detail-page.jpg">
+        <a href="scs-theme-views-detail-page.jpg" target="_blank">
+            <img class="card-img-top" src="scs-theme-views-detail-page.jpg">
+        </a>
         <div class="card-body">
+            <p class="card-text">
+               Kaufe das Plugin über den [Shopware Community Store](https://store.shopware.com/blur467826946731/views/responsive-theme.html?number=Blur467826946731f){:target="_blank"}
+            </p>           
         </div>
     </div>
     <div class="card">
         <img class="card-img-top" src="scs-theme-views-confirm-page.jpg">
         <div class="card-body">
+            <p class="card-text">
+                Wenn du den Kauf im Community Store bestätigt hast, logge dich in dein Shop Backend ein und öffne den Plugin-Manager
+            </p>      
         </div>
     </div>
+</div>
+
+<div class="card-deck">
     <div class="card">
         <img class="card-img-top" src="sw-backend-plugin-manager-my-purchase.jpg">
         <div class="card-body">
+            <p class="card-text">
+                Gehe auf `Meine Einkäufe` und anschließend auf das `Plugin Download` Symbol. Gehe danach auf `Installiert`
+            </p>
         </div>
     </div>
     <div class="card">
         <img class="card-img-top" src="sw-backend-plugin-manager-my-plugins.jpg">
         <div class="card-body">
+            <p class="card-text">
+                Klicke dann auf `Installieren / Deinstallieren` (grünes Plus) und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann Eingerichtet werden
+            </p>      
         </div>
     </div>
 </div>
