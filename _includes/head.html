@@ -31,9 +31,22 @@
     });
     
     $(function () {
-        var pageHeight = $(window).height();
-        var headerHeight = $('.page-header').height();
+
         
-        console.log(pageHeight+' '+headerHeight);
+        function calcSidebarHeight() {
+            var pageHeight = $(window).height();
+            var headerHeight = $('.page-header').outerHeight();
+            var sidebarHeight = pageHeight - headerHeight;
+            
+            $('.page-sidebar-wrap').height(sidebarHeight);
+            
+            console.log(pageHeight+' '+headerHeight+''+sidebarHeight);
+        }
+        
+        calcSidebarHeight();
+        
+        $(window).resize(function() {
+            calcSidebarHeight();
+        });
     });   
 </script>
