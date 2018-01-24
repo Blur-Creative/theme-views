@@ -36,11 +36,11 @@
         function calcSidebarHeight() {
             var pageHeight = $(window).height();
             var headerHeight = $('.page-header').outerHeight();
-            var sidebarHeight = pageHeight - headerHeight;
+            var sidebarHeight = pageHeight - headerHeight+'px';
             
-            $('.page-sidebar-wrap').height(sidebarHeight);
+            $('.page-sidebar-wrap').css('min-height', sidebarHeight);
             
-            console.log(pageHeight+' '+headerHeight+''+sidebarHeight);
+            console.log(pageHeight+' '+headerHeight+' '+sidebarHeight);
         }
         
         calcSidebarHeight();
