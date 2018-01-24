@@ -24,22 +24,22 @@ Wir werden alle drei Wege mit dir gehen.
 
 <div class="card-deck">
     <div class="card">
-        <img class="card-img-top" src="{{ imgPath_de }}los-gehts/installation/scs-theme-views-detail-page.jpg">
+        <img class="card-img-top" src="scs-theme-views-detail-page.jpg">
         <div class="card-body">
         </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="{{ imgPath_de }}los-gehts/installation/scs-theme-views-confirm-page.jpg">
+        <img class="card-img-top" src="scs-theme-views-confirm-page.jpg">
         <div class="card-body">
         </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="{{ imgPath_de }}los-gehts/installation/sw-backend-plugin-manager-my-purchase.jpg">
+        <img class="card-img-top" src="sw-backend-plugin-manager-my-purchase.jpg">
         <div class="card-body">
         </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="{{ imgPath_de }}los-gehts/installation/sw-backend-plugin-manager-my-plugins.jpg">
+        <img class="card-img-top" src="sw-backend-plugin-manager-my-plugins.jpg">
         <div class="card-body">
         </div>
     </div>
