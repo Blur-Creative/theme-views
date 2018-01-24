@@ -22,19 +22,27 @@ Wir werden alle drei Wege mit dir gehen.
 3. Gehe auf `Meine Einkäufe` und anschließend auf das `Plugin Download` Symbol. Gehe danach auf `Installiert`
 4. Klicke dann auf `Installieren / Deinstallieren` (grünes Plus) und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann Eingerichtet werden
 
-<div class="card-deck">
+<div class="card-deck pb-3">
     <div class="card">
+        <div class="card-header">
+            1. Plugin kaufen
+        </div>
         <a href="scs-theme-views-detail-page.jpg" target="_blank">
             <img class="card-img-top" src="scs-theme-views-detail-page.jpg">
         </a>
         <div class="card-body">
             <p class="card-text">
-               Kaufe das Plugin über den [Shopware Community Store](https://store.shopware.com/blur467826946731/views/responsive-theme.html?number=Blur467826946731f){:target="_blank"}
+               Kaufe das Plugin über den <a href="https://store.shopware.com/blur467826946731/views/responsive-theme.html?number=Blur467826946731f" target="_blank">Shopware Community Store</a>
             </p>           
         </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="scs-theme-views-confirm-page.jpg">
+        <div class="card-header">
+            2. Kauf bestätigen
+        </div>
+        <a href="scs-theme-views-confirm-page.jpg" target="_blank">
+            <img class="card-img-top" src="scs-theme-views-confirm-page.jpg">
+        </a>
         <div class="card-body">
             <p class="card-text">
                 Wenn du den Kauf im Community Store bestätigt hast, logge dich in dein Shop Backend ein und öffne den Plugin-Manager
@@ -43,20 +51,30 @@ Wir werden alle drei Wege mit dir gehen.
     </div>
 </div>
 
-<div class="card-deck">
+<div class="card-deck pb-3">
     <div class="card">
-        <img class="card-img-top" src="sw-backend-plugin-manager-my-purchase.jpg">
+        <div class="card-header">
+            3. Plugin downloaden
+        </div>
+        <a href="sw-backend-plugin-manager-my-purchase.jpg" target="_blank">
+            <img class="card-img-top" src="sw-backend-plugin-manager-my-purchase.jpg">
+        </a>
         <div class="card-body">
             <p class="card-text">
-                Gehe auf `Meine Einkäufe` und anschließend auf das `Plugin Download` Symbol. Gehe danach auf `Installiert`
+                Gehe auf <kbd>Meine Einkäufe</kbd> und anschließend auf das <kbd>Plugin Download</kbd> Symbol. Gehe danach auf <kbd>Installiert</kbd>
             </p>
         </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="sw-backend-plugin-manager-my-plugins.jpg">
+        <div class="card-header">
+            4. Plugin installieren
+        </div>
+        <a href="sw-backend-plugin-manager-my-plugins.jpg" target="_blank">
+            <img class="card-img-top" src="sw-backend-plugin-manager-my-plugins.jpg">
+        </a>
         <div class="card-body">
             <p class="card-text">
-                Klicke dann auf `Installieren / Deinstallieren` (grünes Plus) und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann Eingerichtet werden
+                Klicke dann auf <kbd>Installieren / Deinstallieren</kdb> und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann eingerichtet werden
             </p>      
         </div>
     </div>
