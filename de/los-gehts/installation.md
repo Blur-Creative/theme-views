@@ -17,7 +17,7 @@ Wir werden alle drei Wege mit dir gehen.
 
 ### Über den Shopware Community Store
 
-<div class="card-group pb-4 pt-5">
+<div class="card-group pb-5 pt-4">
     <div class="card">
         <div class="card-header">
             1. Plugin kaufen
@@ -53,7 +53,7 @@ Wir werden alle drei Wege mit dir gehen.
         </a>
         <div class="card-body">
             <p class="card-text">
-                Gehe auf <kbd>Meine Einkäufe</kbd> und anschließend auf das <kbd>Plugin Download</kbd> Symbol. Gehe danach auf <kbd>Installiert</kbd>
+                Gehe auf <code>Meine Einkäufe</code> und anschließend auf das <code>Plugin Download</code> Symbol. Gehe danach auf <code>Installiert</code>
             </p>
         </div>
     </div>
@@ -66,7 +66,7 @@ Wir werden alle drei Wege mit dir gehen.
         </a>
         <div class="card-body">
             <p class="card-text">
-                Klicke dann auf <kbd>Installieren / Deinstallieren</kbd> und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann eingerichtet werden
+                Klicke dann auf <code>Installieren / Deinstallieren</code> und aktiviere das Theme. Dann sollte es im Theme-Manager erscheinen und kann eingerichtet werden
             </p>      
         </div>
     </div>
