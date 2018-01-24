@@ -44,3 +44,5 @@ plugins:
 # Custom Variables
 sidebar_title: Views Theme
 sidebar_description: Dokumentation
+
+imgPath_de: /assets/img/de/
