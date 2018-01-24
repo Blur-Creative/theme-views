@@ -27,6 +27,13 @@
 
 <script>
     $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    
+    $(function () {
+        var pageHeight = $(window).height();
+        var headerHeight = $('.page-header').height();
+        
+        console.log(pageHeight+' '+headerHeight);
+    });   
 </script>

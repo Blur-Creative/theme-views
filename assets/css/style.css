@@ -33,6 +33,15 @@ body {
 	color: #007bff;
 }
 
+.header-brand {
+	flex: 0 0 275px;
+	max-width: 275px;
+}
+
+.header-button-group {
+	margin-left: auto;
+}
+
 .header-button h6 {
     margin-bottom: 0;
 }
@@ -41,16 +50,26 @@ body {
     display: block;
 }
 
+.page-header {
+	background-color: #361E47;
+	display: flex;
+	padding: 10px 15px;
+	align-items: center;
+}
+
+
 .page-header .header-title {
 	font-weight: 300;
 	font-size: 24px;
 	margin-bottom: 0;
+    color: #fff;
 }
 
 .page-header .header-description {
 	font-weight: 700;
 	color: #666;
 	font-size: 20px;
+    color: #fff;
 }
 
 .shields-list {
@@ -65,10 +84,13 @@ body {
 .page-wrap .page-sidebar-wrap {
 	flex: 0 0 275px;
 	max-width: 275px;
+    border-right: 1px solid #ddd;
+    padding-top: 15px;
 }
 
 .page-wrap .page-content-wrap {
 	flex: 1 100%;
 	max-width: 100%;
+    padding: 30px 50px;
 }
 
