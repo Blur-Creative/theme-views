@@ -511,3 +511,15 @@
 		}
 	}
 }
+
+.vendor--info {
+    
+    .vendor--image-wrapper {
+        .flexbox-container(@align: center);
+        background-color: @manufacturer-background-color;
+        .unitize(padding, @grid-gutter-size);
+        .unitize(border-radius, @border-radius-sm);
+        .unitize(max-height, 200);
+        height: auto;      
+    }
+}
