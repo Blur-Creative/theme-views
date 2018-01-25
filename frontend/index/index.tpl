@@ -224,6 +224,18 @@
 												{if $theme.payment_option_bitcoin}
 													<li><img src="{link file='frontend/_public/src/img/icons/payment/bitcoin.png'}" /></li>
 												{/if}
+												{if $theme.payment_option_klarna}
+													<li><img src="{link file='frontend/_public/src/img/icons/payment/klarna.png'}" /></li>
+												{/if}
+												{if $theme.payment_option_skrill}
+													<li><img src="{link file='frontend/_public/src/img/icons/payment/skrill.png'}" /></li>
+												{/if}
+												{if $theme.payment_option_giropay}
+													<li><img src="{link file='frontend/_public/src/img/icons/payment/giropay.png'}" /></li>
+												{/if}
+												{if $theme.payment_option_paysafecard}
+													<li><img src="{link file='frontend/_public/src/img/icons/payment/paysafecard.png'}" /></li>
+												{/if}
 											</ul>
 										</div>
 									{/if}

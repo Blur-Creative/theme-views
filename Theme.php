@@ -6307,13 +6307,45 @@ SHOPWARE_EOD;
 			['attributes' => ['lessCompatible' => false]]
 		);		
 
-		// Create Sofort Überweisung checkbkox
+		// Create Bitcoin checkbkox
 		$bitcoinCheckbox = $this->createCheckboxField(
 			'payment_option_bitcoin',
 			'__payment_options_bitcoin_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);				
+		);
+        
+		// Create Klarna checkbkox
+		$klarnaCheckbox = $this->createCheckboxField(
+			'payment_option_klarna',
+			'__payment_options_klarna_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);	
+        
+		// Create Skrill checkbkox
+		$skrillCheckbox = $this->createCheckboxField(
+			'payment_option_skrill',
+			'__payment_options_skrill_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);
+        
+		// Create Giropay checkbkox
+		$giropayCheckbox = $this->createCheckboxField(
+			'payment_option_giropay',
+			'__payment_options_giropay_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);	
+        
+		// Create Paysafecard checkbkox
+		$paysafecardCheckbox = $this->createCheckboxField(
+			'payment_option_paysafecard',
+			'__payment_options_paysafecard_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);	
 		
 		// Adding the fields to the fieldset
 		$fieldset->addElement($paymentsActiveCheckbox);
@@ -6329,6 +6361,10 @@ SHOPWARE_EOD;
 		$fieldset->addElement($amznpayCheckbox);
 		$fieldset->addElement($sofortpayCheckbox);
 		$fieldset->addElement($bitcoinCheckbox);
+		$fieldset->addElement($klarnaCheckbox);
+		$fieldset->addElement($skrillCheckbox);
+		$fieldset->addElement($giropayCheckbox);
+		$fieldset->addElement($paysafecardCheckbox);
 
 		return $fieldset;
 	}
