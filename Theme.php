@@ -6445,6 +6445,30 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
+		
+		// Create Austria Mail Überweisung checkbkox
+		$austriamailCheckbox = $this->createCheckboxField(
+			'shipping_option_austriamail',
+			'__shipping_options_austriamail_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);
+        
+		// Create Swiss Mail Überweisung checkbkox
+		$swissmailCheckbox = $this->createCheckboxField(
+			'shipping_option_swissmail',
+			'__shipping_options_swissmail_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);
+        
+		// Create Liefery Überweisung checkbkox
+		$lieferyCheckbox = $this->createCheckboxField(
+			'shipping_option_liefery',
+			'__shipping_options_liefery_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);
 	
 		// Adding the fields to the fieldset
 		$fieldset->addElement($shippingsActiveCheckbox);
@@ -6454,6 +6478,9 @@ SHOPWARE_EOD;
 		$fieldset->addElement($glsCheckbox);
 		$fieldset->addElement($upsCheckbox);
 		$fieldset->addElement($fedexCheckbox);
+		$fieldset->addElement($austriamailCheckbox);
+		$fieldset->addElement($swissmailCheckbox);
+		$fieldset->addElement($lieferyCheckbox);
 
 		return $fieldset;
 	}

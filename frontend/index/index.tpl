@@ -267,6 +267,15 @@
 												{if $theme.shipping_option_fedex}
 													<li><img src="{link file='frontend/_public/src/img/icons/shipping/fedex.png'}" /></li>
 												{/if}
+												{if $theme.shipping_option_austriamail}
+													<li><img src="{link file='frontend/_public/src/img/icons/shipping/austria-mail.png'}" /></li>
+												{/if}
+												{if $theme.shipping_option_swissmail}
+													<li><img src="{link file='frontend/_public/src/img/icons/shipping/swiss-mail.png'}" /></li>
+												{/if}
+												{if $theme.shipping_option_liefery}
+													<li><img src="{link file='frontend/_public/src/img/icons/shipping/liefery.png'}" /></li>
+												{/if}
 											</ul>
 										</div>
 									{/if}
