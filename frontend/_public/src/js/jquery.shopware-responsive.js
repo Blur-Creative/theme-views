@@ -41,7 +41,7 @@
 		
         $('.table--shipping-costs-trigger').on('click touchstart', function () {
             var $this = $(this),
-                $next = $this.next()
+                $next = $this.next();
 
 			
 			if ($next.hasClass('is--hidden')) {
@@ -52,6 +52,8 @@
         });
 		
 		$('*[data-popover="true"]').webuiPopover();
+        
+		$('*[data-tooltip="true"]').tooltipster();
 		
 		jQuery(document).ready(function() {
 			$(".listing .product--box .product--description").dotdotdot({
@@ -68,16 +70,18 @@
 			}
 		});
 		
-		// Ajax cart amount display
-        function initDotdotdot() {
+		// init jQuery Plugins if Infinite Scrolling is triggered
+        function initPlugins() {
 			$(".product--box .product--description").dotdotdot({
 				watch: "window"
 			});
+            
+            $('*[data-tooltip="true"]').tooltipster();
         }
 		
-		$.subscribe('plugin/swInfiniteScrolling/onFetchNewPageLoaded', initDotdotdot);
-		$.subscribe('plugin/swInfiniteScrolling/onFetchNewPageFinished', initDotdotdot);
-		$.subscribe('plugin/swInfiniteScrolling/onLoadPreviousFinished', initDotdotdot);
+		$.subscribe('plugin/swInfiniteScrolling/onFetchNewPageLoaded', initPlugins);
+		$.subscribe('plugin/swInfiniteScrolling/onFetchNewPageFinished', initPlugins);
+		$.subscribe('plugin/swInfiniteScrolling/onLoadPreviousFinished', initPlugins);
 
 		//Scroll To Top 
 		$(document).ready(function(){

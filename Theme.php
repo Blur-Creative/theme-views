@@ -26,6 +26,11 @@ SHOPWARE_EOD;
 property
 SHOPWARE_EOD;
 
+    /** @var array Defines the files which should be compiled by the javascript compressor */
+    protected $css = array(
+        'vendors/css/tooltipster.bundle.css'
+    );
+
     /**
      * Javascript files which will be used in the theme
      *
@@ -36,6 +41,7 @@ SHOPWARE_EOD;
         'vendors/js/jquery.dotdotdot.min.js',
 		'vendors/js/jquery.webui-popover.js',
 		'vendors/js/jquery.matchHeight-min.js',
+		'vendors/js/tooltipster.bundle.js',
         
 		'src/js/jquery.button-toggle.js',
 		'src/js/jquery.panel-auto-resizer.js',
@@ -5907,6 +5913,7 @@ SHOPWARE_EOD;
 		$tabPanel->addTab($this->createUspBarTab());
 		$tabPanel->addTab($this->createScrollToTopTab());
 		$tabPanel->addTab($this->createCookiePermissionTab());
+		$tabPanel->addTab($this->createProductOptionsTab());
 		
         return $tabPanel;
     }
@@ -7099,6 +7106,63 @@ SHOPWARE_EOD;
 				$this->themeColorDefaults['cookie-permission-color']
             )
         );
+		
+		return $fieldset;
+	}
+    
+	public function createProductOptionsTab()
+	{
+		
+		// Create the Tab
+		$tab = $this->createTab(
+			'product_options_tab',
+			'__product_options_tab__',
+			array(
+				'attributes' => array(
+					'layout' => 'anchor',
+					'flex' => 1,
+					'autoScroll' => true,
+				)
+			)
+		);	
+		
+		$tab->addElement($this->createProductBoxDeliveryDisplay());
+
+		return $tab;
+	}
+	
+	public function createProductBoxDeliveryDisplay()
+	{
+		
+		// Create the fieldset which is the container of our field
+		$fieldset = $this->createFieldSet(
+			'product_box_delivery_display_options',
+			'__product_box_delivery_display_options__',
+			array(
+				'attributes' => array(
+					'layout' => 'column',
+					'flex' => 0,
+					'autoScroll' => true,
+					'defaults' => array(
+						'columnWidth' => 0.5,
+						'labelWidth' => 150,
+						'margin' => '5 15 5 0'
+					)
+				)
+			)
+		);
+
+        $fieldset->addElement(
+            $this->createCheckboxField(
+                'product_box_delivery_display_active',
+                '__product_box_delivery_display_active__',
+                true,
+				[
+					'attributes' => 
+						$this->getLabelAttribute('product_box_delivery_display_active_description')
+				]
+            )
+        );	     
 		
 		return $fieldset;
 	}

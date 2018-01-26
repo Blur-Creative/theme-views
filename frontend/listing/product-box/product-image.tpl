@@ -13,4 +13,11 @@
 			<span class="soldout--overlay"></span>
 		{/if}
 	{/block}
+    
+    {* Delivery informations *}
+    {if $theme.product_box_delivery_display_active}
+        {if ($sArticle.sConfiguratorSettings.type != 1 && $sArticle.sConfiguratorSettings.type != 2) || $activeConfiguratorSelection == true}
+            {include file="frontend/plugins/index/delivery_informations.tpl" sArticle=$sArticle productBox=true}
+        {/if}
+    {/if}
 {/block}

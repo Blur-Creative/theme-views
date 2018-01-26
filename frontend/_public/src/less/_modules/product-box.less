@@ -29,6 +29,33 @@
 		}
 	}
 	
+    .product--delivery {
+        position: absolute;
+        .unitize(right, (@grid-gutter-size / 2));
+        .unitize(bottom, (@grid-gutter-size / 2));
+        z-index: 800;
+        
+        .delivery--icon {
+            display: block;
+            .unitize(width, @icon-size-sm);
+            .unitize(height, @icon-size-sm);
+            border-radius: 50%;
+            background-color: @highlight-info;
+            
+            &.available {
+                background-color: @highlight-success;
+            }
+            
+            &.more-is-coming {
+                background-color: @highlight-notice;
+            }
+            
+            &.not-available {
+                background-color: @highlight-error;
+            }
+        }
+    }
+    
 	.soldout--overlay {
 		display:block;
 		background-color: #000;
