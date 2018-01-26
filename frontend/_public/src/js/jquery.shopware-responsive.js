@@ -82,6 +82,8 @@
 		$.subscribe('plugin/swInfiniteScrolling/onFetchNewPageLoaded', initPlugins);
 		$.subscribe('plugin/swInfiniteScrolling/onFetchNewPageFinished', initPlugins);
 		$.subscribe('plugin/swInfiniteScrolling/onLoadPreviousFinished', initPlugins);
+        $.subscribe('plugin/swProductSlider/onLoadItemsSuccess', initPlugins);
+        $.subscribe('plugin/swEmotionLoader/onLoadEmotionFinished', initPlugins);
 
 		//Scroll To Top 
 		$(document).ready(function(){
