@@ -387,6 +387,10 @@
 		
 		.product--delivery {
 			.unitize(margin-bottom, @padding-lg-vertical);
+            
+            .delivery--text {
+                .unitize(font-size, @font-size-lg);
+            }
 		}
 		
 		.product--configurator {
@@ -584,7 +588,6 @@
 					line-height: @line-height-base;
 					
 					.icon-node {
-						//.unitize(margin-right, @padding-sm-horizontal);	
 						.unitize(font-size, @icon-size-base);	
 						.inline-valign-center;
 						.position(relative,-1px,auto,auto,auto);
