@@ -7211,6 +7211,7 @@ SHOPWARE_EOD;
 		);	
 		
 		$tab->addElement($this->createLayoutGeneralOptionsFieldset());
+		$tab->addElement($this->createSearchLayoutOptionsFieldset());
 
 		return $tab;
 	}
@@ -7255,6 +7256,44 @@ SHOPWARE_EOD;
 				'__body_background_image__',
 				'',
 				['attributes' => ['lessCompatible' => false]]
+			)
+		);
+		
+		return $fieldset;
+	}
+	
+	public function createSearchLayoutOptionsFieldset()
+	{
+		
+		// Create the fieldset which is the container of our field
+		$fieldset = $this->createFieldSet(
+			'search_layout_options',
+			'__search_layout_options__',
+			array(
+				'attributes' => array(
+					'layout' => 'column',
+					'flex' => 0,
+					'autoScroll' => true,
+					'defaults' => array(
+						'columnWidth' => 1,
+						'labelWidth' => 150,
+						'margin' => '5 15 5 0'
+					)
+				)
+			)
+		);
+
+		$fieldset->addElement(
+			$this->createSelectField(
+				'search_layout_product_box',
+				'__search_layout_product_box__',
+                '',
+                [
+                    ['value' => '', 'text' => '__search_layout_product_box_basic__'],
+                    ['value' => 'minimal', 'text' => '__search_layout_product_box_minimal__'],
+                    ['value' => 'image', 'text' => '__search_layout_product_box_image__'],
+                    ['value' => 'list', 'text' => '__search_layout_product_box_list__']
+                ]			
 			)
 		);
 		
