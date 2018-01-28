@@ -6535,7 +6535,7 @@ SHOPWARE_EOD;
 			)
 		);
 
-		// Create Sofort Überweisung checkbkox
+		// Create Facebook URL
 		$socialsFacebookUrl = $this->createTextField(
 			"socials_option_facebook",
 			"__socials_option_facebook_label__",
@@ -6543,7 +6543,7 @@ SHOPWARE_EOD;
 			['attributes' => ['lessCompatible' => false]]
 		);	
 		
-		// Create Sofort Überweisung checkbkox
+		// Create Twitter URL
 		$socialsTwitterUrl = $this->createTextField(
 			"socials_option_twitter",
 			"__socials_option_twitter_label__",
@@ -6551,7 +6551,7 @@ SHOPWARE_EOD;
 			['attributes' => ['lessCompatible' => false]]
 		);	
 		
-		// Create Sofort Überweisung checkbkox
+		// Create Instagram URL
 		$socialsInstagramUrl = $this->createTextField(
 			"socials_option_instagram",
 			"__socials_option_instagram_label__",
@@ -6559,10 +6559,34 @@ SHOPWARE_EOD;
 			['attributes' => ['lessCompatible' => false]]
 		);	
 		
-		// Create Sofort Überweisung checkbkox
+		// Create YouTube URL
 		$socialsYoutubeUrl = $this->createTextField(
 			"socials_option_youtube",
 			"__socials_option_youtube_label__",
+			'',
+			['attributes' => ['lessCompatible' => false]]
+		);	
+		
+		// Create Google+ URL
+		$socialsGoogleplusUrl = $this->createTextField(
+			"socials_option_googleplus",
+			"__socials_option_googleplus_label__",
+			'',
+			['attributes' => ['lessCompatible' => false]]
+		);	
+		
+		// Create Pinterest URL
+		$socialsPinterestUrl = $this->createTextField(
+			"socials_option_pinterest",
+			"__socials_option_pinterest_label__",
+			'',
+			['attributes' => ['lessCompatible' => false]]
+		);	
+		
+		// Create Xing URL
+		$socialsXingUrl = $this->createTextField(
+			"socials_option_xing",
+			"__socials_option_xing_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
 		);	
@@ -6572,6 +6596,9 @@ SHOPWARE_EOD;
 		$fieldset->addElement($socialsTwitterUrl);
 		$fieldset->addElement($socialsInstagramUrl);
 		$fieldset->addElement($socialsYoutubeUrl);
+		$fieldset->addElement($socialsGoogleplusUrl);
+		$fieldset->addElement($socialsPinterestUrl);
+		$fieldset->addElement($socialsXingUrl);
 
 		return $fieldset;
 	}

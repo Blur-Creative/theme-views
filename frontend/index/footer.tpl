@@ -16,7 +16,7 @@
     <div class="footer--bottom">
 
 		{block name='frontend_index_footer_social_media'}
-			{if $theme.socials_option_facebook!="" or $theme.socials_option_instagram!="" or $theme.socials_option_twitter!="" or $theme.socials_option_youtube!=""}
+			{if $theme.socials_option_facebook!="" or $theme.socials_option_instagram!="" or $theme.socials_option_twitter!="" or $theme.socials_option_youtube!="" or $theme.socials_option_googleplus!="" or $theme.socials_option_pinterest!="" or $theme.socials_option_xing!=""}
 				<div class="footer--social-media container">
 					<ul class="list-inline text--center">
 						{if $theme.socials_option_facebook!=""}
@@ -30,6 +30,15 @@
 						{/if}
 						{if $theme.socials_option_youtube!=""}
 							<li><a href="{$theme.socials_option_youtube}" target="_blank"><span class="icon-node icon-youtube-new"></span></a></li>
+						{/if}
+						{if $theme.socials_option_googleplus!=""}
+							<li><a href="{$theme.socials_option_googleplus}" target="_blank"><span class="icon-node icon-google-plus"></span></a></li>
+						{/if}
+						{if $theme.socials_option_pinterest!=""}
+							<li><a href="{$theme.socials_option_pinterest}" target="_blank"><span class="icon-node icon-pinterest"></span></a></li>
+						{/if}
+						{if $theme.socials_option_xing!=""}
+							<li><a href="{$theme.socials_option_xing}" target="_blank"><span class="icon-node icon-xing"></span></a></li>
 						{/if}
 					</ul>
 				</div>
