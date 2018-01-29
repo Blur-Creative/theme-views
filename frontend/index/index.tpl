@@ -219,7 +219,7 @@
 													<li><img src="{link file='frontend/_public/src/img/icons/payment/amazonpay.png'}" /></li>
 												{/if}
 												{if $theme.payment_option_sofort}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/sofort_ueberweisung.png'}" /></li>
+													<li><img src="{link file='frontend/_public/src/img/icons/payment/sofort.png'}" /></li>
 												{/if}
 												{if $theme.payment_option_bitcoin}
 													<li><img src="{link file='frontend/_public/src/img/icons/payment/bitcoin.png'}" /></li>
