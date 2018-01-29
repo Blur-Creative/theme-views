@@ -1,3 +1,6 @@
+@product-badge-shippingfree-bg:             #2685c5;
+@product-badge-shippingfree-color:          #ffffff;
+
 .product--box {
 	color: @text-color;
     min-width: 0;
@@ -70,54 +73,84 @@
 		.unitize(bottom, 0);
 		.unitize(left, 0);
 		.unitize(right, 0);
+		.unitize(padding-top, @padding-base-vertical);
 		text-transform: uppercase;
 		display: block;
+        
+        .product--badges-left {
+            display: block; 
+            float: left;      
+        }
+        
+        .product--badges-right {
+            display: block;
+            float: right;
+            text-align: right;
+            white-space: normal;
+            
+            .product--badge {
+                float: right;
+            }
+        }
 		
 		.product--badge {
+            display: inline-block;
 			border-radius: 0;
 			.unitize-padding(@padding-xs-vertical, @padding-sm-horizontal);
 			.unitize(font-size, @font-size-sm);
 			.unitize(min-width, 55);
 			line-height: @line-height-lg;
+            
+            .icon-node {
+                font-size: 16px;
+                margin-right: 5px;
+                vertical-align: top;
+            }
+            
+            .text-node {
+                line-height: 1;
+                vertical-align: unset;
+            }
 			
-			&.badge--discount {
-				position: absolute;
-				.unitize(top, @padding-base-vertical);	
-				.unitize(right, 0);	
+			&.badge--discount {	
 				background-color: @product-badge-discount-bg;		
 				color: @product-badge-discount-color;				
 			}
 			
 			&.badge--soldout {
-				position: absolute;
-				.unitize(top, @padding-base-vertical);	
-				.unitize(right, 0);	
 				background-color: @product-badge-soldout-bg;	
 				color: @product-badge-soldout-color;				
 			}
+			
+			&.badge--shippingfree {
+				background-color: @product-badge-shippingfree-bg;	
+				color: @product-badge-shippingfree-color;				
+			}
 
 			&.badge--newcomer {
-				position: absolute;
-				.unitize(top, @padding-base-vertical);	
 				background-color: @product-badge-newcomer-bg;	
 				color: @product-badge-newcomer-color;
 			}
 			
 			&.badge--recommend {
-				.unitize(top, 40);	
 				background-color: @product-badge-recommend-bg;
 				color: @product-badge-recommend-color;
 			}
 			
 			&.badge--esd {
 				position: absolute;
-				right: 0;
-				bottom: 0;
+                .unitize(left, 0);
+                .unitize(bottom, 0);
 				background-color: @product-badge-download-bg;
 				color: @product-badge-download-color;
-				.unitize(font-size, @icon-size-xl);
 				.unitize(margin, 0);
 				.unitize-padding(@padding-sm-vertical, @padding-sm-horizontal);
+                line-height: 1;
+                
+                .icon-node {
+                    .unitize(font-size, @icon-size-xl);
+                    .unitize(margin, 0);
+                }
 			}
 		}
 	}

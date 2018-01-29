@@ -7154,6 +7154,7 @@ SHOPWARE_EOD;
 		);	
 		
 		$tab->addElement($this->createProductBoxDeliveryDisplay());
+		$tab->addElement($this->createProductBoxAdvancedBadges());
 
 		return $tab;
 	}
@@ -7188,6 +7189,38 @@ SHOPWARE_EOD;
 					'attributes' => 
 						$this->getLabelAttribute('product_box_delivery_display_active_description')
 				]
+            )
+        );	     
+		
+		return $fieldset;
+	}
+	
+	public function createProductBoxAdvancedBadges()
+	{
+		
+		// Create the fieldset which is the container of our field
+		$fieldset = $this->createFieldSet(
+			'product_box_advanced_badges_options',
+			'__product_box_advanced_badges_options__',
+			array(
+				'attributes' => array(
+					'layout' => 'column',
+					'flex' => 0,
+					'autoScroll' => true,
+					'defaults' => array(
+						'columnWidth' => 0.25,
+						'labelWidth' => 150,
+						'margin' => '5 15 5 0'
+					)
+				)
+			)
+		);
+
+        $fieldset->addElement(
+            $this->createCheckboxField(
+                'product_box_free_shipping_active',
+                '__product_box_free_shipping_active__',
+                true
             )
         );	     
 		
