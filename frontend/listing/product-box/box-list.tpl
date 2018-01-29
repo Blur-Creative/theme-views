@@ -20,39 +20,39 @@
 		<div class="product--data">
 		
 			<div class="product--box-header">
-			
-				{* Product name *}
-				{block name='frontend_listing_box_article_name'}
-					<a href="{$sArticle.linkDetails}"
-					   class="product--title"
-					   title="{$sArticle.articleName|escapeHtml}">
-						{$sArticle.articleName|truncate:50|escapeHtml}
-					</a>
-				{/block}
-				
-				{block name='frontend_listing_box_article_price_info'}
-					<div class="product--price-info">
-
-						{* Product price - Unit price *}
-						{block name='frontend_listing_box_article_unit'}
-							{include file="frontend/listing/product-box/product-price-unit.tpl"}
-						{/block}
-
-						{* Product price - Default and discount price *}
-						{block name='frontend_listing_box_article_price'}
-							{include file="frontend/listing/product-box/product-price.tpl"}
-						{/block}
-					</div>
-				{/block}
-			
+                <div class="product--box-header-infos">
+                    {* Product name *}
+                    {block name='frontend_listing_box_article_name'}
+                        <a href="{$sArticle.linkDetails}"
+                           class="product--title"
+                           title="{$sArticle.articleName|escapeHtml}">
+                            {$sArticle.articleName|truncate:50|escapeHtml}
+                        </a>
+                    {/block}
+                    
+                    {* Product description *}
+                    {block name='frontend_listing_box_article_description'}
+                        <div class="product--description">
+                            {$sArticle.description_long|strip_tags|truncate:240}
+                        </div>
+                    {/block}
+                </div>
+                
+                {block name='frontend_listing_box_article_price_info'}
+                    <div class="product--price-info">
+    
+                        {* Product price - Unit price *}
+                        {block name='frontend_listing_box_article_unit'}
+                            {include file="frontend/listing/product-box/product-price-unit.tpl"}
+                        {/block}
+    
+                        {* Product price - Default and discount price *}
+                        {block name='frontend_listing_box_article_price'}
+                            {include file="frontend/listing/product-box/product-price.tpl"}
+                        {/block}
+                    </div>
+                {/block}
 			</div>
-
-			{* Product description *}
-			{block name='frontend_listing_box_article_description'}
-				<div class="product--description">
-					{$sArticle.description_long|strip_tags|truncate:240}
-				</div>
-			{/block}
 			
 			{block name="frontend_listing_box_article_buy"}
 				{if {config name="displayListingBuyButton"}}

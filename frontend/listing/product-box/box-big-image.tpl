@@ -33,7 +33,13 @@
 						</div>
 					{/if}
 				{/block}
+                
+                {* Product price - Unit price *}
+                {block name='frontend_listing_box_article_unit'}
+                    {include file="frontend/listing/product-box/product-price-unit.tpl"}
+                {/block}
 
+                {* Product Action Button *}
 				{block name="frontend_listing_box_article_buy"}
 					{if {config name="displayListingBuyButton"}}
 						<div class="product--btn-container">
@@ -58,11 +64,6 @@
 
 			{block name='frontend_listing_box_article_price_info'}
 				<div class="product--price-info">
-
-					{* Product price - Unit price *}
-					{block name='frontend_listing_box_article_unit'}
-						{include file="frontend/listing/product-box/product-price-unit.tpl"}
-					{/block}
 
 					{* Product price - Default and discount price *}
 					{block name='frontend_listing_box_article_price'}
