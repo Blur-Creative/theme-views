@@ -414,6 +414,8 @@ SHOPWARE_EOD;
 		'product-badge-download-color' => '#2685c5',
 		'product-badge-soldout-bg' => '#eeeeee',
 		'product-badge-soldout-color' => '#666666',
+		'product-badge-shippingfree-bg' => '#2685c5',
+		'product-badge-shippingfree-color' => '@text-color-light',
 		//product box minimal image height
 		'product-box-minimal-image-height-phone' => '200',
 		'product-box-minimal-image-height-phone-landscape' => '200',
@@ -5308,6 +5310,28 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@product-badge-soldout-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'product-badge-shippingfree-bg',
+                '__product-badge-shippingfree-bg__',
+                $this->themeColorDefaults['product-badge-shippingfree-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@product-badge-shippingfree-bg']
+                ] 
+            )
+        );	
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'product-badge-shippingfree-color',
+                '__product-badge-shippingfree-color__',
+                $this->themeColorDefaults['product-badge-shippingfree-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@product-badge-shippingfree-color']
                 ] 
             )
         );			

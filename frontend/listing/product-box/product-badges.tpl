@@ -65,8 +65,6 @@
             {/if}
         {/block}        
     </span>
-    
-    {debug}
 {/block}
 
 
