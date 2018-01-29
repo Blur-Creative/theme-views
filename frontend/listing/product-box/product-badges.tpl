@@ -46,6 +46,16 @@
                 {/if}
             {/block}
             
+            {* in Stock badge *}
+            {block name='frontend_listing_box_article_instock'}
+                {if $sArticle.instock > 0 and $theme.product_box_in_stock_active}
+                    <span class="product--badge badge--instock">
+                        <span class="icon-node icon-package-steamed"></span>
+                        <span class="text-node">{$sArticle.instock}</span>
+                    </span>
+                {/if}
+            {/block}  
+            
             {* Sold Out badge *}
             {block name='frontend_listing_box_article_soldout'}
                 {if $sArticle.isAvailable==false and $sArticle.instock==0}
@@ -65,6 +75,8 @@
             {/if}
         {/block}        
     </span>
+    
+    {debug}
 {/block}
 
 
