@@ -1,3 +1,32 @@
+v1.2.5
+----------
+**Versions-Highlights:**
+- Lieferzeitanzeige in den Produkt-Boxen wurde hinzugefügt (z.b. Listing, Suche, Slider, Einkaufswelt). Konfigurierbar in den Theme-Einstellungen unter `Views Theme Optionen -> Produkt`
+- Erweiterte Produkt Badges in den Produkt-Boxen wurde hinzugefügt (z.b. Listing, Suche, Slider, Einkaufswelt). Konfigurierbar in den Theme-Einstellungen unter `Views Theme Optionen -> Produkt`
+- Das Produkt-Box Layout für die Produktsuche kann nun konfiguriert werden
+- Neue Zahlungs- / Versand-Icons wurden hinzugefügt
+- Social Media Icons wurden hinzugefügt
+
+**behobene Probleme und Verbesserungen:**
+- issue #41: Erweiterte Produkt Badges wurden hinzugefügt
+- issue #59: 'Sofort-Überweisung' Icon wurde durch neues 'Sofort' Logo ersetzt
+- issue #57: Preis-Einheit Anzeige in den Produkt Boxen wurde angepasst
+- issue #42: Das Produkt-Box Layout für die Produktsuche kann nun konfiguriert werden
+- issue #44: Pinterest wurde den Social Media Icons hinzugefügt
+- issue #45: Xing wurde den Social Media Icons hinzugefügt
+- issue #45: Google+ wurde den Social Media Icons hinzugefügt
+- issue #40: Lieferzeitanzeige in den Produkt-Boxen wurde hinzugefügt
+- issue #34: Darstellung der Buttons mit einem Icon wurde verbessert
+- issue #36: Darstellung des Hersteller Bildes im Listing wurde verbessert
+- issue #35: Darstellung des Hersteller Bildes im Hersteller-Slider wurde verbessert
+- issue #47: 'Liefery' Versand-Icon wurde hinzugefügt
+- issue #37: 'Schweizer Post' Versand-Icon wurde hinzugefügt
+- issue #38: 'Östereichische Post' Versand-Icon wurde hinzugefügt
+- issue #39: 'paysafecard' Zahlart-Icon wurde hinzugefügt
+- issue #52: 'giropay' Zahlart-Icon wurde hinzugefügt
+- issue #50: 'Skrill' Zahlart-Icon wurde hinzugefügt
+- issue #51: 'Klarna' Zahlart-Icon wurde hinzugefügt
+
 v1.2.4
 ----------
 - Es gibt 3 neue Theme Vorlagen (Red Magic, Purple Magic und Green Magic) welche sich an der Vorlage Blur Magic anlehnen
