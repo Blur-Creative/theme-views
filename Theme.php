@@ -418,6 +418,8 @@ SHOPWARE_EOD;
 		'product-badge-shippingfree-color' => '@text-color-light',
 		'product-badge-instock-bg' => '#1bafad',
 		'product-badge-instock-color' => '@text-color-light',
+		'product-badge-brand-bg' => '@brand-secondary',
+		'product-badge-brand-color' => '@text-color-light',
 		//product box minimal image height
 		'product-box-minimal-image-height-phone' => '200',
 		'product-box-minimal-image-height-phone-landscape' => '200',
@@ -5358,7 +5360,29 @@ SHOPWARE_EOD;
                         ['supportText' => '@product-badge-instock-color']
                 ] 
             )
-        );			
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'product-badge-brand-bg',
+                '__product-badge-brand-bg__',
+                $this->themeColorDefaults['product-badge-brand-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@product-badge-brand-bg']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'product-badge-brand-color',
+                '__product-badge-brand-color__',
+                $this->themeColorDefaults['product-badge-brand-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@product-badge-brand-color']
+                ] 
+            )
+        );
 		
         return $fieldSet;
     }
@@ -7275,6 +7299,13 @@ SHOPWARE_EOD;
             $this->createCheckboxField(
                 'product_box_in_stock_active',
                 '__product_box_in_stock_active__',
+                true
+            )
+        );	  
+        $fieldset->addElement(
+            $this->createCheckboxField(
+                'product_box_brand_active',
+                '__product_box_brand_active__',
                 true
             )
         );	     

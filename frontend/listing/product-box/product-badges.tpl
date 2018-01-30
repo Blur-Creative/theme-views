@@ -35,6 +35,15 @@
         </span>
         
         <span class="product--badges-right">
+            {* Manufacturer badge *}
+            {block name='frontend_listing_box_article_brand'}
+                {*if $sArticle.isAvailable==true*}
+                    <span class="product--badge badge--brand">
+                        {$sArticle.supplierName|escape}
+                    </span>
+                {*/if*}
+            {/block}
+            
             {* Discount badge *}
             {block name='frontend_listing_box_article_discount'}
                 {if $sArticle.isAvailable==true}
