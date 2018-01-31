@@ -7,3 +7,5 @@
         perm: los-gehts/einrichtung
 - title: Theme Konfiguration
   perm: theme-konfiguration
+- title: Troubleshooting
+  perm: troubleshooting
