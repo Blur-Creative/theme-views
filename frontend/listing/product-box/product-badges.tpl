@@ -37,11 +37,11 @@
         <span class="product--badges-right">
             {* Manufacturer badge *}
             {block name='frontend_listing_box_article_brand'}
-                {*if $sArticle.isAvailable==true*}
+                {if $theme.product_box_brand_active}
                     <span class="product--badge badge--brand">
                         {$sArticle.supplierName|escape}
                     </span>
-                {*/if*}
+                {/if}
             {/block}
             
             {* Discount badge *}
