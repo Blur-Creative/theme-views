@@ -1,3 +1,8 @@
+v1.2.5.1
+----------
+**Hotfix:**
+- issue #62: Die Hersteller Produkt Badge ignoriert nun nicht mehr die Einstellung in der Theme-Konfiguration
+
 v1.2.5
 ----------
 **Versions-Highlights:**
