@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Troubleshooting
+---
+
 Hier findest du Hilfestellungen zu Problemen die im Theme auftreten können.
 
 ### Fehlende Textbausteine in der Theme-Einstellungen
