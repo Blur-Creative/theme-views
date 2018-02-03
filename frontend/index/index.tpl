@@ -185,100 +185,12 @@
 						<div class="row">
 							<div class="grid-col-sm-6">
 								{block name="frontend_index_footer_payment_infos"}
-									{if $theme.payment_option_active==true}
-										<div class="payment-info">
-											<h2>
-												{s name="sFooterPaymentInfoTitle"}Zahlen Sie mit{/s}
-											</h2>
-											<ul class="list-inline">
-												{if $theme.payment_option_prepayment}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/prepayment.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_bill}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/bill.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_cashondelievery}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/cashondelievery.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_mastercard}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/mastercard.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_visa}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/visa.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_amex}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/amex.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_paypal}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/paypal.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_stripe}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/stripe.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_amazon}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/amazonpay.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_sofort}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/sofort.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_bitcoin}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/bitcoin.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_klarna}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/klarna.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_skrill}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/skrill.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_giropay}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/giropay.png'}" /></li>
-												{/if}
-												{if $theme.payment_option_paysafecard}
-													<li><img src="{link file='frontend/_public/src/img/icons/payment/paysafecard.png'}" /></li>
-												{/if}
-											</ul>
-										</div>
-									{/if}
+                                    {include file="frontend/index/payment-info.tpl"}
 								{/block}
 							</div>
 							<div class="grid-col-sm-6">
 								{block name="frontend_index_footer_shipping_infos"}
-									{if $theme.shipping_option_active==true}
-										<div class="shipping-info">
-											<h2>
-												{s name="sFooterShippingInfoTitle"}Wir versenden mit{/s}
-											</h2>
-											<ul class="list-inline">
-												{if $theme.shipping_option_dpd}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/dpd.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_dhl}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/dhl.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_hermes}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/hermes.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_gls}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/gls.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_ups}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/ups.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_fedex}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/fedex.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_austriamail}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/austria-mail.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_swissmail}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/swiss-mail.png'}" /></li>
-												{/if}
-												{if $theme.shipping_option_liefery}
-													<li><img src="{link file='frontend/_public/src/img/icons/shipping/liefery.png'}" /></li>
-												{/if}
-											</ul>
-										</div>
-									{/if}
+									{include file="frontend/index/shipping-info.tpl"}
 								{/block}
 							</div>
 						</div>
