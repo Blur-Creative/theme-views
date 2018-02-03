@@ -306,17 +306,18 @@
 	}
 	
 	.basket--footer {
+        background-color: @panel-footer-bg;
+        
 		@media (min-width: @phoneLandscapeViewportWidth) {
 			margin-left: 0;
 			margin-right: 0;
-			margin-bottom: 0;
-			background-color: @brand-secondary-dark;
+			margin-bottom: 0;	
 		}
 		
 		@media (min-width: @tabletViewportWidth) {
 			border-color: @border-color-light;
-			border-bottom-left-radius: @border-radius-base;
-			border-bottom-right-radius: @border-radius-base;
+            .unitize(border-bottom-left-radius, @border-radius-base);
+            .unitize(border-bottom-right-radius, @border-radius-base);
 		}
 	}
 	
