@@ -196,6 +196,7 @@ SHOPWARE_EOD;
 		'text-color-danger' => '#ec5114',
 		'link-color' => '#a3c1e0',
 		'text-color-secondary' => '#607891',
+		'base-headline-color' => '@text-color-light',
 		//icon sizes
 		'icon-size-base' => '20',
 		'icon-size-xxs' => '10',
@@ -2699,6 +2700,17 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@link-color']
+                ]  
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'base-headline-color',
+                '__base-headline-color__',
+                $this->themeColorDefaults['base-headline-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@base-headline-color']
                 ]  
             )
         );
