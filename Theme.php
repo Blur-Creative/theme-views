@@ -216,6 +216,7 @@ SHOPWARE_EOD;
 		'button-box-shadow' => '0 0 5px rgba(0, 0, 0, 0.3), inset 1px -2px 0 rgba(255,255,255,.15)',
 		'button-box-shadow-active' => 'inset 5px 5px 8px rgba(0, 0, 0, 0.2), inset -1px 2px 0 rgba(255, 255, 255, 0.15), inset 1px -1px 0 rgba(255, 255, 255, 0.08)',
 		'button-text-shadow' => '1px 1px 0 rgba(0,0,0,.5)',
+		'border-button-text-shadow' => '1px 1px 0 rgba(0,0,0,.5)',
 		//button size base
 		'button-base-font-size' => '@font-size-lg',
 		'button-base-line-height' => '@line-height-base',
@@ -244,37 +245,44 @@ SHOPWARE_EOD;
 		'button-primary-bg' => '#195088',	
 		'button-primary-color' => '@text-color-light',	
 		'button-primary-gardient-start' => 'rgba(255,255,255,0.1)',	
-		'button-primary-gardient-end' => 'rgba(255,255,255,0)',	
+		'button-primary-gardient-end' => 'rgba(255,255,255,0)',
+        'border-button-primary-color' => '@text-color-light',
 		//button secondary
 		'button-secondary-bg' => '@brand-secondary-light',	
 		'button-secondary-color' => '@text-color-light',	
 		'button-secondary-gardient-start' => '@button-primary-gardient-start',	
-		'button-secondary-gardient-end' => '@button-primary-gardient-end',	
+		'button-secondary-gardient-end' => '@button-primary-gardient-end',
+        'border-button-secondary-color' => '@border-button-primary-color',
 		//button danger
 		'button-danger-bg' => '#b0310e',	
 		'button-danger-color' => '@text-color-light',	
 		'button-danger-gardient-start' => '@button-primary-gardient-start',	
-		'button-danger-gardient-end' => '@button-primary-gardient-end',	
+		'button-danger-gardient-end' => '@button-primary-gardient-end',
+        'border-button-danger-color' => '@border-button-primary-color',
 		//button warning
 		'button-warning-bg' => '#ae7300',	
 		'button-warning-color' => '@text-color-light',	
 		'button-warning-gardient-start' => '@button-primary-gardient-start',	
-		'button-warning-gardient-end' => '@button-primary-gardient-end',	
+		'button-warning-gardient-end' => '@button-primary-gardient-end',
+        'border-button-warning-color' => '@border-button-primary-color',
 		//button success
 		'button-success-bg' => '#207100',	
 		'button-success-color' => '@text-color-light',	
 		'button-success-gardient-start' => '@button-primary-gardient-start',	
-		'button-success-gardient-end' => '@button-primary-gardient-end',	
+		'button-success-gardient-end' => '@button-primary-gardient-end',
+        'border-button-success-color' => '@border-button-primary-color',
 		//button info
 		'button-info-bg' => '#007c7b',	
 		'button-info-color' => '@text-color-light',	
 		'button-info-gardient-start' => '@button-primary-gardient-start',	
-		'button-info-gardient-end' => '@button-primary-gardient-end',	
+		'button-info-gardient-end' => '@button-primary-gardient-end',
+        'border-button-info-color' => '@border-button-primary-color',
 		//button default
 		'button-default-bg' => '@brand-secondary-light',	
 		'button-default-color' => '@text-color-light',	
 		'button-default-gardient-start' => '@button-primary-gardient-start',	
-		'button-default-gardient-end' => '@button-primary-gardient-end',	
+		'button-default-gardient-end' => '@button-primary-gardient-end',
+        'border-button-default-color' => '@border-button-primary-color',
 		//panel color
 		'panel-bg' => '@brand-secondary',
 		'panel-border-color' => '@border-color-light',
@@ -3088,6 +3096,17 @@ SHOPWARE_EOD;
                 ] 
             )
         );
+        $fieldSet->addElement(
+            $this->createTextField(
+                'border-button-text-shadow',
+                '__border-button-text-shadow__',
+                $this->themeColorDefaults['border-button-text-shadow'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-text-shadow']
+                ] 
+            )
+        );
 		
         return $fieldSet;
     }
@@ -3415,6 +3434,17 @@ SHOPWARE_EOD;
                 ] 
             )
         );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'border-button-primary-color',
+                '__border-button-primary-color__',
+                $this->themeColorDefaults['border-button-primary-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-primary-color']
+                ] 
+            )
+        );
 
         return $fieldSet;
     }
@@ -3469,6 +3499,17 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@button-secondary-gardient-end']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'border-button-secondary-color',
+                '__border-button-secondary-color__',
+                $this->themeColorDefaults['border-button-secondary-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-secondary-color']
                 ] 
             )
         );
@@ -3529,7 +3570,18 @@ SHOPWARE_EOD;
                 ] 
             )
         );
-
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'border-button-danger-color',
+                '__border-button-danger-color__',
+                $this->themeColorDefaults['border-button-danger-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-danger-color']
+                ] 
+            )
+        );
+        
         return $fieldSet;
     }
 	
@@ -3586,7 +3638,18 @@ SHOPWARE_EOD;
                 ] 
             )
         );
-
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'border-button-warning-color',
+                '__border-button-warning-color__',
+                $this->themeColorDefaults['border-button-warning-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-warning-color']
+                ] 
+            )
+        );
+        
         return $fieldSet;
     }
 	
@@ -3640,6 +3703,17 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@button-success-gardient-end']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'border-button-success-color',
+                '__border-button-success-color__',
+                $this->themeColorDefaults['border-button-success-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-success-color']
                 ] 
             )
         );
@@ -3700,6 +3774,17 @@ SHOPWARE_EOD;
                 ] 
             )
         );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'border-button-info-color',
+                '__border-button-info-color__',
+                $this->themeColorDefaults['border-button-info-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-info-color']
+                ] 
+            )
+        );
 
         return $fieldSet;
     }
@@ -3754,6 +3839,17 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@button-default-gardient-end']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'border-button-default-color',
+                '__border-button-default-color__',
+                $this->themeColorDefaults['border-button-default-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@border-button-default-color']
                 ] 
             )
         );
@@ -7700,12 +7796,19 @@ SHOPWARE_EOD;
 					//button coiors
 					'button-primary-bg' => '@brand-primary',
 					'button-primary-color' => 'rgba(255,255,255,1)',
-                    'button-secondary-color' => '@button-primary-color',		
-                    'button-danger-color' => '@button-primary-color',	
-                    'button-warning-color' => '@button-primary-color',		
-                    'button-success-color' => '@button-primary-color',		
-                    'button-info-color' => '@button-primary-color',		
-                    'button-default-color' => '@button-primary-color',	
+					'border-button-primary-color' => 'rgba(255,255,255,1)',
+                    'button-secondary-color' => '@button-primary-color',
+                    'border-secondary-primary-color' => '@border-button-primary-color',
+                    'button-danger-color' => '@button-primary-color',
+                    'border-danger-primary-color' => '@border-button-primary-color',
+                    'button-warning-color' => '@button-primary-color',
+                    'border-warning-primary-color' => '@border-button-primary-color',
+                    'button-success-color' => '@button-primary-color',
+                    'border-success-primary-color' => '@border-button-primary-color',
+                    'button-info-color' => '@button-primary-color',
+                    'border-info-primary-color' => '@border-button-primary-color',
+                    'button-default-color' => '@button-primary-color',
+                    'border-default-primary-color' => '@border-button-primary-color',
 					//form base style
 					'input-bg' => 'rgba(255,255,255,1)',
                     //product badges

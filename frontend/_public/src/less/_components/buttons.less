@@ -148,6 +148,7 @@
 	background-color:transparent;
 	background-image:none;
 	.box-shadow(none);
+    text-shadow: @border-button-text-shadow;
 	.unitize(border-width, @button-base-border-size);	
 	border-style: solid;
 	border-color: @button-default-bg;
@@ -156,6 +157,7 @@
 
 .btn--border-primary {
 	border-color: @button-primary-bg;
+    color: @border-button-primary-color;
 
 	&.active {
 		background-color: @button-primary-bg;
@@ -164,6 +166,7 @@
 
 .btn--border-danger {
 	border-color: @button-danger-bg;
+    color: @border-button-danger-color;
 
 	&.active {
 		background-color: @button-danger-bg;
@@ -172,6 +175,7 @@
 
 .btn--border-warning {
 	border-color: @button-warning-bg;
+    color: @border-button-warning-color;
 
 	&.active {
 		background-color: @button-warning-bg;
@@ -180,6 +184,7 @@
 
 .btn--border-success {
 	border-color: @button-success-bg;
+    color: @border-button-success-color;
 
 	&.active {
 		background-color: @button-success-bg;
@@ -188,6 +193,7 @@
 
 .btn--border-default {
 	border-color: @button-default-bg;
+    color: @border-button-default-color;
 
 	&.active {
 		background-color: @button-default-bg;
@@ -196,6 +202,7 @@
 
 .btn--border-info {
 	border-color: @button-info-bg;
+    color: @border-button-info-color;
 
 	&.active {
 		background-color: @button-info-bg;
@@ -285,7 +292,6 @@
 	.btn--disabled;
     
     .icon-node {
-        //.unitize(margin-right, @padding-sm-horizontal);
         
         ~ .text-node {
             .unitize(margin-left, @padding-sm-horizontal);
