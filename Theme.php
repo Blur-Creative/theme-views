@@ -140,6 +140,10 @@ SHOPWARE_EOD;
 		'sidebar-account-box-icon-color' => '@text-color-info',
 		'sidebar-width-tablet' => '205',
 		'sidebar-width-desktop' => '270',
+        //offcanvas scaffolding
+        'offcanvas-close-button-bg' => '@brand-secondary-light',
+        'offcanvas-close-button-color' => '@text-color-light',
+        'offcanvas-bg' => '@brand-secondary',
 		//footer scaffolding
 		'footer-bg' => '@brand-secondary-dark',
 		'footer-title-color' => '@text-color-secondary',
@@ -1081,6 +1085,7 @@ SHOPWARE_EOD;
 		$tab->addElement($this->createScaffoldingHeaderFieldset());
 		$tab->addElement($this->createScaffoldingMainNavigationFieldset());
 		$tab->addElement($this->createScaffoldingSidebarFieldset());
+		$tab->addElement($this->createScaffoldingOffcanvasFieldset());
 		$tab->addElement($this->createScaffoldingFooterFieldset());
 
         return $tab;
@@ -1572,6 +1577,64 @@ SHOPWARE_EOD;
                 [
                     'attributes' => 
                         ['supportText' => '@sidebar-width-desktop']
+                ] 
+            )
+        );
+		
+		return $fieldset;
+	}
+    
+	public function createScaffoldingOffcanvasFieldset()
+	{
+		
+		// Create the fieldset which is the container of our field
+		$fieldset = $this->createFieldSet(
+			'scaffolding_offcanvas_fieldset',
+			'__scaffolding_offcanvas_fieldset__',
+			array(
+				'attributes' => array(
+					'layout' => 'column',
+					'flex' => 0,
+					'autoScroll' => true,
+					'defaults' => array(
+						'columnWidth' => 0.5,
+						'labelWidth' => 200,
+						'margin' => '5 15 5 0'
+					)
+				)
+			)
+		);
+
+        $fieldset->addElement(
+            $this->createColorPickerField(
+                'offcanvas-close-button-bg',
+                '__offcanvas-close-button-bg__',
+                $this->themeColorDefaults['offcanvas-close-button-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@offcanvas-close-button-bg']
+                ] 
+            )
+        );
+        $fieldset->addElement(
+            $this->createColorPickerField(
+                'offcanvas-close-button-color',
+                '__offcanvas-close-button-color__',
+                $this->themeColorDefaults['offcanvas-close-button-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@offcanvas-close-button-color']
+                ] 
+            )
+        );
+        $fieldset->addElement(
+            $this->createColorPickerField(
+                'offcanvas-bg',
+                '__offcanvas-bg__',
+                $this->themeColorDefaults['offcanvas-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@offcanvas-bg']
                 ] 
             )
         );
