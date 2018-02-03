@@ -447,6 +447,11 @@ SHOPWARE_EOD;
 		'detail-main-image-height-desktop' => '460',
 		'detail-image-thumbnails-height' => '70',
 		'detail-image-thumbnails-width' => '70',
+        //checkout step icons
+        'step-icon-bg' => '@button-primary-bg',
+        'step-icon-active-bg' => '@button-success-bg',
+        'step-icon-color' => '@text-color-light',
+        'step-text-color' => '@text-color-light',
 		//box shadows
 		'box-base-shadow' => '0 0 10px rgba(0,0,0,.15)',
 		'offcanvas-shadow' => '0 0 10px rgba(0,0,0,.15)',
@@ -561,6 +566,7 @@ SHOPWARE_EOD;
 		$tabPanel->addTab($this->createColorScaffoldingTab());
 		$tabPanel->addTab($this->createListingStyleTab());
         $tabPanel->addTab($this->createDetailStyleTab());
+        $tabPanel->addTab($this->createCheckoutStyleTab());
 		$tabPanel->addTab($this->createFontsTab());
 		$tabPanel->addTab($this->createIconsTab());
 		$tabPanel->addTab($this->createButtonsTab());
@@ -2315,6 +2321,83 @@ SHOPWARE_EOD;
                 ] 
             )
         );			
+		
+        return $fieldSet;
+    }
+    
+	private function createCheckoutStyleTab()
+    {
+        $tab = $this->createTab(
+            'checkout_style_tab',
+            '__checkout_style_tab__',
+            [
+                'attributes' => [
+                    'layout' => 'anchor',
+                    'autoScroll' => true,
+                    'padding' => '0',
+                    'defaults' => ['anchor' => '100%']
+                ]
+            ]
+        );
+        
+        $tab->addElement($this->createCheckoutStepsFieldSet());
+
+        return $tab;
+    }
+    
+    private function createCheckoutStepsFieldSet()
+    {
+        $attributes = array_merge($this->fieldSetDefaults);
+        $fieldSet = $this->createFieldSet(
+            'checkout_steps_style_fieldset',
+            '__checkout_steps_style_fieldset__',
+            ['attributes' => $attributes]
+        );			
+        
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'step-icon-bg',
+                '__step-icon-bg__',
+                $this->themeColorDefaults['step-icon-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@step-icon-bg']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'step-icon-active-bg',
+                '__step-icon-active-bg__',
+                $this->themeColorDefaults['step-icon-active-bg'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@step-icon-active-bg']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'step-icon-color',
+                '__step-icon-color__',
+                $this->themeColorDefaults['step-icon-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@step-icon-color']
+                ] 
+            )
+        );
+        $fieldSet->addElement(
+            $this->createColorPickerField(
+                'step-text-color',
+                '__step-text-color__',
+                $this->themeColorDefaults['step-text-color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@step-text-color']
+                ] 
+            )
+        );
 		
         return $fieldSet;
     }

@@ -41,7 +41,8 @@
 				}
 				
 				.icon {
-					background-color: @button-primary-bg;
+					background-color: @step-icon-bg;
+					color: @step-icon-color;
 					.box-shadow(@step-container-icon-shadow);
 					.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
 					.unitize-width(42);
@@ -58,7 +59,7 @@
 					.unitize(margin-left, @padding-base-horizontal);					
 					font-weight: @font-semibold-weight;
 					line-height: @line-height-base;
-					color: @text-color-light;		
+					color: @step-text-color;		
 
 					@media (min-width: @phoneLandscapeViewportWidth) {
 						display: block;
@@ -81,7 +82,7 @@
 					.icon {
 						.flexbox-item(0 auto);
 						display: block;
-						background-color: @button-success-bg;
+						background-color: @step-icon-active-bg;
 					}					
 
 					.text {
