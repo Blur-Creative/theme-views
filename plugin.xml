@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.2/engine/Shopware/Components/Plugin/schema/plugin.xsd">
+    <label lang="en">Views Themeee</label>
+    <label lang="de">Views Themeee</label>
+
+    <version>1.3.0-dev</version>
+    <link>http://blurcreative.de</link>
+    <author>BlurCreative</author>
+    <compatibility minVersion="5.2.0" />
+	<license>GPLv3</license>
+</plugin>
