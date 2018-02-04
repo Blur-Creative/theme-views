@@ -2,39 +2,52 @@
 namespace BlurThemeViews\Subscriber;
 
 use Enlight\Event\SubscriberInterface;
+use Shopware\Components\Plugin\ConfigReader;
 
 class UserData implements SubscriberInterface
 {
     private $userLoggedIn;
     
+    private $session;
+    
+    /*
+     * UserData constructor
+     *
+     * @param \Enlight_Components_Session_Namespace $session
+     */
+    public function __construct(
+        \Enlight_Components_Session_Namespace $session
+    ) {
+        $this->session      = $session;
+    }
+    
+    /*
+     * Subscribe Events and register functions
+     * 
+     * @func getUserData
+     */
     public static function getSubscribedEvents()
     {
         return [
-            'Enlight_Controller_Action_PostDispatchSecure_Frontend' => 'getUserData'
+            'Enlight_Controller_Action_PostDispatchSecure_Frontend' => 'getUserData',
+            'Enlight_Controller_Action_PostDispatchSecure_Widgets' => 'getUserData'
         ];
     }
     
+    /*
+     * Assign Objects to Smarty
+     *
+     * @var $isUserLoggedIn = $userLoggedIn
+     */
     public function getUserData(\Enlight_Controller_ActionEventArgs $args)
-    {
+    {        
         $view = $args->getSubject()->View();
         
         if (null === $this->userLoggedIn) {
             $this->userLoggedIn = (bool)$this->session->get('sUserId');
         }
         
-        $globalUserData = [];
-        
-        // assign userData array to smarty
-        if ($this->userLoggedIn) {
-//            $this->addUserData($globalUserData);
-        }
-        
-        if ($this->userLoggedIn) {
-//            $this->addUserAttributes($globalUserData);
-        }
-        
-        $view->assign('bcUserLoggedIn', $this->userLoggedIn);
-//        $view->assign('globalUserData', $globalUserData);
+        $view->assign('isUserLoggedIn', $this->userLoggedIn);
     }
 }
 
