@@ -9,5 +9,10 @@
                     <argument type="service" id="session"/>
                     <tag name="shopware.event_subscriber" />
                 </service>
+                
+                <service id="blur_theme_views.get_mail" class="BlurThemeViews\Subscriber\GetMail">
+                    <argument type="service" id="corelogger"/>
+                    <tag name="shopware.event_subscriber" />
+                </service>
             </services>
 </container>
