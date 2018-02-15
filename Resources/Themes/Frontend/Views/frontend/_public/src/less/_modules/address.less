@@ -1,0 +1,38 @@
+.address--form-actions {
+    
+    .address--form-submit {
+        
+        .address-manager--modal &,
+        .account--address & {
+            margin-bottom: 15px;
+            margin-right: 0;
+            
+            @media (min-width: @tabletViewportWidth) {
+                margin-bottom: 0;
+            }
+        }
+        
+        &.save-address {
+            
+            .address-manager--modal &,
+            .account--address & {
+                
+                @media (min-width: @tabletViewportWidth) {
+                    float: left;
+                }
+            }            
+        }
+        
+        &.new-address {
+            margin-bottom: 0;
+            
+            .address-manager--modal &,
+            .account--address & {
+                
+                @media (min-width: @tabletViewportWidth) {
+                    float: right;
+                }
+            }   
+        }
+    }
+}

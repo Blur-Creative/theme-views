@@ -15,7 +15,7 @@
         <div class="panel--body is--wide">
 
             {block name="frontend_address_form_fieldset_customer_type"}
-                <div class="address--customertype">
+                <div class="address--customertype select-field">
                     {if {config name=showCompanySelectField}}
                         {block name="frontend_address_form_fieldset_customer_type_select"}
                             <select name="{$inputPrefix}[additional][customer_type]"
@@ -84,7 +84,7 @@
             {block name="frontend_address_form_fieldset_address"}
                 {* Salutation *}
                 {block name='frontend_address_form_input_salutation'}
-                    <div class="address--salutation field--select">
+                    <div class="address--salutation select-field">
 
                         {getSalutations variable="salutations"}
 
@@ -243,7 +243,7 @@
 
                 {* Country *}
                 {block name='frontend_address_form_input_country'}
-                    <div class="address--country field--select">
+                    <div class="address--country select-field">
                         <select name="{$inputPrefix}[country]"
                                 data-address-type="address"
                                 id="country"
