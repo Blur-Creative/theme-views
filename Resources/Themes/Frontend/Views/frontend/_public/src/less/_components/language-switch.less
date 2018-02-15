@@ -1,25 +1,36 @@
-.language--flag {
-    background-image: url('../../img/icons/flags/de.png');
+.language--flag-reboot {
     background-size: 20px 14px;
+    background-position: 0 0;
+}
+
+.language--flag {
+    &:extend(.language--flag-reboot);
+    background-image: url('../../img/icons/flags/de.png');
     .unitize(width, 20);
     .unitize(height, 14);
     
     &.en_US {
+        &:extend(.language--flag-reboot);
         background-image: url('../../img/icons/flags/us.png');
     }
     &.en_GB {
+        &:extend(.language--flag-reboot);
         background-image: url('../../img/icons/flags/gb.png');
     }
     &.nl_NL {
+        &:extend(.language--flag-reboot);
         background-image: url('../../img/icons/flags/nl.png');
     }
     &.fr_FR {
+        &:extend(.language--flag-reboot);
         background-image: url('../../img/icons/flags/fr.png');
     }
     &.es_ES {
+        &:extend(.language--flag-reboot);
         background-image: url('../../img/icons/flags/es.png');
     }
     &.it_IT {
+        &:extend(.language--flag-reboot);
         background-image: url('../../img/icons/flags/it.png');
     }
 }
