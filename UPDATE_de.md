@@ -1,3 +1,27 @@
+v1.3.0
+----------
+**Versions-Highlights:**
+- Kompatibilität zu Shopware 5.4
+- Änderung der Plugin-Struktur (ab Shopware 5.2)
+
+**behobene Probleme und Verbesserungen:**
+- Die Template Dateien der Versand-/Zahlungs-Icons wurde von der index.tpl ausgelagert
+- issue #78: Smarty Blöcke wurden der index/shipping-info.tpl hinzugefügt
+- issue #77: Smarty Blöcke wurden der index/payment-info.tpl hinzugefügt
+- issue #76: Ein Darstellungs-Fehler der Sprachflaggen Auswahl wurde behoben
+- issue #75: Überarbeitung der Adress-Formulare im Checkout / Kundekonto
+- issue #74: Input-Felder des Typs Telefon wurden überarbeitet
+- issue #73: blockqoute HTML-Elemente wurden optisch angepasst
+- issue #72: @panel-footer-bg wurde dem Footer der Bestellbestätigungs-Tabelle hinzugefügt
+- issue #70: @base-headline-color wurde alles HTML Überschrift Elementen hinzugefügt
+- issue #69: Darstellung der Checkout-Schritte wurde verbessert
+- issue #68: @label-color wird nun nicht mehr ignoriert
+- issue #67: @panel-footer-bg wurde dem Footer der Warenkorb-Tabelle hinzugefügt
+- issue #66: Die Textfarbe der Border-Buttons wurde konfigurierbar gemacht
+- issue #65: Die Konfiguration von Off-Canvas Elementen wurde erweitertD
+- issue #63: Die Konfiguration der Textfarbe des Vorteilsbalken wird nun nicht mehr ignoriert
+- issue #61: Abstand des Icon im Sidebar-Filter Button wurde korrigiert
+
 v1.2.5.1
 ----------
 **Hotfix:**
