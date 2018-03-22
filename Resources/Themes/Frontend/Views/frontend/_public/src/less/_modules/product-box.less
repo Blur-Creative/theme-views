@@ -330,6 +330,42 @@
 				height: 100%;
 				margin-bottom: 0;
 			}
+			
+			.is--ctl-listing.is--no-sidebar &, .is--ctl-search & {
+				.unitize(margin-bottom, @padding-md-vertical);
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				
+				@media (min-width: @phoneLandscapeViewportWidth) {
+					.unitize(border-radius, @border-radius-base);
+					.unitize-width(@product-box-basic-image-width);
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					.position(absolute,@top:0,@left:0);
+					height: 100%;
+					margin-bottom: 0;
+				}
+				
+				@media (min-width: @tabletLandscapeViewportWidth) {
+					.unitize(border-radius, @border-radius-base);
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+					width: auto;
+					.position(relative,@top:auto,@left:auto);
+					.unitize-height(180);
+					.unitize(margin-bottom, @padding-md-vertical);
+				}
+				
+				@media (min-width: @desktopViewportWidth) {
+					.unitize(border-radius, @border-radius-base);
+					.unitize-width(@product-box-basic-image-width);
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					.position(absolute,@top:0,@left:0);
+					height: 100%;
+					margin-bottom: 0;
+				}
+			}
 		}
 		
 		.product--info {
@@ -352,6 +388,29 @@
 				.unitize(padding-top, @padding-md-vertical);
 				.unitize(padding-bottom, 41);
 				height: 100%;
+			}
+			
+			.is--ctl-listing.is--no-sidebar &, .is--ctl-search & {
+				position: relative;
+				
+				@media (min-width: @phoneLandscapeViewportWidth) {
+					.unitize(padding-left, @product-box-basic-image-width);
+					.unitize(padding-top, @padding-md-vertical);
+					height: 100%;
+				}			 
+				
+				@media (min-width: @tabletLandscapeViewportWidth) {
+					.unitize(padding-left, 0);
+					.unitize(padding-top, 0);
+					height: auto;
+				}
+				
+				@media (min-width: @desktopViewportWidth) {
+					.unitize(padding-left, @product-box-basic-image-width);
+					.unitize(padding-top, @padding-md-vertical);
+					.unitize(padding-bottom, 41);
+					height: 100%;
+				}
 			}
 		}
 		
