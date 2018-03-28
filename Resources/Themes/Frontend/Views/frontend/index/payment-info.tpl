@@ -14,6 +14,11 @@
                     <li><img src="{link file='frontend/_public/src/img/icons/payment/bill.png'}" /></li>
                 {/if}
             {/block}
+            {block name="frontend_index_footer_payment_item_cash"}
+                {if $theme.payment_option_cash}
+                    <li><img src="{link file='frontend/_public/src/img/icons/payment/cash.png'}" /></li>
+                {/if}
+            {/block}
             {block name="frontend_index_footer_payment_item_cashondelievery"}
                 {if $theme.payment_option_cashondelievery}
                     <li><img src="{link file='frontend/_public/src/img/icons/payment/cashondelievery.png'}" /></li>
