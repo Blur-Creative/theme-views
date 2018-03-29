@@ -3,12 +3,12 @@
 }
 
 .listing {
-	.unitize-margin(0, 0, 0, -(@grid-gutter-size / 2));
+	.unify-margin(0, 0, 0, -(@grid-gutter-size / 2));
 	
 	.flexbox-container(@wrap:wrap);
 	
 	@media (min-width: @tabletViewportWidth) {
-		.unitize-margin(0, 0, 0, -@grid-gutter-size);
+		.unify-margin(0, 0, 0, -@grid-gutter-size);
 	}
 	
 	&:before,
@@ -19,7 +19,7 @@
 	.product--box {
 		width: auto;
 		float: none;
-		.unitize-padding(0, 0, (@grid-gutter-size / 2), (@grid-gutter-size / 2));
+		.unify-padding(0, 0, (@grid-gutter-size / 2), (@grid-gutter-size / 2));
 		.flexbox-item(0 50%);	
 
 		@media (min-width: @phoneLandscapeViewportWidth) {
@@ -27,7 +27,7 @@
 		}
 		
 		@media (min-width: @tabletViewportWidth) {
-			.unitize-padding(0, 0, @grid-gutter-size, @grid-gutter-size);
+			.unify-padding(0, 0, @grid-gutter-size, @grid-gutter-size);
 		}
 		
 		@media (min-width: @tabletLandscapeViewportWidth) {
@@ -85,11 +85,11 @@
 	
 	&.panel {
 		border: 0;
-		.unitize(padding-bottom, @padding-md-vertical);
+		.unify(padding-bottom, @padding-md-vertical);
 		
 		.panel--title {
-			.unitize(margin-bottom, @padding-md-vertical);
-			.unitize(font-size, @font-size-lg);
+			.unify(margin-bottom, @padding-md-vertical);
+			.unify(font-size, @font-size-lg);
 			background-color: transparent;
 			background-image: none;
 			padding: 0;			
@@ -103,7 +103,7 @@
 	}
 	
 	.category--teaser-image {
-		.unitize(margin-bottom, @padding-md-vertical);
+		.unify(margin-bottom, @padding-md-vertical);
 	}
 	
 	.offcanvas--content {
@@ -118,7 +118,7 @@
 
 .listing--content {
 	@media (min-width: @tabletViewportWidth) {
-		.unitize(padding-top, @grid-gutter-size);
+		.unify(padding-top, @grid-gutter-size);
 		margin-top: 0;
 	}
 }
@@ -128,11 +128,11 @@
     border: 0;
     background-color: transparent;
     padding: 0;	
-	.unitize(margin-bottom, (@grid-gutter-size / 2));
+	.unify(margin-bottom, (@grid-gutter-size / 2));
 	
 	.action--filter-btn {
 		margin:0;
-		.unitize(margin-bottom, (@grid-gutter-size / 2));
+		.unify(margin-bottom, (@grid-gutter-size / 2));
 		
 		@media (min-width: @tabletViewportWidth) {
 			margin-bottom: 0;
@@ -143,8 +143,8 @@
 			border-color: @border-color;
 			border-style: solid;
 			line-height: 1;
-			.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
-			.unitize(font-size, @font-size-base);
+			.unify-padding(@padding-base-vertical, @padding-base-horizontal);
+			.unify(font-size, @font-size-base);
 			height: auto;
 			text-align: left;
 			color: @text-color;
@@ -160,7 +160,7 @@
 			
 			.icon-node {
 				vertical-align: middle;
-				//.unitize(margin-right, @padding-sm-horizontal);
+				//.unify(margin-right, @padding-sm-horizontal);
 			}
 			
 			.text-node {
@@ -182,11 +182,11 @@
 			.action--collapse-icon {
 				position: absolute;
 				top: 50%;
-				.unitize(right, @padding-xs-horizontal);
-				//.unitize(height, @badge-size-base);
-				.unitize(line-height, @badge-size-base);
-				.unitize(border-radius, (@badge-size-base / 2));
-				.unitize(margin-top, -(@badge-size-base / 2));
+				.unify(right, @padding-xs-horizontal);
+				//.unify(height, @badge-size-base);
+				.unify(line-height, @badge-size-base);
+				.unify(border-radius, (@badge-size-base / 2));
+				.unify(margin-top, -(@badge-size-base / 2));
 				background-color: @badge-primary-bg;
 				color: @badge-primary-color;
 				.background-gardient(rgba(255,255,255,0.18), rgba(255,255,255,0));
@@ -206,8 +206,8 @@
 		}
 		
 		.filter--container {
-			.unitize(padding-left, (@grid-gutter-size / 2));
-			.unitize(padding-right, (@grid-gutter-size / 2));
+			.unify(padding-left, (@grid-gutter-size / 2));
+			.unify(padding-right, (@grid-gutter-size / 2));
             //background-color: @listing-filter-bg;
 			
 			@media (min-width: @tabletViewportWidth) {
@@ -222,13 +222,13 @@
 					border: 0;
 					.box-shadow(@listing-filter-shadow);		
 					position: relative;
-					.unitize(margin-top, 0);
-					.unitize(border-radius, @border-radius-sm);
+					.unify(margin-top, 0);
+					.unify(border-radius, @border-radius-sm);
 				}			
 			}
 			
 			.filter--facet-container {
-				.unitize(padding-top, (@grid-gutter-size / 2));
+				.unify(padding-top, (@grid-gutter-size / 2));
 
 				@media (min-width: @tabletViewportWidth) {
 					border-bottom: 1px solid @border-color-light;
@@ -257,35 +257,35 @@
 		
 		.filter--active-container {
 			margin: 0;
-			.unitize(padding-bottom, 0);			
+			.unify(padding-bottom, 0);			
 				
 			@media (min-width: @tabletViewportWidth) {
-				.unitize(padding-left, (@grid-gutter-size / 2));
-				.unitize(padding-right, (@grid-gutter-size / 2));
+				.unify(padding-left, (@grid-gutter-size / 2));
+				.unify(padding-right, (@grid-gutter-size / 2));
 			}
 		}
 			
 		.filter--actions {
 			border-color: @border-color-light;
-			.unitize(margin-left, 0);
-			.unitize(margin-right, 0);
-			.unitize(margin-bottom, (@grid-gutter-size / 2));
-			.unitize(padding-top, (@grid-gutter-size / 2));
+			.unify(margin-left, 0);
+			.unify(margin-right, 0);
+			.unify(margin-bottom, (@grid-gutter-size / 2));
+			.unify(padding-top, (@grid-gutter-size / 2));
 
 			
 			@media (min-width: @tabletViewportWidth) {
 				margin-left: 0;
 				margin-right: 0;
-				.unitize(margin-bottom, 0);
-				.unitize(margin-top, -(@grid-gutter-size / 2));
-				.unitize(padding-top, (@grid-gutter-size / 2));
-				.unitize(padding-bottom, (@grid-gutter-size / 2));
-				.unitize(padding-left, (@grid-gutter-size / 2));
-				.unitize(padding-right, (@grid-gutter-size / 2));
+				.unify(margin-bottom, 0);
+				.unify(margin-top, -(@grid-gutter-size / 2));
+				.unify(padding-top, (@grid-gutter-size / 2));
+				.unify(padding-bottom, (@grid-gutter-size / 2));
+				.unify(padding-left, (@grid-gutter-size / 2));
+				.unify(padding-right, (@grid-gutter-size / 2));
 			}
 			
 			.filter--btn-apply {
-				.unitize(margin-bottom, (@grid-gutter-size / 2));
+				.unify(margin-bottom, (@grid-gutter-size / 2));
 				
 				@media (min-width: @tabletViewportWidth) {
 					margin-bottom: 0;
@@ -293,11 +293,11 @@
 			}
 			
 			&.filter--actions-top {
-				.unitize(margin-bottom, 0);
-				.unitize(padding-bottom, 0);
+				.unify(margin-bottom, 0);
+				.unify(padding-bottom, 0);
 				
 				.filter--btn-apply {
-					.unitize(margin-bottom, 0);
+					.unify(margin-bottom, 0);
 				}
 			}
 		}
@@ -309,10 +309,10 @@
 		border: 0;
 		.box-shadow(@listing-filter-panel-shadow);
 		color: @text-color;
-		.unitize(margin-bottom, (@grid-gutter-size / 2));
+		.unify(margin-bottom, (@grid-gutter-size / 2));
 		
 		@media (min-width: @tabletViewportWidth) {
-			.unitize(margin-left, (@grid-gutter-size / 2));
+			.unify(margin-left, (@grid-gutter-size / 2));
 			width: 45%;
 		}
 		
@@ -353,7 +353,7 @@
 			font-weight: @font-base-weight;
 			//text-shadow: 1px 1px 0 rgba(0,0,0,.5);
 			.background-gardient(rgba(255,255,255,0.1), rgba(255,255,255,0));
-			.unitize(margin-bottom, 1);
+			.unify(margin-bottom, 1);
 		}
 		
 		.filter-panel--icon {
@@ -370,7 +370,7 @@
 		
 		.filter-panel--content {
 			@media (min-width: @tabletViewportWidth) {
-				.unitize(border-radius, @border-radius-sm);
+				.unify(border-radius, @border-radius-sm);
 				background-color: @listing-filter-panel-bg;
 				border: 1px solid @border-color-light;
 			}
@@ -413,21 +413,21 @@
 	}
 	
 	.action--sort {
-		.unitize-height(@select-height-base);
+		.unify-height(@select-height-base);
 		margin: 0;
-		.unitize(margin-bottom, (@grid-gutter-size / 2));
+		.unify(margin-bottom, (@grid-gutter-size / 2));
 		
         .sort--label {
             font-weight: @font-base-weight;
         }
         
         .listing--wrapper.has--sidebar-filter & {
-            .unitize(margin-right, 0);
+            .unify(margin-right, 0);
         }
         
 		.sort--select {
-			.unitize-height(@select-height-base);
-			.unitize(line-height, (@select-height-base - 2));		
+			.unify-height(@select-height-base);
+			.unify(line-height, (@select-height-base - 2));		
 		}
 	}
 	
@@ -449,8 +449,8 @@
 	font-size: 0;
 	text-align: center;
 	padding: 0;
-	.unitize(margin-left, -@padding-xs-horizontal);	
-	.unitize(margin-right, -@padding-xs-horizontal);	
+	.unify(margin-left, -@padding-xs-horizontal);	
+	.unify(margin-right, -@padding-xs-horizontal);	
 	
 	@media (min-width: @tabletViewportWidth) {
 		text-align: left;
@@ -459,11 +459,11 @@
 	
 	.paging--link {
 		margin: 0;
-		.unitize(line-height, @select-height-base);
-		.unitize(padding-left, @button-base-padding-horizontal);
-		.unitize(padding-right, @button-base-padding-horizontal);
-		.unitize(margin-right, @padding-xs-horizontal);
-		.unitize(margin-left, @padding-xs-horizontal);
+		.unify(line-height, @select-height-base);
+		.unify(padding-left, @button-base-padding-horizontal);
+		.unify(padding-right, @button-base-padding-horizontal);
+		.unify(margin-right, @padding-xs-horizontal);
+		.unify(margin-left, @padding-xs-horizontal);
 		border: 0;
 		color: @button-default-color;
 		.box-shadow(@button-box-shadow);
@@ -472,7 +472,7 @@
 		
 		&.is--active,
 		&.is--active:hover {
-			.unitize(line-height, @select-height-base);
+			.unify(line-height, @select-height-base);
 			background-color: @button-primary-bg;
 			.background-gardient(rgba(255,255,255,0.1), rgba(255,255,255,0));
 		}
@@ -493,10 +493,10 @@
 	.box-shadow(none);
 	border-style: solid;
 	border-color: @border-color;
-	.unitize(border-width, @button-sm-border-size);
-	.unitize-padding((@button-sm-padding-vertical - @button-sm-border-size), (@button-sm-padding-horizontal - @button-sm-border-size));
-	.unitize(margin-bottom, @padding-md-vertical);
-	.unitize(font-size, @button-sm-font-size);
+	.unify(border-width, @button-sm-border-size);
+	.unify-padding((@button-sm-padding-vertical - @button-sm-border-size), (@button-sm-padding-horizontal - @button-sm-border-size));
+	.unify(margin-bottom, @padding-md-vertical);
+	.unify(font-size, @button-sm-font-size);
     text-shadow: none;
     
 	.filter--active-icon {
@@ -517,9 +517,9 @@
     .vendor--image-wrapper {
         .flexbox-container(@align: center);
         background-color: @manufacturer-background-color;
-        .unitize(padding, @grid-gutter-size);
-        .unitize(border-radius, @border-radius-sm);
-        .unitize(max-height, 200);
+        .unify(padding, @grid-gutter-size);
+        .unify(border-radius, @border-radius-sm);
+        .unify(max-height, 200);
         height: auto;      
     }
 }

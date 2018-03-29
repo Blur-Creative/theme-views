@@ -222,3 +222,60 @@
 		{/if}
 	{/block}
 {/block}
+
+{* Librarys *}
+
+{*
+	Include jQuery and all other javascript files at the bottom of the page
+	Include it with type text/javascript for GZIP comression
+*}
+{block name="frontend_index_header_javascript_jquery_lib"}
+	{block name="frontend_index_footer_css_screen"}
+		{{compileLess timestamp={themeTimestamp} output="lessFiles"}}
+		{foreach $lessFiles as $stylesheet}
+			<link href="{$stylesheet}" media="all" rel="stylesheet" type="text/css" />
+		{/foreach}
+	
+		{if $theme.additionalCssData}
+			{$theme.additionalCssData}
+		{/if}
+	{/block}
+	
+	{* Include Google Fonts through CDN *}
+    {* $theme.fontBaseStack *}
+    {block name="frontend_index_header_google_fonts_base_stack"}
+        {if $theme.fontBaseStack=="Open Sans"}
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+        {elseif $theme.fontBaseStack=='Ubuntu'}
+            <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        {elseif $theme.fontBaseStack=='Raleway'}
+            <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+        {elseif $theme.fontBaseStack=='Oswald'}
+            <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600,700" rel="stylesheet">
+        {elseif $theme.fontBaseStack=='Lato'}
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        {elseif $theme.fontBaseStack=='Patua One'}
+            <link href="https://fonts.googleapis.com/css?family=Patua+One:400" rel="stylesheet">
+        {/if}
+    {/block}
+
+    {block name="frontend_index_header_google_fonts_headline_stack"}
+        {if $theme.fontHeadlineStack!=$theme.fontBaseStack}
+            {if $theme.fontHeadlineStack=="Open Sans"}
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+            {elseif $theme.fontHeadlineStack=='Ubuntu'}
+                <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+            {elseif $theme.fontHeadlineStack=='Raleway'}
+                <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+            {elseif $theme.fontHeadlineStack=='Oswald'}
+                <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600,700" rel="stylesheet">
+            {elseif $theme.fontHeadlineStack=='Lato'}
+                <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+            {elseif $theme.fontHeadlineStack=='Patua One'}
+                <link href="https://fonts.googleapis.com/css?family=Patua+One:400" rel="stylesheet">
+            {/if}
+        {/if}
+    {/block}
+
+	{$smarty.block.parent}
+{/block}

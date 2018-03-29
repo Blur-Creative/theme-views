@@ -2,7 +2,7 @@
 	border:0;
 	background-color: @main-navigation-bg;
 	.box-shadow(@main-navigation-shadow);
-	.unitize(margin-bottom, @padding-md-vertical);
+	.unify(margin-bottom, @padding-md-vertical);
 	
 	@media (min-width: @tabletViewportWidth) {
 		margin-bottom: 0;
@@ -17,9 +17,9 @@
 			vertical-align: top;
 			
 			.navigation--link {
-				.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
-				.unitize(font-size, @font-size-base);
-				.unitize(border-radius, 0);
+				.unify-padding(@padding-base-vertical, @padding-base-horizontal);
+				.unify(font-size, @font-size-base);
+				.unify(border-radius, 0);
 				color: @main-navigation-button-color;
 				background-color: @main-navigation-button-bg;
 				font-weight: @font-semibold-weight;
@@ -48,13 +48,13 @@
 					line-height: 1;
 					
 					.icon-node {
-						.unitize(font-size, 18);
+						.unify(font-size, 18);
 					}
 				}
 			}
 			
 			&.is--hovered {
-				.unitize(border-radius, 0);
+				.unify(border-radius, 0);
 				
 				.navigation--link {
 					background-color: @main-navigation-button-active-bg;

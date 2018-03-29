@@ -32,8 +32,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  .unitize(margin-bottom, @line-height-computed);
-  .unitize(font-size, (@font-size-base * 1.5));
+  .unify(margin-bottom, @line-height-computed);
+  .unify(font-size, (@font-size-base * 1.5));
   line-height: inherit;
   color: @legend-color;
   border: 0;
@@ -43,7 +43,7 @@ legend {
 label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  .unitize(margin-bottom, @padding-sm-vertical);
+  .unify(margin-bottom, @padding-sm-vertical);
   font-weight: @font-semibold-weight;
   color: @label-color;
 }
@@ -53,12 +53,12 @@ label {
 .radio-label {
     position: relative;
     display: block;
-	.unitize(margin-top, @padding-base-vertical);
-	.unitize(margin-bottom, @padding-base-vertical);	
+	.unify(margin-top, @padding-base-vertical);
+	.unify(margin-bottom, @padding-base-vertical);	
 	
 	label {
 		min-height: 20px;
-		.unitize(padding-left, 20);	
+		.unify(padding-left, 20);	
 		margin-bottom: 0;
 		font-weight: @font-base-weight;
 		cursor: pointer;
@@ -121,8 +121,8 @@ input[type="checkbox"]:focus {
 // Adjust output element
 output {
   display: block;
-  .unitize(padding-top, (@padding-base-vertical + 1));
-  .unitize(font-size, @font-size-base);
+  .unify(padding-top, (@padding-base-vertical + 1));
+  .unify(font-size, @font-size-base);
   line-height: @line-height-base;
   color: @input-color;
 }
@@ -158,15 +158,15 @@ input[type="tel"],
 textarea {
   display: block;
   width: 100%;
-  .unitize-height(@input-height-base);
-  .unitize-padding(@input-padding-base-vertical, @input-padding-base-horizontal);
-  .unitize(font-size, @font-size-base);
+  .unify-height(@input-height-base);
+  .unify-padding(@input-padding-base-vertical, @input-padding-base-horizontal);
+  .unify(font-size, @font-size-base);
   line-height: @input-line-height-base;
   color: @input-color;
   background-color: @input-bg;
   background-image: none; 
   border: 1px solid @input-border-color;
-  .unitize(border-radius, @input-border-radius);
+  .unify(border-radius, @input-border-radius);
   .box-shadow(@input-shadow);
   .background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));
   //.transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
@@ -276,8 +276,8 @@ input[type="search"] {
 
 
 .select-field {
-	.unitize(min-width, 100);
-	.unitize(height, @select-height-base);
+	.unify(min-width, 100);
+	.unify(height, @select-height-base);
 	
 	select {
 		background-color: @select-bg;
@@ -285,7 +285,7 @@ input[type="search"] {
 		color: @text-color;	
 		.box-shadow(@input-shadow);
 		.background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));		
-		.unitize(font-size, @font-size-base);
+		.unify(font-size, @font-size-base);
 		line-height: 1;
 		
 		&:hover {
@@ -300,8 +300,8 @@ input[type="search"] {
 	}
 	
 	&:after {
-		.unitize(height, @select-height-base);
-		.unitize(line-height, @select-height-base);
+		.unify(height, @select-height-base);
+		.unify(line-height, @select-height-base);
 	}
     
     .account--address &,
@@ -315,16 +315,16 @@ input[type="search"] {
 .js--fancy-select {
     background-color: transparent;
     background-image: none;
-    .unitize(height, @select-height-base);
-	.unitize(line-height, @select-height-base);
+    .unify(height, @select-height-base);
+	.unify(line-height, @select-height-base);
 	color: @text-color;	
 	width: auto;
 	.box-shadow(@input-shadow);
 	.background-gardient(rgba(255,255,255,0), rgba(255,255,255,0.05));
 	
 	.js--fancy-select-text {
-		.unitize(font-size, @font-size-base);
-		.unitize(padding-left, @padding-base-horizontal);
+		.unify(font-size, @font-size-base);
+		.unify(padding-left, @padding-base-horizontal);
 	}
 	
 	.js--fancy-select-trigger {

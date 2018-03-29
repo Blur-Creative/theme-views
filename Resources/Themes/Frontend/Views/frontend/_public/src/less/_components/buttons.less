@@ -110,22 +110,22 @@
 
 /* Button sizes */
 .btn--base {
-	.unitize-padding(@button-base-padding-vertical, @button-base-padding-horizontal);
-	.unitize(font-size, @button-base-font-size);
+	.unify-padding(@button-base-padding-vertical, @button-base-padding-horizontal);
+	.unify(font-size, @button-base-font-size);
 	line-height: @button-base-line-height;
 	height: auto;    
 }
 
 .btn--sm {
-	.unitize-padding(@button-sm-padding-vertical, @button-sm-padding-horizontal);
-	.unitize(font-size, @button-sm-font-size);		
+	.unify-padding(@button-sm-padding-vertical, @button-sm-padding-horizontal);
+	.unify(font-size, @button-sm-font-size);		
 	line-height: @button-sm-line-height;
 	height: auto;
 }
 
 .btn--lg {
-	.unitize-padding(@button-lg-padding-vertical, @button-lg-padding-horizontal);
-	.unitize(font-size, @button-lg-font-size);		
+	.unify-padding(@button-lg-padding-vertical, @button-lg-padding-horizontal);
+	.unify(font-size, @button-lg-font-size);		
 	line-height: @button-lg-line-height;
 	height: auto;
 }
@@ -149,10 +149,10 @@
 	background-image:none;
 	.box-shadow(none);
     text-shadow: @border-button-text-shadow;
-	.unitize(border-width, @button-base-border-size);	
+	.unify(border-width, @button-base-border-size);	
 	border-style: solid;
 	border-color: @button-default-bg;
-	.unitize-padding((@button-base-padding-vertical - @button-base-border-size), (@button-base-padding-horizontal - @button-base-border-size));
+	.unify-padding((@button-base-padding-vertical - @button-base-border-size), (@button-base-padding-horizontal - @button-base-border-size));
 }
 
 .btn--border-primary {
@@ -234,20 +234,20 @@
 }
 
 .btn--border-sm {
-	.unitize-padding((@button-sm-padding-vertical - @button-sm-border-size), (@button-sm-padding-horizontal - @button-sm-border-size));
-	.unitize(border-width, @button-sm-border-size);	
+	.unify-padding((@button-sm-padding-vertical - @button-sm-border-size), (@button-sm-padding-horizontal - @button-sm-border-size));
+	.unify(border-width, @button-sm-border-size);	
 }
 
 .btn--border-lg {
-	.unitize-padding((@button-lg-padding-vertical - @button-lg-border-size), (@button-lg-padding-horizontal - @button-lg-border-size));
-	.unitize(border-width, @button-lg-border-size);	
+	.unify-padding((@button-lg-padding-vertical - @button-lg-border-size), (@button-lg-padding-horizontal - @button-lg-border-size));
+	.unify(border-width, @button-lg-border-size);	
 }
 
 .btn {
     display: inline-block;
-	.unitize-padding(@button-base-padding-vertical, @button-base-padding-horizontal);
-	.unitize(font-size, @button-base-font-size);
-	.unitize(border-radius, @button-base-border-radius);
+	.unify-padding(@button-base-padding-vertical, @button-base-padding-horizontal);
+	.unify(font-size, @button-base-font-size);
+	.unify(border-radius, @button-base-border-radius);
 	color: @button-default-color;
 	.box-shadow(@button-box-shadow);
 	background-color: @button-default-bg;
@@ -318,7 +318,7 @@
     .icon-node {
         
         ~ .text-node {
-            .unitize(margin-left, @padding-sm-horizontal);
+            .unify(margin-left, @padding-sm-horizontal);
         }
     }
 

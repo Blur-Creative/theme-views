@@ -1,12 +1,12 @@
 .scroll-totop--button {
 	display: block;
 	position: fixed;
-	.unitize-width(@scroll-totop-button-size);
-	.unitize-height(@scroll-totop-button-size);
-	.unitize(line-height, @scroll-totop-button-size);
-	.unitize(right, @scroll-totop-position-right);
-	.unitize(bottom, -@scroll-totop-button-size);
-	.unitize(border-radius, @scroll-totop-button-radius);
+	.unify-width(@scroll-totop-button-size);
+	.unify-height(@scroll-totop-button-size);
+	.unify(line-height, @scroll-totop-button-size);
+	.unify(right, @scroll-totop-position-right);
+	.unify(bottom, -@scroll-totop-button-size);
+	.unify(border-radius, @scroll-totop-button-radius);
 	.box-shadow(@scroll-totop-button-shadow);
 	background-color: @scroll-totop-button-bg;
 	color: @scroll-totop-button-color;
@@ -18,10 +18,10 @@
 	
 	&.is--shown {
 		opacity: 1;
-		.unitize(bottom, @scroll-totop-position-bottom);
+		.unify(bottom, @scroll-totop-position-bottom);
 	}
 	
 	.icon-node {
-		.unitize(font-size, @scroll-totop-button-icon-size);
+		.unify(font-size, @scroll-totop-button-icon-size);
 	}
 }

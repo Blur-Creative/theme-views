@@ -1,10 +1,10 @@
 .content-main {
 	box-shadow: none;
-	.unitize(margin-top, @padding-md-vertical);
+	.unify(margin-top, @padding-md-vertical);
 	
 	.is--act-finish & {
 		@media (min-width: @tabletViewportWidth) {
-			.unitize(margin-top, @padding-lg-vertical);
+			.unify(margin-top, @padding-lg-vertical);
 		}		
 	}
 	
@@ -14,42 +14,42 @@
 				
 		.sidebar-main {
 			@media (min-width: @tabletViewportWidth) {
-				.unitize-width(@sidebar-width-tablet);
+				.unify-width(@sidebar-width-tablet);
 			}	
 		
 			@media (min-width: @desktopViewportWidth) {
-				.unitize-width(@sidebar-width-desktop);
+				.unify-width(@sidebar-width-desktop);
 			}
 
 			.is--ctl-account.is--user &, 
 			.is--ctl-note.is--user & {
 				@media (min-width: @tabletViewportWidth) {
-					.unitize-width(@sidebar-width-tablet);
+					.unify-width(@sidebar-width-tablet);
 				}	
 			
 				@media (min-width: @desktopViewportWidth) {
-					.unitize-width(@sidebar-width-desktop);
+					.unify-width(@sidebar-width-desktop);
 				}				
 			}
 		}
 		
 		.content--wrapper {
 			@media (min-width: @tabletViewportWidth) {
-				.unitize(margin-left, (@sidebar-width-tablet + @grid-gutter-size));
+				.unify(margin-left, (@sidebar-width-tablet + @grid-gutter-size));
 			}
 			
 			@media (min-width: @desktopViewportWidth) {
-				.unitize(margin-left, (@sidebar-width-desktop + @grid-gutter-size));
+				.unify(margin-left, (@sidebar-width-desktop + @grid-gutter-size));
 			}
 
 			.is--ctl-account.is--user &, 
 			.is--ctl-note.is--user & {
 				@media (min-width: @tabletViewportWidth) {
-					.unitize(margin-left, (@sidebar-width-tablet + @grid-gutter-size));
+					.unify(margin-left, (@sidebar-width-tablet + @grid-gutter-size));
 				}
 				
 				@media (min-width: @desktopViewportWidth) {
-					.unitize(margin-left, (@sidebar-width-desktop + @grid-gutter-size));
+					.unify(margin-left, (@sidebar-width-desktop + @grid-gutter-size));
 				}		
 			}
 			
@@ -68,10 +68,10 @@
 			.account--address {
 				float: left;
 				width: 100%;
-				.unitize(padding-top, @padding-md-vertical);
+				.unify(padding-top, @padding-md-vertical);
 				
 				@media (min-width: @tabletViewportWidth) {
-					.unitize(padding-top, @padding-md-vertical);
+					.unify(padding-top, @padding-md-vertical);
 				}				
 			}
 		}

@@ -1,6 +1,6 @@
 .blog--content {
 	@media screen and (min-width: @tabletViewportWidth) {
-		.unitize(margin-top, @padding-md-vertical);
+		.unify(margin-top, @padding-md-vertical);
 	}
 }
 
@@ -18,7 +18,7 @@
 		margin-left: 0;
 		margin-right: 0;
 		border-color: @border-color-light;
-		.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+		.unify-padding(@padding-base-vertical, @padding-base-horizontal);
 	}
 }
 
@@ -28,19 +28,19 @@
 	.filter--headline {
 		color: @text-color-light;
 		margin: 0;
-		.unitize-padding(@padding-base-vertical, 0);
+		.unify-padding(@padding-base-vertical, 0);
 		font-weight: @font-base-weight;
 	}
 	
 	.filter--entry {
-		.unitize(font-size, @font-size-base);
-		.unitize(padding-left, @padding-base-horizontal);
-		.unitize(padding-right, @padding-base-horizontal);
+		.unify(font-size, @font-size-base);
+		.unify(padding-left, @padding-base-horizontal);
+		.unify(padding-right, @padding-base-horizontal);
 		
 		.blog--content & {
 			@media screen and (min-width: @tabletViewportWidth) {
-				.unitize(padding-top, @padding-xs-vertical);
-				.unitize(padding-bottom, @padding-xs-vertical);
+				.unify(padding-top, @padding-xs-vertical);
+				.unify(padding-bottom, @padding-xs-vertical);
 			}
 		}
 	}
@@ -60,7 +60,7 @@
 	.blog--navigation {
 		
 		.collapse--header {
-			.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+			.unify-padding(@padding-base-vertical, @padding-base-horizontal);
 			margin-bottom:0;
 			color: @text-color-light;
 			
@@ -77,7 +77,7 @@
 		
 		.blog--sidebar-body {
 			@media screen and (min-width: @tabletViewportWidth) {
-				.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+				.unify-padding(@padding-base-vertical, @padding-base-horizontal);
 			}			
 		}
 	}
@@ -86,17 +86,17 @@
 .blog--detail {
 	
 	.blog--detail-header {
-		.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+		.unify-padding(@padding-base-vertical, @padding-base-horizontal);
 		border-bottom: 1px solid @border-color-light;
 		margin-bottom: 0;
 		
 		.blog--detail-headline {
-			.unitize(margin-bottom, @padding-base-vertical);
+			.unify(margin-bottom, @padding-base-vertical);
 			color: @text-color;
 			font-weight: font-semibold-weight;
 			
 			@media screen and (min-width: @tabletViewportWidth) {
-				.unitize(font-size, @font-size-h2);
+				.unify(font-size, @font-size-h2);
 			}
 		}
 		
@@ -113,7 +113,7 @@
 	}
 	
 	.blog--detail-box-content {
-		.unitize(padding, @grid-gutter-size);
+		.unify(padding, @grid-gutter-size);
 	}
 	
 	.blog--comments-wrapper {

@@ -7,35 +7,35 @@
 	}
 		
 	.main-search--button {
-		.unitize(font-size, @search-icon-size);
-		.unitize(padding-left, @padding-base-horizontal);
-		.unitize(padding-right, @padding-base-horizontal);
+		.unify(font-size, @search-icon-size);
+		.unify(padding-left, @padding-base-horizontal);
+		.unify(padding-right, @padding-base-horizontal);
 		.position(absolute, 0, 0, 0, auto);
 		color: @search-icon-color;
 	}
 	
 	.main-search--field {
 		.form-control;
-		.unitize(padding-right, (@icon-size-xs + (@padding-base-horizontal * 2)));
+		.unify(padding-right, (@icon-size-xs + (@padding-base-horizontal * 2)));
 		background-color: @search-bg;
 		border-color: @search-border-color;
 	}
 	
 	.form--ajax-loader {
-		.unitize(right, (@icon-size-xs + (@padding-base-horizontal * 2)));
-		.unitize(top, 8);
+		.unify(right, (@icon-size-xs + (@padding-base-horizontal * 2)));
+		.unify(top, 8);
 	}
 }
 
 .main-search--results {
-	.unitize(margin-top, @padding-md-vertical);
+	.unify(margin-top, @padding-md-vertical);
 	top: 100%;
 	width: 100%;
 	margin-left: 0;
 	
 	@media (min-width: @tabletViewportWidth) {
-		.unitize(left, 0);
-		.unitize-width(400);
+		.unify(left, 0);
+		.unify-width(400);
 	}
 	
 	.results--list {
@@ -61,9 +61,9 @@
 		}
 		
 		.list--entry {
-			.unitize-padding(@padding-sm-vertical, @padding-sm-horizontal);
-			.unitize(margin-left, -@padding-sm-horizontal);
-			.unitize(margin-right, -@padding-sm-horizontal);
+			.unify-padding(@padding-sm-vertical, @padding-sm-horizontal);
+			.unify(margin-left, -@padding-sm-horizontal);
+			.unify(margin-right, -@padding-sm-horizontal);
 			border-bottom: 1px solid @border-color-light;
 		}
 		

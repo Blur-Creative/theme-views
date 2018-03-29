@@ -1,6 +1,6 @@
 body {
     font-family: "@{fontBaseStack}";
-	.unitize(font-size, @font-size-base);
+	.unify(font-size, @font-size-base);
 	color:@text-color;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -13,7 +13,7 @@ body {
 	.box-shadow(@page-wrap-shadow);
 	
 	.page--boxed-width & {
-		.unitize(max-width, 1290);
+		.unify(max-width, 1290);
 		margin-left: auto;
 		margin-right: auto;	
 		width: 100%;
@@ -36,21 +36,21 @@ body {
 	}
 	
 	.rating--count-wrapper {
-		.unitize(font-size, @font-size-base);
+		.unify(font-size, @font-size-base);
 		line-height:1;
 		display:inline-block;
 		vertical-align:middle;
 		color:@text-color;
 		
 		.product--details & {
-			.unitize(font-size, @font-size-base);
+			.unify(font-size, @font-size-base);
 			vertical-align:middle;
 			line-height:1;
 		}
 	}
 	
 	.product--details & {
-		.unitize(font-size, @icon-size-xs);
+		.unify(font-size, @icon-size-xs);
 		height: auto;
 		display: inline-block;
 		line-height: 1;

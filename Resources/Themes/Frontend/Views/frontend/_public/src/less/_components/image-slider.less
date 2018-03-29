@@ -8,21 +8,21 @@
 .image-slider--container {
 	
 	.arrow {
-		.unitize-width(@image-slider-arrow-width);
-		.unitize-height(@image-slider-arrow-height);
-		.unitize(margin-top, -(@image-slider-arrow-height / 2));
-		.unitize(line-height, @image-slider-arrow-height);
-		.unitize(border-radius, 0);
+		.unify-width(@image-slider-arrow-width);
+		.unify-height(@image-slider-arrow-height);
+		.unify(margin-top, -(@image-slider-arrow-height / 2));
+		.unify(line-height, @image-slider-arrow-height);
+		.unify(border-radius, 0);
 		color: @image-slider-arrow-color;
 		background-color: @image-slider-arrow-bg;
 		border: 0;
 		
 		&.is--right {
-			.unitize(border-radius, 0);
+			.unify(border-radius, 0);
 		}
 		
 		&.is--left {
-			.unitize(border-radius, 0);
+			.unify(border-radius, 0);
 		}
 		
 		&:hover {

@@ -5,10 +5,10 @@
         
         .product--table & {
             .panel.success;
-            .unitize(margin-bottom, @padding-md-vertical);
+            .unify(margin-bottom, @padding-md-vertical);
             
             @media (min-width: @tabletViewportWidth) {
-                .unitize(margin-bottom, 0);
+                .unify(margin-bottom, 0);
             }
         }
     }
@@ -20,16 +20,16 @@
             .premium-product--badge {
                 .badge;
                 .badge.is--info;
-                .unitize(width, @icon-size-xl);
-                .unitize(height, @icon-size-xl);
-                .unitize(line-height, @icon-size-xl);
-                .unitize(padding, 0);
+                .unify(width, @icon-size-xl);
+                .unify(height, @icon-size-xl);
+                .unify(line-height, @icon-size-xl);
+                .unify(padding, 0);
                 border-radius: 50%;
            }
             
             .product--image {
                 background-color: @image-background-color;
-                .unitize(border-radius, @border-radius-sm);
+                .unify(border-radius, @border-radius-sm);
             }
             
             .premium-product--difference {
@@ -47,24 +47,24 @@
                 .select-field {
                     .flexbox-item(1 100%);
                     max-width: none;
-                    .unitize(margin-right, 0);
+                    .unify(margin-right, 0);
                     
                     .premium--selection {
-                        .unitize(height, @select-height-base);
-                        .unitize(line-height, @select-height-base);
+                        .unify(height, @select-height-base);
+                        .unify(line-height, @select-height-base);
                         border-right: 0;
                     }
                 }
                 
                 .premium--button {
                     .flexbox-item(0 auto);
-                    .unitize(height, @select-height-base);
-                    .unitize-padding(@padding-sm-vertical, @padding-md-horizontal);
+                    .unify(height, @select-height-base);
+                    .unify-padding(@padding-sm-vertical, @padding-md-horizontal);
                     width: auto;
-                    .unitize(margin-left, 0);
+                    .unify(margin-left, 0);
                     
                     .icon-node {
-                        .unitize(margin-right, 0);
+                        .unify(margin-right, 0);
                     }
                 }
             }

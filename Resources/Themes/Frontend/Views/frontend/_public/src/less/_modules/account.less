@@ -19,8 +19,8 @@
 	fieldset {
 		
 		input[type="checkbox"] {
-			.unitize(margin-left, -20);
-			.unitize(margin-top, 4);
+			.unify(margin-left, -20);
+			.unify(margin-top, 4);
 		}
 	}
 }
@@ -34,7 +34,7 @@
 		}
 		
 		@media (min-width: @tabletLandscapeViewportWidth) {
-			.unitize(margin-bottom, @padding-md-vertical);
+			.unify(margin-bottom, @padding-md-vertical);
 		}
 		
 		@media (min-width: @desktopViewportWidth) {
@@ -104,11 +104,11 @@
 	
 	.address--actions-set-defaults {
 		margin-bottom: 0;
-		.unitize(padding-top, @padding-md-vertical);
+		.unify(padding-top, @padding-md-vertical);
 		
 		.btn {
 			color: @link-color;
-			.unitize-padding(@button-sm-padding-vertical, @button-sm-padding-horizontal);
+			.unify-padding(@button-sm-padding-vertical, @button-sm-padding-horizontal);
 
 
 			@media (min-width: @tabletLandscapeViewportWidth) {
@@ -128,7 +128,7 @@
 	
 	.orders--table-header {
 		@media (min-width: @tabletViewportWidth) {
-			.unitize-padding(@padding-base-vertical, @padding-base-horizontal);
+			.unify-padding(@padding-base-vertical, @padding-base-horizontal);
 			background-color: transparent;
 			color: @text-color;
 		}
@@ -143,7 +143,7 @@
 	
 	.order--item {
 		@media (min-width: @tabletViewportWidth) {
-			.unitize-padding((@grid-gutter-size / 2), (@grid-gutter-size / 2));
+			.unify-padding((@grid-gutter-size / 2), (@grid-gutter-size / 2));
 		}
 	}
 	
@@ -177,10 +177,10 @@
     }
         
     .logout-action--back {
-        .unitize(margin-bottom, @padding-base-vertical);
+        .unify(margin-bottom, @padding-base-vertical);
         
         @media (min-width: @tabletViewportWidth) {
-            .unitize(margin-bottom, 0);
+            .unify(margin-bottom, 0);
         }
     }
 }
