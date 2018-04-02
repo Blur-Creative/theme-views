@@ -13,6 +13,10 @@
 	{block name="frontend_index_body_has_breadcrumb"}
 		{if count($sBreadcrumb)} has--breadcrumb{/if}
 	{/block}
+	
+	{block name="frontend_index_body_has_page_preload"}
+		{if $theme.page_preload_active} has--page-preload{/if}
+	{/block}
 {/strip}
 {/block}
 
@@ -24,6 +28,36 @@
 		{/if}
 	{/block}
 {/strip}
+{/block}
+
+{block name='frontend_index_after_body'}
+	{$smarty.block.parent}
+	
+	{*block name='frontend_index_body_page_preloader'}
+		{if $theme.page_preload_active}
+			<style type="text/css">
+				@keyframes spin {
+					0% { transform: rotate(0deg); }
+					100% { transform: rotate(360deg); }
+				}
+				
+				.page-preloader {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-left: -50px;
+					margin-top: -50px;
+					border: 3px solid rgba(255,255,255,.42); /* Light grey */
+					border-top: 3px solid #ffffff; /* Blue */
+					border-radius: 50%;
+					width: 100px;
+					height: 100px;
+					animation: spin 2s linear infinite;
+				}
+			</style>
+			<div class="page-preloader"></div>
+		{/if}
+	{/block*}
 {/block}
 
 {* Shop header *}

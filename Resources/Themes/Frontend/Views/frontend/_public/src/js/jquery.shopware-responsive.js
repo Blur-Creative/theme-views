@@ -24,13 +24,9 @@
         .addPlugin('.navigation--entry.entry--account.with-slt', 'bcDropdown', {
             dropdownCls: '.account--dropdown-navigation'
         }, [ 'm', 'l', 'xl' ])
-		
-		//remove ajax product navigation. if you want to use comment it out
-		//.removePlugin('body', 'swAjaxProductNavigation')
 	;
-
-	$(function($) {
-		
+	
+	$(function($) {	
 		$('.add-voucher--trigger-btn').on('click', function (event) {
 			var $input = $(this).find('input');
 			var method = (!$input.is(':checked')) ? 'addClass' : 'removeClass';
@@ -107,6 +103,11 @@
 				$('html, body').animate({scrollTop : 0},800);
 				return false;
 			});
+		});
+		
+		// Page Preload
+		$(document).ready(function(){
+			$('body.has--page-preload').addClass('has--loaded');
 		});
 	});
 })(jQuery, window);

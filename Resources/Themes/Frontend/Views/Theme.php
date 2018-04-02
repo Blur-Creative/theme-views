@@ -520,7 +520,10 @@ SHOPWARE_EOD;
         'header-listing-category-teaser-height-phone-landscape' => '350',
         'header-listing-category-teaser-height-tablet' => '400',
         'header-listing-category-teaser-height-tablet-landscape' => '400',
-        'header-listing-category-teaser-height-desktop' => '500'
+        'header-listing-category-teaser-height-desktop' => '500',
+		// Page Pre-Loader Settings
+		'page_preload_active' => true,
+		'page_preload_bg_color' => '#292e33'
     ];
     
 	/**
@@ -7585,6 +7588,7 @@ SHOPWARE_EOD;
 		
 		$tab->addElement($this->createLayoutGeneralOptionsFieldset());
 		$tab->addElement($this->createSearchLayoutOptionsFieldset());
+		$tab->addElement($this->createPagepreloadOptionsFieldset());
 
 		return $tab;
 	}
@@ -7669,6 +7673,56 @@ SHOPWARE_EOD;
                 ]			
 			)
 		);
+		
+		return $fieldset;
+	}
+	
+	public function createPagepreloadOptionsFieldset()
+	{
+		
+		// Create the fieldset which is the container of our field
+		$fieldset = $this->createFieldSet(
+			'page_preload_options',
+			'__page_preload_options__',
+			array(
+				'attributes' => array(
+					'layout' => 'column',
+					'flex' => 0,
+					'autoScroll' => true,
+					'defaults' => array(
+						'columnWidth' => 1,
+						'labelWidth' => 150,
+						'margin' => '5 15 5 0'
+					)
+				)
+			)
+		);
+		
+        $fieldset->addElement(
+            $this->createCheckboxField(
+                'page_preload_active',
+                '__page_preload_active__',
+                $this->themeConfigDefaults['page_preload_active'],
+                ['attributes' => 
+                    [
+                        'lessCompatible' => false, 'columnWidth' => 1,
+						'supportText' => '__page_preload_active_description__'
+                    ]
+                ]
+            )
+        );
+		
+        $fieldset->addElement(
+            $this->createColorPickerField(
+                'page_preload_bg_color',
+                '__page_preload_bg_color__',
+				$this->themeConfigDefaults['page_preload_bg_color'],
+                [
+                    'attributes' => 
+                        ['supportText' => '@page_preload_bg_color']
+                ]  
+            )
+        );
 		
 		return $fieldset;
 	}
