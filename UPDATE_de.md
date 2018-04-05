@@ -1,3 +1,17 @@
+v1.3.1
+----------
+**Versions-Highlights:**
+- kleinere Fehlerbeseitigungen und Verbesserungen
+
+**behobene Probleme und Verbesserungen:**
+- Ein Pageloader wurde hinzugefügt. Dadurch dass die Haupt Stylesheet below the fold geladen wird, kann es beim Seiten laden kurz zu unsauberer Darstellung des Shops kommen. Der Page Loader stellt nun den Inhalt des Shops erst dar, wenn die CSS/JavaScript Dateien tatsächlich geladen sind. Dies sorgt für eine saubere und flüssigere Darstellung des Shop beim Ladevorgang. Diese Option läaat sich unter "Views Theme Optionen" -> "Layout" de-/aktivieren
+- .unify(); Mixin wurde hinzugefügt, welches nur den rem Wert ausgibt
+- Stylesheet Aufruf wurde in den Footer platziert (lädt below the fold)
+- Google Fonts CDN Aufruf wurde in den Footer platziert (lädt below the fold)
+- Ein Fehler auf der Such-Seite, bei dem die falschen Artikelboxen im Infinite Scroll geladen wurden, wurde behoben
+- issue #81: Das Barzahlungs-Icon wird nun angezeigt
+- issue #80: Darstellungsprobleme mit der Box Basic (Detailierte Informationen) wurden behoben
+
 v1.3.0
 ----------
 **Versions-Highlights:**
