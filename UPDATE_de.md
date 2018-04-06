@@ -5,6 +5,7 @@ v1.3.1
 
 **behobene Probleme und Verbesserungen:**
 - Ein Pageloader wurde hinzugefügt. Dadurch dass die Haupt Stylesheet below the fold geladen wird, kann es beim Seiten laden kurz zu unsauberer Darstellung des Shops kommen. Der Page Loader stellt nun den Inhalt des Shops erst dar, wenn die CSS/JavaScript Dateien tatsächlich geladen sind. Dies sorgt für eine saubere und flüssigere Darstellung des Shop beim Ladevorgang. Diese Option läaat sich unter "Views Theme Optionen" -> "Layout" de-/aktivieren
+- Im Warenkorb wurde die Methode zur Löschung eines Produktes von Ajax auf Form geändert
 - .unify(); Mixin wurde hinzugefügt, welches nur den rem Wert ausgibt
 - Stylesheet Aufruf wurde in den Footer platziert (lädt below the fold)
 - Google Fonts CDN Aufruf wurde in den Footer platziert (lädt below the fold)
