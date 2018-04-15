@@ -17,7 +17,7 @@
         
         .panel--title,
         .panel--header {
-            .panel--header.primary;
+            &:extend(.panel--header.primary);
         }
     }
     &.secondary {
@@ -25,7 +25,7 @@
         
         .panel--title,
         .panel--header {
-            .panel--header.secondary;
+			&:extend(.panel--header.secondary);
         }
     }
     &.danger {
@@ -33,7 +33,7 @@
         
         .panel--title,
         .panel--header {
-            .panel--header.danger;
+			&:extend(.panel--header.danger);
         }
     }
     &.warning {
@@ -41,7 +41,7 @@
         
         .panel--title,
         .panel--header {
-            .panel--header.warning;
+			&:extend(.panel--header.warning);
         }
     }
     &.success {
@@ -49,7 +49,7 @@
         
         .panel--title,
         .panel--header {
-            .panel--header.success;
+			&:extend(.panel--header.success);
         }
     }
     &.small {
