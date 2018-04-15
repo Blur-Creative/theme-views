@@ -165,7 +165,7 @@
 
 	{* Country and state fields *}
 	{block name='frontend_register_shipping_fieldset_input_country'}
-		<div class="register--shipping-country field--select">
+		<div class="register--shipping-country field--select select-field">
 			<select name="register[shipping][country]"
 					data-address-type="shipping"
 					id="country_shipping"
@@ -194,7 +194,7 @@
 		<div class="country-area-state-selection">
 			{foreach $country_list as $country}
 				{if $country.states}
-					<div data-country-id="{$country.id}" data-address-type="shipping" class="register--state-selection field--select{if $country.id != $form_data.country} is--hidden{/if}">
+					<div data-country-id="{$country.id}" data-address-type="shipping" class="register--state-selection field--select select-field{if $country.id != $form_data.country} is--hidden{/if}">
 						<select name="register[shipping][country_shipping_state_{$country.id}]"{if $country.force_state_in_registration} required="required" aria-required="true"{/if}{if $country.id != $form_data.country} disabled="disabled"{/if} class="select--state {if $country.force_state_in_registration}is--required{/if}{if isset($error_flags.stateID)} has--error{/if}">
 							<option value="" selected="selected"{if $country.force_state_in_registration} disabled="disabled"{/if}>{s name='RegisterShippingLabelState'}{/s}{if $country.force_state_in_registration}{s name="RequiredField" namespace="frontend/register/index"}{/s}{/if}</option>
 							{assign var="stateID" value="country_shipping_state_`$country.id`"}
