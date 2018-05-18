@@ -7,6 +7,8 @@ use Shopware\Components\Plugin\ConfigReader;
 class UserData implements SubscriberInterface
 {
     private $userLoggedIn;
+	
+    private $userInfo;
     
     private $session;
     
@@ -19,6 +21,8 @@ class UserData implements SubscriberInterface
         \Enlight_Components_Session_Namespace $session
     ) {
         $this->session      = $session;
+		
+		echo $this->session->get('sUserId');
     }
     
     /*
@@ -40,14 +44,19 @@ class UserData implements SubscriberInterface
      * @var $isUserLoggedIn = $userLoggedIn
      */
     public function getUserData(\Enlight_Controller_ActionEventArgs $args)
-    {        
+    {       
         $view = $args->getSubject()->View();
         
         if (null === $this->userLoggedIn) {
             $this->userLoggedIn = (bool)$this->session->get('sUserId');
         }
+		
+		if ($this->userLoggedIn) {
+			$this->userInfo = Shopware()->Container()->get('shopware_account.store_front_greeting_service')->fetch();
+		}
         
         $view->assign('isUserLoggedIn', $this->userLoggedIn);
+        $view->assign('userInfo', $this->userInfo);
     }
 }
 
