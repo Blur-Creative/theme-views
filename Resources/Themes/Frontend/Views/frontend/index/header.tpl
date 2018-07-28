@@ -6,8 +6,6 @@
 	block: frontend_index_header_javascript_jquery_lib
 *}
 {block name="frontend_index_header_css_screen"}
-	{$smarty.block.parent}
-
 	{if $theme.page_preload_active}
 		<style type="text/css">
 			body.has--page-preload {ldelim}
