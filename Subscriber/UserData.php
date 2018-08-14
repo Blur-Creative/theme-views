@@ -22,7 +22,7 @@ class UserData implements SubscriberInterface
     ) {
         $this->session      = $session;
 		
-		echo $this->session->get('sUserId');
+		//echo $this->session->get('sUserId');
     }
     
     /*
