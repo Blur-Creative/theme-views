@@ -1,8 +1,10 @@
 {if $theme.shipping_option_active==true}
     <div class="shipping-info">
-        <h2>
-            {s namespace="themes/views/frontend/index/shipping-info" name="sFooterShippingInfoTitle"}{/s}
-        </h2>
+		{block name="frontend_index_footer_shipping_info_title"}
+			<h2>
+				{s namespace="themes/views/frontend/index/shipping-info" name="sFooterShippingInfoTitle"}{/s}
+			</h2>
+		{/block}
         <ul class="list-inline">
             {block name="frontend_index_footer_shipping_item_dpd"}
                 {if $theme.shipping_option_dpd}

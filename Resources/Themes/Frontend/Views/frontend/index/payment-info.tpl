@@ -1,8 +1,10 @@
 {if $theme.payment_option_active==true}
     <div class="payment-info">
-        <h2>
-            {s namespace="themes/views/frontend/index/payment-info" name="sFooterPaymentInfoTitle"}{/s}
-        </h2>
+		{block name="frontend_index_footer_payment_info_title"}
+			<h2>
+				{s namespace="themes/views/frontend/index/payment-info" name="sFooterPaymentInfoTitle"}{/s}
+			</h2>
+		{/block}
         <ul class="list-inline">
             {block name="frontend_index_footer_payment_item_prepayment"}
                 {if $theme.payment_option_prepayment}
