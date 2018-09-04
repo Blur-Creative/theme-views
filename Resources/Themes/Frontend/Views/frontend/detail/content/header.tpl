@@ -35,7 +35,7 @@
 							{s namespace="themes/views/frontend/detail/content/header" name="DetailHeaderOrdernumber"}{/s}
 						</label>
 						<meta itemprop="productID" content="{$sArticle.articleDetailsID}"/>
-						<span class="entry--content" itemprop="sku">
+						<span class="entry--content product--sku-number" itemprop="sku">
 							{$sArticle.ordernumber}
 						</span>
 					</div>

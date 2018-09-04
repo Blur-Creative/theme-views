@@ -24,6 +24,10 @@
         .addPlugin('.navigation--entry.entry--account.with-slt', 'bcDropdown', {
             dropdownCls: '.account--dropdown-navigation'
         }, [ 'm', 'l', 'xl' ])
+		
+		.addPlugin('*[data-ajax-variants-container="true"]', 'swAjaxVariant', {
+			orderNumberSelector: '.product--sku-number'
+		})
 	;
 	
 	$(function($) {	
