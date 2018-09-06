@@ -95,9 +95,11 @@
                                 </a>
                             {/block}
 
-                            <div class="entry--search" role="menuitem" data-search="true" aria-haspopup="true"{if $theme.focusSearch && {controllerName|lower} == 'index'} data-activeOnStart="true"{/if}>
-                                {include file="frontend/index/search.tpl"}
-                            </div>
+							{block name='frontend_index_shop_control_search_entry'}
+								<div class="entry--search" role="menuitem" data-search="true" aria-haspopup="true"{if $theme.focusSearch && {controllerName|lower} == 'index'} data-activeOnStart="true"{/if}>
+									{include file="frontend/index/search.tpl"}
+								</div>
+							{/block}
                         </div>
 					{/block}
 					
