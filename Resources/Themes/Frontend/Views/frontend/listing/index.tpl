@@ -28,23 +28,25 @@
 			{/if}
 		{/block}
 
-		{* Define all necessary template variables for the listing *}
-		{block name="frontend_listing_index_layout_variables"}
+        {* Define all necessary template variables for the listing *}
+        {block name="frontend_listing_index_layout_variables"}
+
+            {$emotionViewports = [0 => 'xl', 1 => 'l', 2 => 'm', 3 => 's', 4 => 'xs']}
 
             {* Count of available product pages *}
-            {$pages = ceil($sNumberArticles / $criteria->getLimit())}
+            {$pages = 1}
 
-            {* Controller url for the found products counter *}
-            {$countCtrlUrl = "{url module="widgets" controller="listing" action="listingCount" params=$ajaxCountUrlParams fullPath}"}
+            {if $criteria}
+                {$pages = ceil($sNumberArticles / $criteria->getLimit())}
+            {/if}
 
             {* Layout for the product boxes *}
             {$productBoxLayout = 'basic'}
 
-            {if $sCategoryContent.productBoxLayout !== null &&
-                $sCategoryContent.productBoxLayout !== 'extend'}
+            {if $sCategoryContent.productBoxLayout !== null && $sCategoryContent.productBoxLayout !== 'extend'}
                 {$productBoxLayout = $sCategoryContent.productBoxLayout}
             {/if}
-		{/block}
+        {/block}
 
 		{* Listing *}
 		{block name="frontend_listing_index_listing"}
