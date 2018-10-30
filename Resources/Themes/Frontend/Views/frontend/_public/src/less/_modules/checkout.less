@@ -285,6 +285,10 @@
 		color: @text-color-light;
 		.unify(font-size, @font-size-sm);
 	}
+	
+	.content--confirm  & {
+		border-color: @border-color-light;
+	}
 }
 /* >>> CHECKOUT PROCESS end */
 
@@ -420,6 +424,8 @@
 
 		.information--panel-item {
 			padding-top: 0;
+			.unify(padding-left, @padding-base-horizontal);
+			.unify(padding-right, @padding-base-horizontal);
 			
 			.information--panel {
 				.unify(margin-bottom, @padding-md-vertical);
@@ -624,6 +630,50 @@
 		
 		.basket--footer {
 			border-top: 0;
+		}
+	}
+}
+
+.paypal--payment-selection {
+	
+	> .panel--body {
+		padding: 0 !important;
+	}
+	
+	.payment--method {
+		font-family: @fontBaseStack;
+		color: @text-color;
+		
+		&.js--is-active,
+		&.is--active {
+			background-color: @brand-secondary-light;
+			
+			&:after {
+				&:extend(.icon-node);
+				content: @icon-check-thin; 
+				color: @highlight-success;
+				background: transparent none;
+				font-size: 24px;
+				width: auto;
+				height: auto;
+				right: 15px;
+			}
+			
+			&:hover {
+				background-color: @brand-secondary-light;
+			}
+		}
+		
+		.method--name {
+			color: @text-color;	
+		}
+		
+		&:hover {
+			background-color: @brand-secondary-dark;
+		}
+		
+		&:last-child {
+			border: 0 !important;
 		}
 	}
 }
