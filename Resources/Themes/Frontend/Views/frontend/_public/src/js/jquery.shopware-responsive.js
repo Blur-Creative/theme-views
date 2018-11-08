@@ -18,7 +18,7 @@
         .addPlugin('*[data-product-slider="true"]', 'swProductSlider', {itemMinWidth:240})
 
 		//BC Sticky Nav
-		.addPlugin('*[data-sticky-navigation="true"]', 'bcStickyNav')
+		.addPlugin('*[data-sticky-navigation="true"]', 'bcStickyNav', [ 'm', 'l', 'xl' ])
         
         .removePlugin('.navigation--entry.entry--account.with-slt', 'swDropdownMenu', [ 'm', 'l', 'xl' ])
         .addPlugin('.navigation--entry.entry--account.with-slt', 'bcDropdown', {
