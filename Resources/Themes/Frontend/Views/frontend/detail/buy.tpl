@@ -23,7 +23,14 @@
 {/block}
 
 
-{block name="frontend_detail_buy_button_container_outer" append}
+{block name="frontend_detail_buy_button_container_outer"}
+	{$smarty.block.parent}
+	
+    {block name='frontend_detail_buy_button_paypal_unified_installments'}
+        {if !($sArticle.sConfigurator && !$activeConfiguratorSelection) && $paypalUnifiedEcDetailActive}
+            {include file='frontend/paypal_unified/express_checkout/button_detail.tpl'}
+        {/if}
+    {/block}
 	
 	{block name="frontend_detail_buy_button_soldout"}
 		{if !$sArticle.isAvailable}
