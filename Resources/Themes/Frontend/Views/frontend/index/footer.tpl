@@ -68,14 +68,14 @@
             {* Copyright *}
             {block name="frontend_index_shopware_footer_copyright"}
                 <div class="footer--copyright container text--center">
-					{s namespace="themes/views/frontend/index/footer" name="ThemeCopyright"}{/s}
+					<a href="https://blurcreative.de/" target="_blank" title="Digitale Agentur für Wordpress, Onlineshops, Branding">{s namespace="themes/views/frontend/index/footer" name="ThemeCopyright"}{/s}</a>
                 </div>
             {/block}
 
             {* Logo *}
             {block name="frontend_index_shopware_footer_logo"}
                 <div class="footer--logo container  text--center">
-                    <img src="{link file='frontend/_public/src/img/icons/blurcreative.png'}" />
+                    <a href="https://blurcreative.de/" target="_blank" title="Digitale Agentur für Wordpress, Onlineshops, Branding"><img src="{link file='frontend/_public/src/img/icons/blurcreative.png'}" /></a>
                 </div>
             {/block}
         {/block}
