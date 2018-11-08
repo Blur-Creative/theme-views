@@ -35,11 +35,11 @@
 
 			{* Highlight badge *}
 			{block name='frontend_listing_box_article_hint'}
-				{*if $sArticle.highlight*}
+				{if $sArticle.highlight}
 					<span class="product--badge badge--recommend">
 						{s name="ListingBoxTip" namespace="frontend/listing/box_article"}{/s}
 					</span>
-				{*/if*}
+				{/if}
 			{/block}
 	
 			{* ESD product badge *}
