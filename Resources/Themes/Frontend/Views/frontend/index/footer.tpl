@@ -44,7 +44,7 @@
 				</div>
 			{/if}
 		{/block}
-	
+
         {* Vat info *}
         {block name='frontend_index_footer_vatinfo'}
             <div class="footer--vat-info container">
@@ -68,14 +68,14 @@
             {* Copyright *}
             {block name="frontend_index_shopware_footer_copyright"}
                 <div class="footer--copyright container text--center">
-					<a href="https://blurcreative.de/" target="_blank" title="Digitale Agentur für Wordpress, Onlineshops, Branding">{s namespace="themes/views/frontend/index/footer" name="ThemeCopyright"}{/s}</a>
+				<a href="https://blurcreative.de/" rel="dofollow" title="Digitale Agentur für Wordpress, Onlineshops, Branding" target="_blank">{s namespace="themes/views/frontend/index/footer" name="ThemeCopyright"}{/s}</a>
                 </div>
             {/block}
 
             {* Logo *}
             {block name="frontend_index_shopware_footer_logo"}
                 <div class="footer--logo container  text--center">
-                    <a href="https://blurcreative.de/" target="_blank" title="Digitale Agentur für Wordpress, Onlineshops, Branding"><img src="{link file='frontend/_public/src/img/icons/blurcreative.png'}" /></a>
+                    <a href="https://blurcreative.de/" rel="dofollow" title="Digitale Agentur für Wordpress, Onlineshops, Branding" target="_blank"><img src="{link file='frontend/_public/src/img/icons/blurcreative.png'}" /></a>
                 </div>
             {/block}
         {/block}
