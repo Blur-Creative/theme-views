@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
 	<label lang="en">Views Theme</label>
     <label lang="de">Views Theme</label>
-    <version>1.3.8</version>
+    <version>1.3.9</version>
 
     <link>http://blurcreative.de</link>
     <author>BlurCreative</author>
