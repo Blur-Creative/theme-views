@@ -35,6 +35,15 @@
 					</li>
                 {/if}
             {/block}
+            {block name="frontend_index_footer_payment_item_lastschrift"}
+                {if $theme.payment_option_lastschrift}
+                    <li>
+						<img src="{link file='frontend/_public/src/img/icons/payment/lastschrift.png'}"
+							 alt="{s name='sPaymentInfoLastschrift'}{/s}" 
+							 title="{s name='sFooterPaymentInfoTitle'}{/s} {s name='sPaymentInfoLastschrift'}{/s}" />
+					</li>
+                {/if}
+            {/block}
             {block name="frontend_index_footer_payment_item_cashondelievery"}
                 {if $theme.payment_option_cashondelievery}
                     <li>

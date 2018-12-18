@@ -6564,6 +6564,14 @@ SHOPWARE_EOD;
 		);	
 
 		// Create Sofort Überweisung checkbkox
+		$lastschriftCheckbox = $this->createCheckboxField(
+			'payment_option_lastschrift',
+			'__payment_option_lastschrift_label__',
+			false,
+			['attributes' => ['lessCompatible' => false]]
+		);	
+
+		// Create Sofort Überweisung checkbkox
 		$cashCheckbox = $this->createCheckboxField(
 			'payment_option_cash',
 			'__payment_options_cash_label__',
@@ -6687,6 +6695,7 @@ SHOPWARE_EOD;
 		$fieldset->addElement($paymentsActiveCheckbox);
 		$fieldset->addElement($prepayCheckbox);
 		$fieldset->addElement($cashCheckbox);
+		$fieldset->addElement($lastschriftCheckbox);
 		$fieldset->addElement($cashondelieveryCheckbox);
 		$fieldset->addElement($billCheckbox);
 		$fieldset->addElement($visaCheckbox);
