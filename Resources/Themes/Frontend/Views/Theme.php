@@ -26,6 +26,8 @@ SHOPWARE_EOD;
 property
 SHOPWARE_EOD;
 
+	//protected $injectBeforePlugins = true;
+
     /** @var array Defines the files which should be compiled by the javascript compressor */
     protected $css = array(
         'vendors/css/tooltipster.bundle.css'
@@ -42,14 +44,14 @@ SHOPWARE_EOD;
 		'vendors/js/jquery.webui-popover.js',
 		'vendors/js/jquery.matchHeight-min.js',
 		'vendors/js/tooltipster.bundle.js',
-        
+
 		'src/js/jquery.button-toggle.js',
 		'src/js/jquery.panel-auto-resizer.js',
 		'src/js/jquery.bc.sticky-nav.js',
 		'src/js/jquery.bc.drop-down.js',
 		'src/js/jquery.shopware-responsive.js'
     ];
-	
+
 	protected $inheritanceConfig = false;
 
     private $fieldSetDefaults = [
@@ -62,7 +64,7 @@ SHOPWARE_EOD;
 			'margin' => '2 15 2 0'
 		)
     ];
-	
+
     private $themeColorDefaults = [
 		//base colors
         'brand-primary' => 'rgba(255,255,255,0.62)',
@@ -73,7 +75,7 @@ SHOPWARE_EOD;
         'brand-secondary-dark' => '#1c1f22',
         'gray' => '#F5F5F8',
         'gray-light' => 'lighten(@gray, 1%)',
-        'gray-dark' => 'darken(@gray-light, 10%)',		
+        'gray-dark' => 'darken(@gray-light, 10%)',
 		//border style
         'border-color' => 'rgba(255,255,255,0.42)',
 		'border-color-light' => 'rgba(255,255,255,0.15)',
@@ -92,16 +94,16 @@ SHOPWARE_EOD;
 		'padding-base-vertical' => '10',
 		'padding-base-horizontal' => '15',
 		'padding-xs-vertical' => '3',
-		'padding-xs-horizontal' => '5',		
+		'padding-xs-horizontal' => '5',
 		'padding-sm-vertical' => '5',
-		'padding-sm-horizontal' => '10',				
+		'padding-sm-horizontal' => '10',
 		'padding-md-vertical' => '15',
-		'padding-md-horizontal' => '20',	
+		'padding-md-horizontal' => '20',
 		'padding-lg-vertical' => '20',
-		'padding-lg-horizontal' => '25',	
+		'padding-lg-horizontal' => '25',
 		'padding-xl-vertical' => '25',
 		'padding-xl-horizontal' => '30',
-		//generel scaffolding 
+		//generel scaffolding
 		'body-bg' => '@brand-secondary',
 		'page-wrap-bg' => 'transparent',
 		'page-wrap-shadow' => 'none',
@@ -171,15 +173,15 @@ SHOPWARE_EOD;
         'product-configurator-bg' => '@brand-secondary-dark',
         'product-configurator-border-color' => '@border-color-light',
 		//font base
-		'fontBaseStack' => 'Open Sans',	
-		'fontHeadlineStack' => 'Open Sans',	
-		'font-base-weight' => '400',	
-		'font-light-weight' => '300',	
-		'font-semibold-weight' => '600',	
-		'font-bold-weight' => '800',	
-		'line-height-base' => '1.428571429',	
-		'line-height-sm' => '1.3333333',	
-		'line-height-lg' => '1.5',	
+		'fontBaseStack' => 'Open Sans',
+		'fontHeadlineStack' => 'Open Sans',
+		'font-base-weight' => '400',
+		'font-light-weight' => '300',
+		'font-semibold-weight' => '600',
+		'font-bold-weight' => '800',
+		'line-height-base' => '1.428571429',
+		'line-height-sm' => '1.3333333',
+		'line-height-lg' => '1.5',
 		//font size
 		'font-size-base' => '14',
 		'font-size-sm' => '12',
@@ -244,47 +246,47 @@ SHOPWARE_EOD;
 		'button-lg-padding-horizontal' => '18',
 		'button-lg-border-radius' => '@border-radius-base',
 		'button-lg-border-size' => '2',
-		'button-lg-font-weight' => '@font-bold-weight',		
+		'button-lg-font-weight' => '@font-bold-weight',
 		//button primary
-		'button-primary-bg' => '#195088',	
-		'button-primary-color' => '@text-color-light',	
-		'button-primary-gardient-start' => 'rgba(255,255,255,0.1)',	
+		'button-primary-bg' => '#195088',
+		'button-primary-color' => '@text-color-light',
+		'button-primary-gardient-start' => 'rgba(255,255,255,0.1)',
 		'button-primary-gardient-end' => 'rgba(255,255,255,0)',
         'border-button-primary-color' => '@text-color-light',
 		//button secondary
-		'button-secondary-bg' => '@brand-secondary-light',	
-		'button-secondary-color' => '@text-color-light',	
-		'button-secondary-gardient-start' => '@button-primary-gardient-start',	
+		'button-secondary-bg' => '@brand-secondary-light',
+		'button-secondary-color' => '@text-color-light',
+		'button-secondary-gardient-start' => '@button-primary-gardient-start',
 		'button-secondary-gardient-end' => '@button-primary-gardient-end',
         'border-button-secondary-color' => '@border-button-primary-color',
 		//button danger
-		'button-danger-bg' => '#b0310e',	
-		'button-danger-color' => '@text-color-light',	
-		'button-danger-gardient-start' => '@button-primary-gardient-start',	
+		'button-danger-bg' => '#b0310e',
+		'button-danger-color' => '@text-color-light',
+		'button-danger-gardient-start' => '@button-primary-gardient-start',
 		'button-danger-gardient-end' => '@button-primary-gardient-end',
         'border-button-danger-color' => '@border-button-primary-color',
 		//button warning
-		'button-warning-bg' => '#ae7300',	
-		'button-warning-color' => '@text-color-light',	
-		'button-warning-gardient-start' => '@button-primary-gardient-start',	
+		'button-warning-bg' => '#ae7300',
+		'button-warning-color' => '@text-color-light',
+		'button-warning-gardient-start' => '@button-primary-gardient-start',
 		'button-warning-gardient-end' => '@button-primary-gardient-end',
         'border-button-warning-color' => '@border-button-primary-color',
 		//button success
-		'button-success-bg' => '#207100',	
-		'button-success-color' => '@text-color-light',	
-		'button-success-gardient-start' => '@button-primary-gardient-start',	
+		'button-success-bg' => '#207100',
+		'button-success-color' => '@text-color-light',
+		'button-success-gardient-start' => '@button-primary-gardient-start',
 		'button-success-gardient-end' => '@button-primary-gardient-end',
         'border-button-success-color' => '@border-button-primary-color',
 		//button info
-		'button-info-bg' => '#007c7b',	
-		'button-info-color' => '@text-color-light',	
-		'button-info-gardient-start' => '@button-primary-gardient-start',	
+		'button-info-bg' => '#007c7b',
+		'button-info-color' => '@text-color-light',
+		'button-info-gardient-start' => '@button-primary-gardient-start',
 		'button-info-gardient-end' => '@button-primary-gardient-end',
         'border-button-info-color' => '@border-button-primary-color',
 		//button default
-		'button-default-bg' => '@brand-secondary-light',	
-		'button-default-color' => '@text-color-light',	
-		'button-default-gardient-start' => '@button-primary-gardient-start',	
+		'button-default-bg' => '@brand-secondary-light',
+		'button-default-color' => '@text-color-light',
+		'button-default-gardient-start' => '@button-primary-gardient-start',
 		'button-default-gardient-end' => '@button-primary-gardient-end',
         'border-button-default-color' => '@border-button-primary-color',
 		//panel color
@@ -322,7 +324,7 @@ SHOPWARE_EOD;
         'panel-success-title-gardient-start' => '@button-success-gardient-start',
         'panel-success-title-gardient-end' => '@button-success-gardient-end',
         'panel-success-title-border-color' => '@border-color-light',
-        'panel-success-border-color' => '@button-success-bg', 
+        'panel-success-border-color' => '@button-success-bg',
         //panel structure
 		'panel-border-size' => '1',
 		'panel-border-radius' => '@border-radius-sm',
@@ -491,7 +493,7 @@ SHOPWARE_EOD;
         'cookie-permission-border-color' => '@border-color-light',
         'cookie-permission-color' => '@text-color'
     ];
-	
+
     private $themeConfigDefaults = [
         'mobileLogo' => 'frontend/_public/src/img/logos/logo--shop.png',
         'tabletLogo' => 'frontend/_public/src/img/logos/logo--shop.png',
@@ -506,7 +508,7 @@ SHOPWARE_EOD;
         'header-logo-width-tablet-landscape' => '170',
         'header-logo-height-tablet-landscape' => '80',
         'header-logo-width-desktop' => '220',
-        'header-logo-height-desktop' => '150',       
+        'header-logo-height-desktop' => '150',
         //header listing settings
         'header_listing_active' => 'disabled',
         'header_listing_content_active' => true,
@@ -525,19 +527,19 @@ SHOPWARE_EOD;
 		'page_preload_active' => true,
 		'page_preload_bg_color' => '#292e33'
     ];
-    
+
 	/**
 	 * @param Form\Container\TabContainer $container
 		Creates Views config main tabs
 	 */
-	 
+
 	public function createConfig(Form\Container\TabContainer $container)
 	{
 		//creates logo icons tab
         $container->addTab($this->createLogoIconTab());
 		$container->addTab($this->createMainConfigTab());
 		$container->addTab($this->createColorConfigTab());
-		
+
 		// Create the tab which will be named "My custom colors"
 		$tab = $this->createTab(
 			'custom_theme_options',
@@ -550,22 +552,22 @@ SHOPWARE_EOD;
 		// ...last but not least add the tab to the container, which is a tab panel.
 		$container->addTab($tab);
 		//$container->addTab($tabLogoIcons);
-		
+
 		$tab->addElement($this->createCustomTabPanel());
 	}
-	
+
     private function createColorConfigTab()
     {
         $tab = $this->createTab(
             'color_config_tab',
             '__color_config_tab__'
         );
-		
+
         $tab->addElement($this->createColorTabPanel());
 
         return $tab;
     }
-	
+
     private function createColorTabPanel()
     {
         $tabPanel = $this->createTabPanel(
@@ -593,7 +595,7 @@ SHOPWARE_EOD;
 
         return $tabPanel;
     }
-	
+
    /**
      * Helper function to create the tab ("Color General")
      * @return Form\Container\Tab
@@ -620,7 +622,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     private function createColorBasicFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -647,45 +649,45 @@ SHOPWARE_EOD;
                 '__brand-primary__',
 				$this->themeColorDefaults['brand-primary'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@brand-primary']
-                ]  
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'brand-secondary',
                 '__brand-secondary__',
                 $this->themeColorDefaults['brand-secondary'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@brand-secondary']
-                ]  
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'brand-primary-light',
                 '__brand-primary-light__',
                 $this->themeColorDefaults['brand-primary-light'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@brand-primary-light']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'brand-secondary-light',
                 '__brand-secondary-light__',
                 $this->themeColorDefaults['brand-secondary-light'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@brand-secondary-light']
-                ] 
+                ]
             )
         );
 
@@ -695,33 +697,33 @@ SHOPWARE_EOD;
                 '__brand-primary-dark__',
                 $this->themeColorDefaults['brand-primary-dark'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@brand-primary-dark']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'brand-secondary-dark',
                 '__brand-secondary-dark__',
                 $this->themeColorDefaults['brand-secondary-dark'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@brand-secondary-dark']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'gray',
                 '__gray__',
                 $this->themeColorDefaults['gray'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@gray']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -730,9 +732,9 @@ SHOPWARE_EOD;
                 '__gray-light__',
                 $this->themeColorDefaults['gray-light'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@gray-light']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -741,15 +743,15 @@ SHOPWARE_EOD;
                 '__gray-dark__',
                 $this->themeColorDefaults['gray-dark'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@gray-dark']
-                ]   
+                ]
             )
         );
 
         return $fieldSet;
     }
-	
+
     private function createColorBorderFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -776,9 +778,9 @@ SHOPWARE_EOD;
                 '__border-color__',
                 $this->themeColorDefaults['border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-color']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -787,9 +789,9 @@ SHOPWARE_EOD;
                 '__border-color-light__',
                 $this->themeColorDefaults['border-color-light'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-color-light']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -798,9 +800,9 @@ SHOPWARE_EOD;
                 '__border-color-dark__',
                 $this->themeColorDefaults['border-color-dark'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-color-dark']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -809,9 +811,9 @@ SHOPWARE_EOD;
                 '__border-radius-base__',
                 $this->themeColorDefaults['border-radius-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-radius-base']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -820,9 +822,9 @@ SHOPWARE_EOD;
                 '__border-radius-sm__',
                 $this->themeColorDefaults['border-radius-sm'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-radius-sm']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -831,15 +833,15 @@ SHOPWARE_EOD;
                 '__border-radius-lg__',
                 $this->themeColorDefaults['border-radius-lg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-radius-lg']
-                ]  
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createColorHighlightFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -866,9 +868,9 @@ SHOPWARE_EOD;
                 '__highlight-success__',
                 $this->themeColorDefaults['highlight-success'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@highlight-success']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -877,9 +879,9 @@ SHOPWARE_EOD;
                 '__highlight-error__',
                 $this->themeColorDefaults['highlight-error'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@highlight-error']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -888,9 +890,9 @@ SHOPWARE_EOD;
                 '__highlight-notice__',
                 $this->themeColorDefaults['highlight-notice'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@highlight-notice']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -899,15 +901,15 @@ SHOPWARE_EOD;
                 '__highlight-info__',
                 $this->themeColorDefaults['highlight-info'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@highlight-info']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createScaffoldingPaddingFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -934,9 +936,9 @@ SHOPWARE_EOD;
                 '__padding-base-vertical__',
                 $this->themeColorDefaults['padding-base-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-base-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -945,21 +947,21 @@ SHOPWARE_EOD;
                 '__padding-base-horizontal__',
                 $this->themeColorDefaults['padding-base-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-base-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'padding-xs-vertical',
                 '__padding-xs-vertical__',
                 $this->themeColorDefaults['padding-xs-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-xs-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -968,21 +970,21 @@ SHOPWARE_EOD;
                 '__padding-xs-horizontal__',
                 $this->themeColorDefaults['padding-xs-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-xs-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'padding-sm-vertical',
                 '__padding-sm-vertical__',
                 $this->themeColorDefaults['padding-sm-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-sm-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -991,21 +993,21 @@ SHOPWARE_EOD;
                 '__padding-sm-horizontal__',
                 $this->themeColorDefaults['padding-sm-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-sm-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'padding-md-vertical',
                 '__padding-md-vertical__',
                 $this->themeColorDefaults['padding-md-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-md-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -1014,21 +1016,21 @@ SHOPWARE_EOD;
                 '__padding-md-horizontal__',
                 $this->themeColorDefaults['padding-md-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-md-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'padding-lg-vertical',
                 '__padding-lg-vertical__',
                 $this->themeColorDefaults['padding-lg-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-lg-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -1037,21 +1039,21 @@ SHOPWARE_EOD;
                 '__padding-lg-horizontal__',
                 $this->themeColorDefaults['padding-lg-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-lg-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'padding-xl-vertical',
                 '__padding-xl-vertical__',
                 $this->themeColorDefaults['padding-xl-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-xl-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -1060,12 +1062,12 @@ SHOPWARE_EOD;
                 '__padding-xl-horizontal__',
                 $this->themeColorDefaults['padding-xl-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@padding-xl-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
 
@@ -1093,10 +1095,10 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
 	public function createScaffoldingGeneralFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'scaffolding_generel_fieldset',
@@ -1121,9 +1123,9 @@ SHOPWARE_EOD;
                 '__body-bg__',
                 $this->themeColorDefaults['body-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@body-bg']
-                ] 
+                ]
             )
         );
 		$fieldset->addElement(
@@ -1132,9 +1134,9 @@ SHOPWARE_EOD;
                 '__page-wrap-bg__',
                 $this->themeColorDefaults['page-wrap-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@page-wrap-bg']
-                ] 
+                ]
             )
         );
 		$fieldset->addElement(
@@ -1143,9 +1145,9 @@ SHOPWARE_EOD;
                 '__page-wrap-shadow__',
                 $this->themeColorDefaults['page-wrap-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@page-wrap-shadow']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1154,9 +1156,9 @@ SHOPWARE_EOD;
                 '__overlay-bg__',
                 $this->themeColorDefaults['overlay-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@overlay-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1165,18 +1167,18 @@ SHOPWARE_EOD;
                 '__overlay-opacity__',
                 $this->themeColorDefaults['overlay-opacity'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@overlay-opacity']
-                ] 
+                ]
             )
         );
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createScaffoldingHeaderFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'scaffolding_header_fieldset',
@@ -1201,9 +1203,9 @@ SHOPWARE_EOD;
                 '__header-bg__',
                 $this->themeColorDefaults['header-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@header-bg']
-                ] 
+                ]
             )
         );
 		$fieldset->addElement(
@@ -1212,21 +1214,21 @@ SHOPWARE_EOD;
                 '__header-icon-color__',
                 $this->themeColorDefaults['header-icon-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@header-icon-color']
-                ] 
+                ]
             )
         );
-		
+
 		$fieldset->addElement(
             $this->createColorPickerField(
                 'search-bg',
                 '__search-bg__',
                 $this->themeColorDefaults['search-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@search-bg']
-                ] 
+                ]
             )
         );
 		$fieldset->addElement(
@@ -1235,21 +1237,21 @@ SHOPWARE_EOD;
                 '__search-border-color__',
                 $this->themeColorDefaults['search-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@search-border-color']
-                ] 
+                ]
             )
         );
-		
+
 		$fieldset->addElement(
             $this->createColorPickerField(
                 'search-icon-color',
                 '__search-icon-color__',
                 $this->themeColorDefaults['search-icon-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@search-icon-color']
-                ] 
+                ]
             )
         );
 		$fieldset->addElement(
@@ -1258,33 +1260,33 @@ SHOPWARE_EOD;
                 '__search-icon-size__',
                 $this->themeColorDefaults['search-icon-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@search-icon-size']
-                ] 
+                ]
             )
         );
-		
+
 		$fieldset->addElement(
             $this->createTextField(
                 'breadcrumb-border-color',
                 '__breadcrumb-border-color__',
                 $this->themeColorDefaults['breadcrumb-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@breadcrumb-border-color']
-                ] 
+                ]
             )
         );
-		
+
 		$fieldset->addElement(
             $this->createTextField(
                 'breadcrumb-link-color',
                 '__breadcrumb-link-color__',
                 $this->themeColorDefaults['breadcrumb-link-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@breadcrumb-link-color']
-                ] 
+                ]
             )
         );
 		$fieldset->addElement(
@@ -1293,9 +1295,9 @@ SHOPWARE_EOD;
                 '__breadcrumb-link-active-color__',
                 $this->themeColorDefaults['breadcrumb-link-active-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@breadcrumb-link-active-color']
-                ] 
+                ]
             )
         );
 		$fieldset->addElement(
@@ -1304,18 +1306,18 @@ SHOPWARE_EOD;
                 '__breadcrumb-separator-color__',
                 $this->themeColorDefaults['breadcrumb-separator-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@breadcrumb-link-active-color']
-                ] 
+                ]
             )
         );
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createScaffoldingMainNavigationFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'scaffolding_main_navigation_fieldset',
@@ -1333,16 +1335,16 @@ SHOPWARE_EOD;
 				)
 			)
 		);
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'main-navigation-bg',
                 '__main-navigation-bg__',
                 $this->themeColorDefaults['main-navigation-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1351,9 +1353,9 @@ SHOPWARE_EOD;
                 '__main-navigation-sticky-bg__',
                 $this->themeColorDefaults['main-navigation-sticky-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-sticky-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1362,9 +1364,9 @@ SHOPWARE_EOD;
                 '__main-navigation-button-bg__',
                 $this->themeColorDefaults['main-navigation-button-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-button-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1373,9 +1375,9 @@ SHOPWARE_EOD;
                 '__main-navigation-button-color__',
                 $this->themeColorDefaults['main-navigation-button-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-button-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1384,9 +1386,9 @@ SHOPWARE_EOD;
                 '__main-navigation-button-active-bg__',
                 $this->themeColorDefaults['main-navigation-button-active-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-button-active-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1395,9 +1397,9 @@ SHOPWARE_EOD;
                 '__main-navigation-button-active-color__',
                 $this->themeColorDefaults['main-navigation-button-active-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-button-active-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1406,9 +1408,9 @@ SHOPWARE_EOD;
                 '__main-navigation-button-hover-bg__',
                 $this->themeColorDefaults['main-navigation-button-hover-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-button-hover-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1417,9 +1419,9 @@ SHOPWARE_EOD;
                 '__main-navigation-button-hover-color__',
                 $this->themeColorDefaults['main-navigation-button-hover-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@main-navigation-button-hover-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1428,9 +1430,9 @@ SHOPWARE_EOD;
                 '__advanced-menu-bg__',
                 $this->themeColorDefaults['advanced-menu-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@advanced-menu-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1439,18 +1441,18 @@ SHOPWARE_EOD;
                 '__advanced-menu-header-bg__',
                 $this->themeColorDefaults['advanced-menu-header-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@advanced-menu-header-bg']
-                ] 
+                ]
             )
         );
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createScaffoldingSidebarFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'scaffolding_sidebar_fieldset',
@@ -1468,16 +1470,16 @@ SHOPWARE_EOD;
 				)
 			)
 		);
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'sidebar-box-bg',
                 '__sidebar-box-bg__',
                 $this->themeColorDefaults['sidebar-box-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-box-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1486,21 +1488,21 @@ SHOPWARE_EOD;
                 '__sidebar-box-border-color__',
                 $this->themeColorDefaults['sidebar-box-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-box-border-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'sidebar-box-title-color',
                 '__sidebar-box-title-color__',
                 $this->themeColorDefaults['sidebar-box-title-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-box-title-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1509,21 +1511,21 @@ SHOPWARE_EOD;
                 '__sidebar-box-link-color__',
                 $this->themeColorDefaults['sidebar-box-link-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-box-link-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'sidebar-box-link-active-color',
                 '__sidebar-box-link-active-color__',
                 $this->themeColorDefaults['sidebar-box-link-active-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-box-link-active-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1532,21 +1534,21 @@ SHOPWARE_EOD;
                 '__sidebar-box-link-active-bg__',
                 $this->themeColorDefaults['sidebar-box-link-active-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-box-link-active-bg']
-                ] 
+                ]
             )
         );
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'sidebar-box-icon-color',
                 '__sidebar-box-icon-color__',
                 $this->themeColorDefaults['sidebar-box-icon-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-box-icon-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1555,21 +1557,21 @@ SHOPWARE_EOD;
                 '__sidebar-account-box-icon-color__',
                 $this->themeColorDefaults['sidebar-account-box-icon-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-account-box-icon-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldset->addElement(
             $this->createTextField(
                 'sidebar-width-tablet',
                 '__sidebar-width-tablet__',
                 $this->themeColorDefaults['sidebar-width-tablet'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-width-tablet']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1578,18 +1580,18 @@ SHOPWARE_EOD;
                 '__sidebar-width-desktop__',
                 $this->themeColorDefaults['sidebar-width-desktop'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@sidebar-width-desktop']
-                ] 
+                ]
             )
         );
-		
+
 		return $fieldset;
 	}
-    
+
 	public function createScaffoldingOffcanvasFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'scaffolding_offcanvas_fieldset',
@@ -1614,9 +1616,9 @@ SHOPWARE_EOD;
                 '__offcanvas-close-button-bg__',
                 $this->themeColorDefaults['offcanvas-close-button-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@offcanvas-close-button-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1625,9 +1627,9 @@ SHOPWARE_EOD;
                 '__offcanvas-close-button-color__',
                 $this->themeColorDefaults['offcanvas-close-button-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@offcanvas-close-button-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1636,18 +1638,18 @@ SHOPWARE_EOD;
                 '__offcanvas-bg__',
                 $this->themeColorDefaults['offcanvas-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@offcanvas-bg']
-                ] 
+                ]
             )
         );
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createScaffoldingFooterFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'scaffolding_footer_fieldset',
@@ -1665,28 +1667,28 @@ SHOPWARE_EOD;
 				)
 			)
 		);
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'footer-bg',
                 '__footer-bg__',
                 $this->themeColorDefaults['footer-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@footer-bg']
-                ] 
+                ]
             )
         );
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'footer-title-color',
                 '__footer-title-color__',
                 $this->themeColorDefaults['footer-title-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@footer-title-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1695,9 +1697,9 @@ SHOPWARE_EOD;
                 '__footer-title-size__',
                 $this->themeColorDefaults['footer-title-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@footer-title-size']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1706,9 +1708,9 @@ SHOPWARE_EOD;
                 '__footer-text-color__',
                 $this->themeColorDefaults['footer-text-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@footer-text-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1717,9 +1719,9 @@ SHOPWARE_EOD;
                 '__footer-link-color__',
                 $this->themeColorDefaults['footer-link-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@footer-link-color']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1728,15 +1730,15 @@ SHOPWARE_EOD;
                 '__footer-link-active-color__',
                 $this->themeColorDefaults['footer-link-active-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@footer-link-active-color']
-                ] 
+                ]
             )
         );
-		
+
 		return $fieldset;
 	}
-	
+
 	private function createListingStyleTab()
     {
         $tab = $this->createTab(
@@ -1789,9 +1791,9 @@ SHOPWARE_EOD;
                 '__listing-filter-bg__',
                 $this->themeColorDefaults['listing-filter-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@listing-filter-bg']
-                ]    
+                ]
             )
         );
         $fieldset->addElement(
@@ -1800,9 +1802,9 @@ SHOPWARE_EOD;
                 '__listing-filter-shadow__',
                 $this->themeColorDefaults['listing-filter-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@listing-filter-shadow']
-                ]    
+                ]
             )
         );
         $fieldset->addElement(
@@ -1811,9 +1813,9 @@ SHOPWARE_EOD;
                 '__listing-filter-arrow-shadow__',
                 $this->themeColorDefaults['listing-filter-arrow-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@listing-filter-arrow-shadow']
-                ]    
+                ]
             )
         );
         $fieldset->addElement(
@@ -1822,9 +1824,9 @@ SHOPWARE_EOD;
                 '__listing-filter-panel-bg__',
                 $this->themeColorDefaults['listing-filter-panel-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@listing-filter-panel-bg']
-                ]     
+                ]
             )
         );
         $fieldset->addElement(
@@ -1833,15 +1835,15 @@ SHOPWARE_EOD;
                 '__listing-filter-panel-shadow__',
                 $this->themeColorDefaults['listing-filter-panel-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@listing-filter-panel-shadow']
-                ]                
+                ]
             )
         );
 
         return $fieldset;
     }
-    
+
     private function createProductImageBackgroundFieldSet()
     {
         $fieldSet = $this->createFieldSet(
@@ -1867,26 +1869,26 @@ SHOPWARE_EOD;
                 '__image-background-color__',
                 $this->themeColorDefaults['image-background-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@image-background-color']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'manufacturer-background-color',
                 '__manufacturer-background-color__',
                 $this->themeColorDefaults['manufacturer-background-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@manufacturer-background-color']
-                ] 
+                ]
             )
         );
 
         return $fieldSet;
     }
-    
+
     public function createProductBoxBasicFieldset()
     {
 
@@ -1907,16 +1909,16 @@ SHOPWARE_EOD;
                 )
             )
         );
-        
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'product-box-basic-bg',
                 '__product-box-basic-bg__',
                 $this->themeColorDefaults['product-box-basic-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-basic-bg']
-                ] 
+                ]
             )
         );
 
@@ -1926,15 +1928,15 @@ SHOPWARE_EOD;
                 '__product-box-basic-shadow__',
                 $this->themeColorDefaults['product-box-basic-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-basic-shadow']
-                ] 
+                ]
             )
         );
 
         return $fieldset;
     }
-    
+
     public function createProductBoxMinimalFieldset()
     {
 
@@ -1955,16 +1957,16 @@ SHOPWARE_EOD;
                 )
             )
         );
-        
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'product-box-minimal-bg',
                 '__product-box-minimal-bg__',
                 $this->themeColorDefaults['product-box-minimal-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-minimal-bg']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1973,9 +1975,9 @@ SHOPWARE_EOD;
                 '__product-box-minimal-shadow__',
                 $this->themeColorDefaults['product-box-minimal-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-minimal-shadow']
-                ] 
+                ]
             )
         );
         $fieldset->addElement(
@@ -1984,20 +1986,20 @@ SHOPWARE_EOD;
                 '__product-box-minimal-image-height-phone__',
                 $this->themeColorDefaults['product-box-minimal-image-height-phone'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-minimal-image-height-phone']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-minimal-image-height-phone-landscape',
                 '__product-box-minimal-image-height-phone-landscape__',
                 $this->themeColorDefaults['product-box-minimal-image-height-phone-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-minimal-image-height-phone-landscape']
-                ] 
+                ]
             )
         );
 
@@ -2007,38 +2009,38 @@ SHOPWARE_EOD;
                 '__product-box-minimal-image-height-tablet__',
                 $this->themeColorDefaults['product-box-minimal-image-height-tablet'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-minimal-image-height-tablet']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-minimal-image-height-tablet-landscape',
                 '__product-box-minimal-image-height-tablet-landscape__',
                 $this->themeColorDefaults['product-box-minimal-image-height-tablet-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-minimal-image-height-tablet-landscape']
-                ] 
+                ]
             )
-        );		
-		
+        );
+
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-minimal-image-height-desktop',
                 '__product-box-minimal-image-height-desktop__',
                 $this->themeColorDefaults['product-box-minimal-image-height-desktop'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-minimal-image-height-desktop']
-                ] 
+                ]
             )
-        );	
+        );
 
         return $fieldset;
     }
-    
+
     public function createProductBoxImageFieldset()
     {
 
@@ -2066,20 +2068,20 @@ SHOPWARE_EOD;
                 '__product-box-big-image-height-phone__',
                 $this->themeColorDefaults['product-box-big-image-height-phone'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-big-image-height-phone']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-big-image-height-phone-landscape',
                 '__product-box-big-image-height-phone-landscape__',
                 $this->themeColorDefaults['product-box-big-image-height-phone-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-big-image-height-phone-landscape']
-                ] 
+                ]
             )
         );
 
@@ -2089,22 +2091,22 @@ SHOPWARE_EOD;
                 '__product-box-big-image-height-tablet__',
                 $this->themeColorDefaults['product-box-big-image-height-tablet'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-big-image-height-tablet']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-big-image-height-tablet-landscape',
                 '__product-box-big-image-height-tablet-landscape__',
                 $this->themeColorDefaults['product-box-big-image-height-tablet-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-big-image-height-tablet-landscape']
-                ] 
+                ]
             )
-        );		
+        );
 
         $fieldset->addElement(
             $this->createTextField(
@@ -2112,15 +2114,15 @@ SHOPWARE_EOD;
                 '__product-box-big-image-height-desktop__',
                 $this->themeColorDefaults['product-box-big-image-height-desktop'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-big-image-height-desktop']
-                ] 
+                ]
             )
-        );	
+        );
 
         return $fieldset;
     }
-    
+
     public function createProductBoxSliderFieldset()
     {
 
@@ -2141,27 +2143,27 @@ SHOPWARE_EOD;
                 )
             )
         );
-        
+
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-slider-image-height-phone',
                 '__product-box-slider-image-height-phone__',
                 $this->themeColorDefaults['product-box-slider-image-height-phone'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-slider-image-height-phone']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-slider-image-height-phone-landscape',
                 '__product-box-slider-image-height-phone-landscape__',
                 $this->themeColorDefaults['product-box-slider-image-height-phone-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-slider-image-height-phone-landscape']
-                ] 
+                ]
             )
         );
 
@@ -2171,38 +2173,38 @@ SHOPWARE_EOD;
                 '__product-box-slider-image-height-tablet__',
                 $this->themeColorDefaults['product-box-slider-image-height-tablet'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-slider-image-height-tablet']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-slider-image-height-tablet-landscape',
                 '__product-box-slider-image-height-tablet-landscape__',
                 $this->themeColorDefaults['product-box-slider-image-height-tablet-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-slider-image-height-tablet-landscape']
-                ] 
+                ]
             )
-        );		
-		
+        );
+
         $fieldset->addElement(
             $this->createTextField(
                 'product-box-slider-image-height-desktop',
                 '__product-box-slider-image-height-desktop__',
                 $this->themeColorDefaults['product-box-slider-image-height-desktop'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-box-slider-image-height-desktop']
-                ] 
+                ]
             )
         );
-        
+
         return $fieldset;
     }
-	
+
 	private function createDetailStyleTab()
     {
         $tab = $this->createTab(
@@ -2217,14 +2219,14 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-        
+
         $tab->addElement($this->createProductNavigationFieldSet());
         $tab->addElement($this->createProductConfiguratorStyleFieldSet());
         $tab->addElement($this->createProductDetailImageHeightFieldSet());
 
         return $tab;
     }
-    
+
     private function createProductNavigationFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2232,17 +2234,17 @@ SHOPWARE_EOD;
             'product_navigation_style_field_set',
             '__product_navigation_style_field_set__',
             ['attributes' => $attributes]
-        );			
-        
+        );
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-navigation-button-bg',
                 '__product-navigation-button-bg__',
                 $this->themeColorDefaults['product-navigation-button-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-navigation-button-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2251,9 +2253,9 @@ SHOPWARE_EOD;
                 '__product-navigation-button-color__',
                 $this->themeColorDefaults['product-navigation-button-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-navigation-button-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2262,15 +2264,15 @@ SHOPWARE_EOD;
                 '__product-navigation-button-shadow__',
                 $this->themeColorDefaults['product-navigation-button-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-navigation-button-shadow']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-    
+
     private function createProductConfiguratorStyleFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2278,17 +2280,17 @@ SHOPWARE_EOD;
             'product_configurator_style_field_set',
             '__product_configurator_style_field_set__',
             ['attributes' => $attributes]
-        );			
-        
+        );
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-configurator-bg',
                 '__product-configurator-bg__',
                 $this->themeColorDefaults['product-configurator-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-configurator-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2297,15 +2299,15 @@ SHOPWARE_EOD;
                 '__product-configurator-border-color__',
                 $this->themeColorDefaults['product-configurator-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-configurator-border-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-    
+
     private function createProductDetailImageHeightFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2314,27 +2316,27 @@ SHOPWARE_EOD;
             '__product_detail_image_sizes_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'detail-main-image-height-phone',
                 '__detail-main-image-height-phone__',
                 $this->themeColorDefaults['detail-main-image-height-phone'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@detail-main-image-height-phone']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createTextField(
                 'detail-main-image-height-phone-landscape',
                 '__detail-main-image-height-phone-landscape__',
                 $this->themeColorDefaults['detail-main-image-height-phone-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@detail-main-image-height-phone-landscape']
-                ] 
+                ]
             )
         );
 
@@ -2344,61 +2346,61 @@ SHOPWARE_EOD;
                 '__detail-main-image-height-tablet__',
                 $this->themeColorDefaults['detail-main-image-height-tablet'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@detail-main-image-height-tablet']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createTextField(
                 'detail-main-image-height-tablet-landscape',
                 '__detail-main-image-height-tablet-landscape__',
                 $this->themeColorDefaults['detail-main-image-height-tablet-landscape'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@detail-main-image-height-tablet-landscape']
-                ] 
+                ]
             )
-        );		
-		
+        );
+
         $fieldSet->addElement(
             $this->createTextField(
                 'detail-main-image-height-desktop',
                 '__detail-main-image-height-desktop__',
                 $this->themeColorDefaults['detail-main-image-height-desktop'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@detail-main-image-height-desktop']
-                ] 
+                ]
             )
-        );		
+        );
         $fieldSet->addElement(
             $this->createTextField(
                 'detail-image-thumbnails-height',
                 '__detail-image-thumbnails-height__',
                 $this->themeColorDefaults['detail-image-thumbnails-height'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@detail-image-thumbnails-height']
-                ] 
+                ]
             )
-        );	
-		
+        );
+
         $fieldSet->addElement(
             $this->createTextField(
                 'detail-image-thumbnails-width',
                 '__detail-image-thumbnails-width__',
                 $this->themeColorDefaults['detail-image-thumbnails-width'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@detail-image-thumbnails-width']
-                ] 
+                ]
             )
-        );			
-		
+        );
+
         return $fieldSet;
     }
-    
+
 	private function createCheckoutStyleTab()
     {
         $tab = $this->createTab(
@@ -2413,12 +2415,12 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-        
+
         $tab->addElement($this->createCheckoutStepsFieldSet());
 
         return $tab;
     }
-    
+
     private function createCheckoutStepsFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2426,17 +2428,17 @@ SHOPWARE_EOD;
             'checkout_steps_style_fieldset',
             '__checkout_steps_style_fieldset__',
             ['attributes' => $attributes]
-        );			
-        
+        );
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'step-icon-bg',
                 '__step-icon-bg__',
                 $this->themeColorDefaults['step-icon-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@step-icon-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2445,9 +2447,9 @@ SHOPWARE_EOD;
                 '__step-icon-active-bg__',
                 $this->themeColorDefaults['step-icon-active-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@step-icon-active-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2456,9 +2458,9 @@ SHOPWARE_EOD;
                 '__step-icon-color__',
                 $this->themeColorDefaults['step-icon-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@step-icon-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2467,15 +2469,15 @@ SHOPWARE_EOD;
                 '__step-text-color__',
                 $this->themeColorDefaults['step-text-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@step-text-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-    
+
     private function createFontsTab()
     {
         $tab = $this->createTab(
@@ -2490,7 +2492,7 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
 		$fontBasicFieldSet = $this->createFontBasicFieldSet();
 		$fontSizeFieldSet = $this->createFontSizeFieldSet();
 		$fontColorFieldSet = $this->createFontColorFieldSet();
@@ -2500,7 +2502,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     private function createFontBasicFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2535,11 +2537,11 @@ SHOPWARE_EOD;
 					['value' => 'Lato', 'text' => 'Lato']
 				],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@fontBaseStack']
-                ]   
+                ]
 			)
-		);	
+		);
 		$fieldSet->addElement(
 			$this->createSelectField(
 				'fontHeadlineStack',
@@ -2554,20 +2556,20 @@ SHOPWARE_EOD;
 					['value' => 'Lato', 'text' => 'Lato']
 				],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@fontHeadlineStack']
-                ]   
+                ]
 			)
-		);	
+		);
         $fieldSet->addElement(
             $this->createTextField(
                 'font-base-weight',
                 '__font-base-weight__',
                 $this->themeColorDefaults['font-base-weight'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-base-weight']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2576,9 +2578,9 @@ SHOPWARE_EOD;
                 '__font-light-weight__',
                 $this->themeColorDefaults['font-light-weight'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-light-weight']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2587,9 +2589,9 @@ SHOPWARE_EOD;
                 '__font-semibold-weight__',
                 $this->themeColorDefaults['font-semibold-weight'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-semibold-weight']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2598,9 +2600,9 @@ SHOPWARE_EOD;
                 '__font-bold-weight__',
                 $this->themeColorDefaults['font-bold-weight'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-bold-weight']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2609,9 +2611,9 @@ SHOPWARE_EOD;
                 '__line-height-base__',
                 $this->themeColorDefaults['line-height-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@line-height-base']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2620,9 +2622,9 @@ SHOPWARE_EOD;
                 '__line-height-sm__',
                 $this->themeColorDefaults['line-height-sm'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@line-height-sm']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2631,15 +2633,15 @@ SHOPWARE_EOD;
                 '__line-height-lg__',
                 $this->themeColorDefaults['line-height-lg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@line-height-lg']
-                ]   
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createFontSizeFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2655,9 +2657,9 @@ SHOPWARE_EOD;
                 '__font-size-base__',
                 $this->themeColorDefaults['font-size-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-base']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2666,9 +2668,9 @@ SHOPWARE_EOD;
                 '__font-size-sm__',
                 $this->themeColorDefaults['font-size-sm'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-sm']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2677,9 +2679,9 @@ SHOPWARE_EOD;
                 '__font-size-lg__',
                 $this->themeColorDefaults['font-size-lg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-lg']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2688,9 +2690,9 @@ SHOPWARE_EOD;
                 '__font-size-h1__',
                 $this->themeColorDefaults['font-size-h1'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-h1']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2699,9 +2701,9 @@ SHOPWARE_EOD;
                 '__font-size-h2__',
                 $this->themeColorDefaults['font-size-h2'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-h2']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2710,9 +2712,9 @@ SHOPWARE_EOD;
                 '__font-size-h3__',
                 $this->themeColorDefaults['font-size-h3'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-h3']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2721,9 +2723,9 @@ SHOPWARE_EOD;
                 '__font-size-h4__',
                 $this->themeColorDefaults['font-size-h4'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-h4']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2732,9 +2734,9 @@ SHOPWARE_EOD;
                 '__font-size-h5__',
                 $this->themeColorDefaults['font-size-h5'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-h5']
-                ]   
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2743,12 +2745,12 @@ SHOPWARE_EOD;
                 '__font-size-h6__',
                 $this->themeColorDefaults['font-size-h6'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@font-size-h6']
-                ]   
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
 
@@ -2767,9 +2769,9 @@ SHOPWARE_EOD;
                 '__text-color__',
                 $this->themeColorDefaults['text-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2778,9 +2780,9 @@ SHOPWARE_EOD;
                 '__text-color-light__',
                 $this->themeColorDefaults['text-color-light'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color-light']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2789,9 +2791,9 @@ SHOPWARE_EOD;
                 '__text-color-dark__',
                 $this->themeColorDefaults['text-color-dark'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color-dark']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2800,9 +2802,9 @@ SHOPWARE_EOD;
                 '__text-color-secondary__',
                 $this->themeColorDefaults['text-color-secondary'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color-secondary']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2811,9 +2813,9 @@ SHOPWARE_EOD;
                 '__text-color-info__',
                 $this->themeColorDefaults['text-color-info'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color-info']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2822,9 +2824,9 @@ SHOPWARE_EOD;
                 '__text-color-success__',
                 $this->themeColorDefaults['text-color-success'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color-success']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2833,9 +2835,9 @@ SHOPWARE_EOD;
                 '__text-color-warning__',
                 $this->themeColorDefaults['text-color-warning'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color-warning']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2844,9 +2846,9 @@ SHOPWARE_EOD;
                 '__text-color-danger__',
                 $this->themeColorDefaults['text-color-danger'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@text-color-danger']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2855,9 +2857,9 @@ SHOPWARE_EOD;
                 '__link-color__',
                 $this->themeColorDefaults['link-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@link-color']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2866,15 +2868,15 @@ SHOPWARE_EOD;
                 '__base-headline-color__',
                 $this->themeColorDefaults['base-headline-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@base-headline-color']
-                ]  
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createIconsTab()
     {
         $tab = $this->createTab(
@@ -2889,7 +2891,7 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
 		$iconSizeFieldSet = $this->createiconSizeFieldSet();
 		$iconColorFieldSet = $this->createiconColorFieldSet();
         $tab->addElement($iconSizeFieldSet);
@@ -2897,7 +2899,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     private function createiconSizeFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2913,9 +2915,9 @@ SHOPWARE_EOD;
                 '__icon-size-base__',
                 $this->themeColorDefaults['icon-size-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-size-base']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2924,9 +2926,9 @@ SHOPWARE_EOD;
                 '__icon-size-xxs__',
                 $this->themeColorDefaults['icon-size-xxs'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-size-xxs']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2935,9 +2937,9 @@ SHOPWARE_EOD;
                 '__icon-size-xs__',
                 $this->themeColorDefaults['icon-size-xs'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-size-xs']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2946,9 +2948,9 @@ SHOPWARE_EOD;
                 '__icon-size-sm__',
                 $this->themeColorDefaults['icon-size-sm'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-size-sm']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2957,9 +2959,9 @@ SHOPWARE_EOD;
                 '__icon-size-lg__',
                 $this->themeColorDefaults['icon-size-lg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-size-lg']
-                ]  
+                ]
             )
         );
         $fieldSet->addElement(
@@ -2968,15 +2970,15 @@ SHOPWARE_EOD;
                 '__icon-size-xl__',
                 $this->themeColorDefaults['icon-size-xl'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-size-xl']
-                ]  
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createiconColorFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -2985,16 +2987,16 @@ SHOPWARE_EOD;
             '__icons_color_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'icon-color-base',
                 '__icon-color-base__',
                 $this->themeColorDefaults['icon-color-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-base']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3003,9 +3005,9 @@ SHOPWARE_EOD;
                 '__icon-color-light__',
                 $this->themeColorDefaults['icon-color-light'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-light']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3014,9 +3016,9 @@ SHOPWARE_EOD;
                 '__icon-color-dark__',
                 $this->themeColorDefaults['icon-color-dark'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-dark']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3025,9 +3027,9 @@ SHOPWARE_EOD;
                 '__icon-color-info__',
                 $this->themeColorDefaults['icon-color-info'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-info']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3036,9 +3038,9 @@ SHOPWARE_EOD;
                 '__icon-color-success__',
                 $this->themeColorDefaults['icon-color-success'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-success']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3047,9 +3049,9 @@ SHOPWARE_EOD;
                 '__icon-color-warning__',
                 $this->themeColorDefaults['icon-color-warning'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-warning']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3058,9 +3060,9 @@ SHOPWARE_EOD;
                 '__icon-color-danger__',
                 $this->themeColorDefaults['icon-color-danger'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-danger']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3069,13 +3071,13 @@ SHOPWARE_EOD;
                 '__rating-star-color__',
                 $this->themeColorDefaults['rating-star-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@icon-color-color']
-                ] 
+                ]
             )
         );
-	
-		
+
+
         return $fieldSet;
     }
 
@@ -3093,7 +3095,7 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
 		$buttonGeneralFieldSet = $this->createButtonGeneralFieldSet();
 		$buttonSizeBaseFieldSet = $this->createButtonSizeBaseFieldSet();
 		$buttonSizeSmallFieldSet = $this->createButtonSizeSmallFieldSet();
@@ -3119,7 +3121,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     private function createButtonGeneralFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3128,16 +3130,16 @@ SHOPWARE_EOD;
             '__buttons_general_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'button-box-shadow',
                 '__button-box-shadow__',
                 $this->themeColorDefaults['button-box-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-box-shadow']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3146,9 +3148,9 @@ SHOPWARE_EOD;
                 '__button-box-shadow-active__',
                 $this->themeColorDefaults['button-box-shadow-active'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-box-shadow-active']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3157,9 +3159,9 @@ SHOPWARE_EOD;
                 '__button-text-shadow__',
                 $this->themeColorDefaults['button-text-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-text-shadow']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3168,15 +3170,15 @@ SHOPWARE_EOD;
                 '__border-button-text-shadow__',
                 $this->themeColorDefaults['border-button-text-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-text-shadow']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createButtonSizeBaseFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3185,16 +3187,16 @@ SHOPWARE_EOD;
             '__buttons_size_base_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'button-base-font-size',
                 '__button-base-font-size__',
                 $this->themeColorDefaults['button-base-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-base-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3203,9 +3205,9 @@ SHOPWARE_EOD;
                 '__button-base-line-height__',
                 $this->themeColorDefaults['button-base-line-height'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-base-line-height']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3214,9 +3216,9 @@ SHOPWARE_EOD;
                 '__button-base-padding-vertical__',
                 $this->themeColorDefaults['button-base-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-base-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3225,9 +3227,9 @@ SHOPWARE_EOD;
                 '__button-base-padding-horizontal__',
                 $this->themeColorDefaults['button-base-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-base-padding-horizontal']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3236,9 +3238,9 @@ SHOPWARE_EOD;
                 '__button-base-border-radius__',
                 $this->themeColorDefaults['button-base-border-radius'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-base-border-radius']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3247,9 +3249,9 @@ SHOPWARE_EOD;
                 '__button-base-border-size__',
                 $this->themeColorDefaults['button-base-border-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-base-border-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3258,15 +3260,15 @@ SHOPWARE_EOD;
                 '__button-base-font-weight__',
                 $this->themeColorDefaults['button-base-font-weight'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-base-font-weight']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createButtonSizeSmallFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3275,16 +3277,16 @@ SHOPWARE_EOD;
             '__buttons_size_small_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'button-sm-font-size',
                 '__button-sm-font-size__',
                 $this->themeColorDefaults['button-sm-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-sm-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3293,9 +3295,9 @@ SHOPWARE_EOD;
                 '__button-sm-line-height__',
                 $this->themeColorDefaults['button-sm-line-height'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-sm-line-height']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3304,9 +3306,9 @@ SHOPWARE_EOD;
                 '__button-sm-padding-vertical__',
                 $this->themeColorDefaults['button-sm-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-sm-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3315,9 +3317,9 @@ SHOPWARE_EOD;
                 '__button-sm-padding-horizontal__',
                 $this->themeColorDefaults['button-sm-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-sm-padding-horizontal']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3326,9 +3328,9 @@ SHOPWARE_EOD;
                 '__button-sm-border-radius__',
                 $this->themeColorDefaults['button-sm-border-radius'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-sm-border-radius']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3337,9 +3339,9 @@ SHOPWARE_EOD;
                 '__button-sm-border-size__',
                 $this->themeColorDefaults['button-sm-border-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-sm-border-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3348,15 +3350,15 @@ SHOPWARE_EOD;
                 '__button-sm-font-weight__',
                 $this->themeColorDefaults['button-sm-font-weight'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-sm-font-weight']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createButtonSizeLargeFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3365,16 +3367,16 @@ SHOPWARE_EOD;
             '__buttons_size_large_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'button-lg-font-size',
                 '__button-lg-font-size__',
                 $this->themeColorDefaults['button-lg-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-lg-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3383,9 +3385,9 @@ SHOPWARE_EOD;
                 '__button-lg-line-height__',
                 $this->themeColorDefaults['button-lg-line-height'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-lg-line-height']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3394,9 +3396,9 @@ SHOPWARE_EOD;
                 '__button-lg-padding-vertical__',
                 $this->themeColorDefaults['button-lg-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-lg-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3405,9 +3407,9 @@ SHOPWARE_EOD;
                 '__button-lg-padding-horizontal__',
                 $this->themeColorDefaults['button-lg-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-lg-padding-horizontal']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3416,9 +3418,9 @@ SHOPWARE_EOD;
                 '__button-lg-border-radius__',
                 $this->themeColorDefaults['button-lg-border-radius'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-lg-border-radius']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3427,9 +3429,9 @@ SHOPWARE_EOD;
                 '__button-lg-border-size__',
                 $this->themeColorDefaults['button-lg-border-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-lg-border-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3438,15 +3440,15 @@ SHOPWARE_EOD;
                 '__button-lg-font-weight__',
                 $this->themeColorDefaults['button-lg-font-weight'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-lg-font-weight']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createButtonColorPrimaryFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3455,16 +3457,16 @@ SHOPWARE_EOD;
             '__buttons_color_primary_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'button-primary-bg',
                 '__button-primary-bg__',
                 $this->themeColorDefaults['button-primary-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-primary-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3473,9 +3475,9 @@ SHOPWARE_EOD;
                 '__button-primary-gardient-start__',
                 $this->themeColorDefaults['button-primary-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-primary-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3484,9 +3486,9 @@ SHOPWARE_EOD;
                 '__button-primary-color__',
                 $this->themeColorDefaults['button-primary-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-primary-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3495,9 +3497,9 @@ SHOPWARE_EOD;
                 '__button-primary-gardient-end__',
                 $this->themeColorDefaults['button-primary-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-primary-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3506,15 +3508,15 @@ SHOPWARE_EOD;
                 '__border-button-primary-color__',
                 $this->themeColorDefaults['border-button-primary-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-primary-color']
-                ] 
+                ]
             )
         );
 
         return $fieldSet;
     }
-	
+
     private function createButtonColorSecondaryFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3523,16 +3525,16 @@ SHOPWARE_EOD;
             '__buttons_color_secondary_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'button-secondary-bg',
                 '__button-secondary-bg__',
                 $this->themeColorDefaults['button-secondary-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-secondary-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3541,9 +3543,9 @@ SHOPWARE_EOD;
                 '__button-secondary-gardient-start__',
                 $this->themeColorDefaults['button-secondary-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-secondary-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3552,9 +3554,9 @@ SHOPWARE_EOD;
                 '__button-secondary-color__',
                 $this->themeColorDefaults['button-secondary-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-secondary-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3563,9 +3565,9 @@ SHOPWARE_EOD;
                 '__button-secondary-gardient-end__',
                 $this->themeColorDefaults['button-secondary-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-secondary-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3574,15 +3576,15 @@ SHOPWARE_EOD;
                 '__border-button-secondary-color__',
                 $this->themeColorDefaults['border-button-secondary-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-secondary-color']
-                ] 
+                ]
             )
         );
 
         return $fieldSet;
     }
-	
+
     private function createButtonColorDangerFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3591,16 +3593,16 @@ SHOPWARE_EOD;
             '__buttons_color_danger_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'button-danger-bg',
                 '__button-danger-bg__',
                 $this->themeColorDefaults['button-danger-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-danger-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3609,9 +3611,9 @@ SHOPWARE_EOD;
                 '__button-danger-gardient-start__',
                 $this->themeColorDefaults['button-danger-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-danger-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3620,9 +3622,9 @@ SHOPWARE_EOD;
                 '__button-danger-color__',
                 $this->themeColorDefaults['button-danger-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-danger-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3631,9 +3633,9 @@ SHOPWARE_EOD;
                 '__button-danger-gardient-end__',
                 $this->themeColorDefaults['button-danger-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-danger-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3642,15 +3644,15 @@ SHOPWARE_EOD;
                 '__border-button-danger-color__',
                 $this->themeColorDefaults['border-button-danger-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-danger-color']
-                ] 
+                ]
             )
         );
-        
+
         return $fieldSet;
     }
-	
+
     private function createButtonColorWarningFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3659,16 +3661,16 @@ SHOPWARE_EOD;
             '__buttons_color_warning_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'button-warning-bg',
                 '__button-warning-bg__',
                 $this->themeColorDefaults['button-warning-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-warning-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3677,9 +3679,9 @@ SHOPWARE_EOD;
                 '__button-warning-gardient-start__',
                 $this->themeColorDefaults['button-warning-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-warning-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3688,9 +3690,9 @@ SHOPWARE_EOD;
                 '__button-warning-color__',
                 $this->themeColorDefaults['button-warning-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-warning-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3699,9 +3701,9 @@ SHOPWARE_EOD;
                 '__button-warning-gardient-end__',
                 $this->themeColorDefaults['button-warning-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-warning-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3710,15 +3712,15 @@ SHOPWARE_EOD;
                 '__border-button-warning-color__',
                 $this->themeColorDefaults['border-button-warning-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-warning-color']
-                ] 
+                ]
             )
         );
-        
+
         return $fieldSet;
     }
-	
+
     private function createButtonColorSuccessFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3727,16 +3729,16 @@ SHOPWARE_EOD;
             '__buttons_color_success_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'button-success-bg',
                 '__button-success-bg__',
                 $this->themeColorDefaults['button-success-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-success-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3745,9 +3747,9 @@ SHOPWARE_EOD;
                 '__button-success-gardient-start__',
                 $this->themeColorDefaults['button-success-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-success-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3756,9 +3758,9 @@ SHOPWARE_EOD;
                 '__button-success-color__',
                 $this->themeColorDefaults['button-success-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-success-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3767,9 +3769,9 @@ SHOPWARE_EOD;
                 '__button-success-gardient-end__',
                 $this->themeColorDefaults['button-success-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-success-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3778,15 +3780,15 @@ SHOPWARE_EOD;
                 '__border-button-success-color__',
                 $this->themeColorDefaults['border-button-success-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-success-color']
-                ] 
+                ]
             )
         );
 
         return $fieldSet;
     }
-	
+
     private function createButtonColorInfoFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3795,16 +3797,16 @@ SHOPWARE_EOD;
             '__buttons_color_info_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'button-info-bg',
                 '__button-info-bg__',
                 $this->themeColorDefaults['button-info-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-info-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3813,9 +3815,9 @@ SHOPWARE_EOD;
                 '__button-info-gardient-start__',
                 $this->themeColorDefaults['button-info-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-info-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3824,9 +3826,9 @@ SHOPWARE_EOD;
                 '__button-info-color__',
                 $this->themeColorDefaults['button-info-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-info-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3835,9 +3837,9 @@ SHOPWARE_EOD;
                 '__button-info-gardient-end__',
                 $this->themeColorDefaults['button-info-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-info-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3846,15 +3848,15 @@ SHOPWARE_EOD;
                 '__border-button-info-color__',
                 $this->themeColorDefaults['border-button-info-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-info-color']
-                ] 
+                ]
             )
         );
 
         return $fieldSet;
     }
-	
+
     private function createButtonColorDefaultFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3863,16 +3865,16 @@ SHOPWARE_EOD;
             '__buttons_color_default_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'button-default-bg',
                 '__button-default-bg__',
                 $this->themeColorDefaults['button-default-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-default-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3881,9 +3883,9 @@ SHOPWARE_EOD;
                 '__button-default-gardient-start__',
                 $this->themeColorDefaults['button-default-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-default-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3892,9 +3894,9 @@ SHOPWARE_EOD;
                 '__button-default-color__',
                 $this->themeColorDefaults['button-default-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-default-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3903,9 +3905,9 @@ SHOPWARE_EOD;
                 '__button-default-gardient-end__',
                 $this->themeColorDefaults['button-default-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@button-default-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3914,15 +3916,15 @@ SHOPWARE_EOD;
                 '__border-button-default-color__',
                 $this->themeColorDefaults['border-button-default-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@border-button-default-color']
-                ] 
+                ]
             )
         );
 
         return $fieldSet;
     }
-	
+
     private function createPanelTab()
     {
         $tab = $this->createTab(
@@ -3937,7 +3939,7 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
         $tab->addElement($this->createPanelColorFieldSet());
         $tab->addElement($this->createPanelColorPrimaryFieldSet());
         $tab->addElement($this->createPanelColorDangerFieldSet());
@@ -3949,7 +3951,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     private function createPanelColorFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -3958,16 +3960,16 @@ SHOPWARE_EOD;
             '__panel_color_default_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'panel-bg',
                 '__panel-bg__',
                 $this->themeColorDefaults['panel-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3976,9 +3978,9 @@ SHOPWARE_EOD;
                 '__panel-border-color__',
                 $this->themeColorDefaults['panel-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-border-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3987,9 +3989,9 @@ SHOPWARE_EOD;
                 '__panel-header-bg__',
                 $this->themeColorDefaults['panel-header-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -3998,9 +4000,9 @@ SHOPWARE_EOD;
                 '__panel-header-gardient-start__',
                 $this->themeColorDefaults['panel-header-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4009,9 +4011,9 @@ SHOPWARE_EOD;
                 '__panel-header-gardient-end__',
                 $this->themeColorDefaults['panel-header-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4020,9 +4022,9 @@ SHOPWARE_EOD;
                 '__panel-header-color__',
                 $this->themeColorDefaults['panel-header-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4031,15 +4033,15 @@ SHOPWARE_EOD;
                 '__panel-footer-bg__',
                 $this->themeColorDefaults['panel-footer-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-footer-bg']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-    
+
     private function createPanelColorPrimaryFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4048,16 +4050,16 @@ SHOPWARE_EOD;
             '__panel_color_primary_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'panel-primary-title-bg',
                 '__panel-primary-title-bg__',
                 $this->themeColorDefaults['panel-primary-title-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-primary-title-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4066,9 +4068,9 @@ SHOPWARE_EOD;
                 '__panel-primary-title-color__',
                 $this->themeColorDefaults['panel-primary-title-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-primary-title-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4077,9 +4079,9 @@ SHOPWARE_EOD;
                 '__panel-primary-title-gardient-start__',
                 $this->themeColorDefaults['panel-primary-title-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-primary-title-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4088,9 +4090,9 @@ SHOPWARE_EOD;
                 '__panel-primary-title-gardient-end__',
                 $this->themeColorDefaults['panel-primary-title-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-primary-title-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4099,9 +4101,9 @@ SHOPWARE_EOD;
                 '__panel-primary-title-border-color__',
                 $this->themeColorDefaults['panel-primary-title-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-primary-title-border-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4110,15 +4112,15 @@ SHOPWARE_EOD;
                 '__panel-primary-border-color__',
                 $this->themeColorDefaults['panel-primary-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-primary-border-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-    
+
     private function createPanelColorDangerFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4127,16 +4129,16 @@ SHOPWARE_EOD;
             '__panel_color_danger_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'panel-danger-title-bg',
                 '__panel-danger-title-bg__',
                 $this->themeColorDefaults['panel-danger-title-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-danger-title-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4145,9 +4147,9 @@ SHOPWARE_EOD;
                 '__panel-danger-title-color__',
                 $this->themeColorDefaults['panel-danger-title-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-danger-title-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4156,9 +4158,9 @@ SHOPWARE_EOD;
                 '__panel-danger-title-gardient-start__',
                 $this->themeColorDefaults['panel-danger-title-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-danger-title-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4167,9 +4169,9 @@ SHOPWARE_EOD;
                 '__panel-danger-title-gardient-end__',
                 $this->themeColorDefaults['panel-danger-title-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-danger-title-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4178,9 +4180,9 @@ SHOPWARE_EOD;
                 '__panel-danger-title-border-color__',
                 $this->themeColorDefaults['panel-danger-title-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-danger-title-border-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4189,15 +4191,15 @@ SHOPWARE_EOD;
                 '__panel-danger-border-color__',
                 $this->themeColorDefaults['panel-danger-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-danger-border-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-    
+
     private function createPanelColorWarningFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4206,16 +4208,16 @@ SHOPWARE_EOD;
             '__panel_color_warning_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'panel-warning-title-bg',
                 '__panel-warning-title-bg__',
                 $this->themeColorDefaults['panel-warning-title-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-warning-title-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4224,9 +4226,9 @@ SHOPWARE_EOD;
                 '__panel-warning-title-color__',
                 $this->themeColorDefaults['panel-warning-title-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-warning-title-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4235,9 +4237,9 @@ SHOPWARE_EOD;
                 '__panel-warning-title-gardient-start__',
                 $this->themeColorDefaults['panel-warning-title-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-warning-title-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4246,9 +4248,9 @@ SHOPWARE_EOD;
                 '__panel-warning-title-gardient-end__',
                 $this->themeColorDefaults['panel-warning-title-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-warning-title-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4257,9 +4259,9 @@ SHOPWARE_EOD;
                 '__panel-warning-title-border-color__',
                 $this->themeColorDefaults['panel-warning-title-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-warning-title-border-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4268,15 +4270,15 @@ SHOPWARE_EOD;
                 '__panel-warning-border-color__',
                 $this->themeColorDefaults['panel-warning-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-warning-border-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-    
+
     private function createPanelColorSuccessFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4285,16 +4287,16 @@ SHOPWARE_EOD;
             '__panel_color_success_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'panel-success-title-bg',
                 '__panel-success-title-bg__',
                 $this->themeColorDefaults['panel-success-title-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-success-title-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4303,9 +4305,9 @@ SHOPWARE_EOD;
                 '__panel-success-title-color__',
                 $this->themeColorDefaults['panel-success-title-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-success-title-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4314,9 +4316,9 @@ SHOPWARE_EOD;
                 '__panel-success-title-gardient-start__',
                 $this->themeColorDefaults['panel-success-title-gardient-start'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-success-title-gardient-start']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4325,9 +4327,9 @@ SHOPWARE_EOD;
                 '__panel-success-title-gardient-end__',
                 $this->themeColorDefaults['panel-success-title-gardient-end'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-success-title-gardient-end']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4336,9 +4338,9 @@ SHOPWARE_EOD;
                 '__panel-success-title-border-color__',
                 $this->themeColorDefaults['panel-success-title-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-success-title-border-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4347,15 +4349,15 @@ SHOPWARE_EOD;
                 '__panel-success-border-color__',
                 $this->themeColorDefaults['panel-success-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-success-border-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createPanelStructureFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4364,16 +4366,16 @@ SHOPWARE_EOD;
             '__panel_structure_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-border-size',
                 '__panel-border-size__',
                 $this->themeColorDefaults['panel-border-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-border-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4382,21 +4384,21 @@ SHOPWARE_EOD;
                 '__panel-border-radius__',
                 $this->themeColorDefaults['panel-border-radius'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-border-radius']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-header-font-size',
                 '__panel-header-font-size__',
                 $this->themeColorDefaults['panel-header-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4405,21 +4407,21 @@ SHOPWARE_EOD;
                 '__panel-header-line-height__',
                 $this->themeColorDefaults['panel-header-line-height'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-line-height']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-header-padding-vertical',
                 '__panel-header-padding-vertical__',
                 $this->themeColorDefaults['panel-header-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4428,21 +4430,21 @@ SHOPWARE_EOD;
                 '__panel-header-padding-horizontal__',
                 $this->themeColorDefaults['panel-header-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-header-padding-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-body-padding-vertical',
                 '__panel-body-padding-vertical__',
                 $this->themeColorDefaults['panel-body-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-body-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4451,21 +4453,21 @@ SHOPWARE_EOD;
                 '__panel-body-padding-horizontal__',
                 $this->themeColorDefaults['panel-body-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-body-padding-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-footer-padding-vertical',
                 '__panel-footer-padding-vertical__',
                 $this->themeColorDefaults['panel-footer-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-footer-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4474,15 +4476,15 @@ SHOPWARE_EOD;
                 '__panel-footer-padding-horizontal__',
                 $this->themeColorDefaults['panel-footer-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-footer-padding-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createPanelSizeSmallFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4491,16 +4493,16 @@ SHOPWARE_EOD;
             '__panel_small_size_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-sm-border-size',
                 '__panel-sm-border-size__',
                 $this->themeColorDefaults['panel-sm-border-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-border-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4509,9 +4511,9 @@ SHOPWARE_EOD;
                 '__panel-sm-border-radius__',
                 $this->themeColorDefaults['panel-sm-border-radius'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-border-radius']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4520,9 +4522,9 @@ SHOPWARE_EOD;
                 '__panel-sm-header-font-size__',
                 $this->themeColorDefaults['panel-sm-header-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-header-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4531,9 +4533,9 @@ SHOPWARE_EOD;
                 '__panel-sm-header-line-height__',
                 $this->themeColorDefaults['panel-sm-header-line-height'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-header-line-height']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4542,9 +4544,9 @@ SHOPWARE_EOD;
                 '__panel-sm-header-padding-vertical__',
                 $this->themeColorDefaults['panel-sm-header-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-header-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4553,9 +4555,9 @@ SHOPWARE_EOD;
                 '__panel-sm-header-padding-horizontal__',
                 $this->themeColorDefaults['panel-sm-header-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-header-padding-horizontal']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4564,9 +4566,9 @@ SHOPWARE_EOD;
                 '__panel-sm-body-padding-vertical__',
                 $this->themeColorDefaults['panel-sm-body-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-body-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4575,21 +4577,21 @@ SHOPWARE_EOD;
                 '__panel-sm-body-padding-horizontal__',
                 $this->themeColorDefaults['panel-sm-body-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-body-padding-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-sm-footer-padding-vertical',
                 '__panel-sm-footer-padding-vertical__',
                 $this->themeColorDefaults['panel-sm-footer-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-footer-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4598,15 +4600,15 @@ SHOPWARE_EOD;
                 '__panel-sm-footer-padding-horizontal__',
                 $this->themeColorDefaults['panel-sm-footer-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-sm-footer-padding-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createPanelSizeLargeFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4615,16 +4617,16 @@ SHOPWARE_EOD;
             '__panel_large_size_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-lg-border-size',
                 '__panel-lg-border-size__',
                 $this->themeColorDefaults['panel-lg-border-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-border-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4633,9 +4635,9 @@ SHOPWARE_EOD;
                 '__panel-lg-border-radius__',
                 $this->themeColorDefaults['panel-lg-border-radius'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-border-radius']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4644,9 +4646,9 @@ SHOPWARE_EOD;
                 '__panel-lg-header-font-size__',
                 $this->themeColorDefaults['panel-lg-header-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-header-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4655,9 +4657,9 @@ SHOPWARE_EOD;
                 '__panel-lg-header-line-height__',
                 $this->themeColorDefaults['panel-lg-header-line-height'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-header-line-height']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4666,9 +4668,9 @@ SHOPWARE_EOD;
                 '__panel-lg-header-padding-vertical__',
                 $this->themeColorDefaults['panel-lg-header-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-header-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4677,9 +4679,9 @@ SHOPWARE_EOD;
                 '__panel-lg-header-padding-horizontal__',
                 $this->themeColorDefaults['panel-lg-header-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-header-padding-horizontal']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4688,9 +4690,9 @@ SHOPWARE_EOD;
                 '__panel-lg-body-padding-vertical__',
                 $this->themeColorDefaults['panel-lg-body-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-body-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4699,21 +4701,21 @@ SHOPWARE_EOD;
                 '__panel-lg-body-padding-horizontal__',
                 $this->themeColorDefaults['panel-lg-body-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-body-padding-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'panel-lg-footer-padding-vertical',
                 '__panel-lg-footer-padding-vertical__',
                 $this->themeColorDefaults['panel-lg-footer-padding-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-footer-padding-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4722,15 +4724,15 @@ SHOPWARE_EOD;
                 '__panel-lg-footer-padding-horizontal__',
                 $this->themeColorDefaults['panel-lg-footer-padding-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-lg-footer-padding-horizontal']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createFormsTab()
     {
         $tab = $this->createTab(
@@ -4745,7 +4747,7 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
 		$formLabelsFieldSet = $this->createFormLabelsFieldSet();
 		$formGlobalFieldSet = $this->createFormGlobalFieldSet();
 		$formStateFieldSet = $this->createFormStateFieldSet();
@@ -4755,7 +4757,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     private function createFormLabelsFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4764,16 +4766,16 @@ SHOPWARE_EOD;
             '__form_labels_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'label-font-size',
                 '__label-font-size__',
                 $this->themeColorDefaults['label-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@label-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4782,15 +4784,15 @@ SHOPWARE_EOD;
                 '__label-color__',
                 $this->themeColorDefaults['label-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@label-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createFormGlobalFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4799,16 +4801,16 @@ SHOPWARE_EOD;
             '__form_global_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'input-font-size',
                 '__input-font-size__',
                 $this->themeColorDefaults['input-font-size'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-font-size']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4817,21 +4819,21 @@ SHOPWARE_EOD;
                 '__input-bg__',
                 $this->themeColorDefaults['input-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-bg']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'input-color',
                 '__input-color__',
                 $this->themeColorDefaults['input-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4840,21 +4842,21 @@ SHOPWARE_EOD;
                 '__input-placeholder-color__',
                 $this->themeColorDefaults['input-placeholder-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-placeholder-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'input-shadow',
                 '__input-shadow__',
                 $this->themeColorDefaults['input-shadow'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-shadow']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4863,21 +4865,21 @@ SHOPWARE_EOD;
                 '__input-gardient__',
                 $this->themeColorDefaults['input-gardient'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-gardient']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'input-border-color',
                 '__input-border-color__',
                 $this->themeColorDefaults['input-border-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-border-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4886,21 +4888,21 @@ SHOPWARE_EOD;
                 '__input-border-radius__',
                 $this->themeColorDefaults['input-border-radius'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-border-radius']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'input-height-base',
                 '__input-height-base__',
                 $this->themeColorDefaults['input-height-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-height-base']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4909,21 +4911,21 @@ SHOPWARE_EOD;
                 '__input-line-height-base__',
                 $this->themeColorDefaults['input-line-height-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-line-height-base']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'input-padding-base-vertical',
                 '__input-padding-base-vertical__',
                 $this->themeColorDefaults['input-padding-base-vertical'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-padding-base-vertical']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4932,9 +4934,9 @@ SHOPWARE_EOD;
                 '__input-padding-base-horizontal__',
                 $this->themeColorDefaults['input-padding-base-horizontal'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-padding-base-horizontal']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4943,31 +4945,31 @@ SHOPWARE_EOD;
                 '__select-bg__',
                 $this->themeColorDefaults['select-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@select-bg']
-                ] 
+                ]
             )
-        );		
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'select-hover-bg',
                 '__select-hover-bg__',
                 $this->themeColorDefaults['select-hover-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@select-hover-bg']
-                ] 
+                ]
             )
-        );		
+        );
         $fieldSet->addElement(
             $this->createTextField(
                 'select-height-base',
                 '__select-height-base__',
                 $this->themeColorDefaults['select-height-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@select-height-base']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -4976,15 +4978,15 @@ SHOPWARE_EOD;
                 '__select-line-height-base__',
                 $this->themeColorDefaults['select-line-height-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@select-line-height-base']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createFormStateFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -4993,16 +4995,16 @@ SHOPWARE_EOD;
             '__form_state_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'input-focus-bg',
                 '__input-focus-bg__',
                 $this->themeColorDefaults['input-focus-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-focus-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5011,9 +5013,9 @@ SHOPWARE_EOD;
                 '__input-focus-border__',
                 $this->themeColorDefaults['input-focus-border'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-focus-border']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5022,21 +5024,21 @@ SHOPWARE_EOD;
                 '__input-focus-color__',
                 $this->themeColorDefaults['input-focus-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-focus-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'input-error-bg',
                 '__input-error-bg__',
                 $this->themeColorDefaults['input-error-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-error-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5045,9 +5047,9 @@ SHOPWARE_EOD;
                 '__input-error-border__',
                 $this->themeColorDefaults['input-error-border'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-error-border']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5056,21 +5058,21 @@ SHOPWARE_EOD;
                 '__input-error-color__',
                 $this->themeColorDefaults['input-error-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-error-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'input-success-bg',
                 '__input-success-bg__',
                 $this->themeColorDefaults['input-success-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-success-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5079,9 +5081,9 @@ SHOPWARE_EOD;
                 '__input-success-border__',
                 $this->themeColorDefaults['input-success-border'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-success-border']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5090,15 +5092,15 @@ SHOPWARE_EOD;
                 '__input-success-color__',
                 $this->themeColorDefaults['input-success-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@input-success-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createTablesTab()
     {
         $tab = $this->createTab(
@@ -5113,13 +5115,13 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
 		$tablesFieldSet = $this->createTablesFieldSet();
 		$tab->addElement($tablesFieldSet);
 
         return $tab;
     }
-	
+
     private function createTablesFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -5128,16 +5130,16 @@ SHOPWARE_EOD;
             '__tables_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'panel-table-header-bg',
                 '__panel-table-header-bg__',
                 $this->themeColorDefaults['panel-table-header-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-table-header-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5146,9 +5148,9 @@ SHOPWARE_EOD;
                 '__panel-table-header-color__',
                 $this->themeColorDefaults['panel-table-header-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@panel-table-header-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5157,9 +5159,9 @@ SHOPWARE_EOD;
                 '__table-row-bg__',
                 $this->themeColorDefaults['table-row-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@table-row-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5168,9 +5170,9 @@ SHOPWARE_EOD;
                 '__table-row-color__',
                 $this->themeColorDefaults['table-row-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@table-row-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5179,9 +5181,9 @@ SHOPWARE_EOD;
                 '__table-row-highlight-bg__',
                 $this->themeColorDefaults['table-row-highlight-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@table-row-highlight-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5190,9 +5192,9 @@ SHOPWARE_EOD;
                 '__table-header-bg__',
                 $this->themeColorDefaults['table-header-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@table-header-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5201,15 +5203,15 @@ SHOPWARE_EOD;
                 '__table-header-color__',
                 $this->themeColorDefaults['table-header-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@table-header-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createBadgesTab()
     {
         $tab = $this->createTab(
@@ -5224,14 +5226,14 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
 		$tab->addElement($this->createBadgesSizeFieldSet());
 		$tab->addElement($this->createBadgesColorFieldSet());
 		$tab->addElement($this->createProductBadgesFieldSet());
 
         return $tab;
     }
-	
+
     private function createBadgesSizeFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -5240,16 +5242,16 @@ SHOPWARE_EOD;
             '__badges_size_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'badge-size-base',
                 '__badge-size-base__',
                 $this->themeColorDefaults['badge-size-base'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-size-base']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5258,9 +5260,9 @@ SHOPWARE_EOD;
                 '__badge-size-sm__',
                 $this->themeColorDefaults['badge-size-sm'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-size-sm']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5269,15 +5271,15 @@ SHOPWARE_EOD;
                 '__badge-size-lg__',
                 $this->themeColorDefaults['badge-size-lg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-size-lg']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createBadgesColorFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -5286,16 +5288,16 @@ SHOPWARE_EOD;
             '__badges_color_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'badge-primary-bg',
                 '__badge-primary-bg__',
                 $this->themeColorDefaults['badge-primary-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-primary-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5304,21 +5306,21 @@ SHOPWARE_EOD;
                 '__badge-primary-color__',
                 $this->themeColorDefaults['badge-primary-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-primary-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'badge-secondary-bg',
                 '__badge-secondary-bg__',
                 $this->themeColorDefaults['badge-secondary-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-secondary-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5327,21 +5329,21 @@ SHOPWARE_EOD;
                 '__badge-secondary-color__',
                 $this->themeColorDefaults['badge-secondary-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-secondary-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'badge-danger-bg',
                 '__badge-danger-bg__',
                 $this->themeColorDefaults['badge-danger-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-danger-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5350,21 +5352,21 @@ SHOPWARE_EOD;
                 '__badge-danger-color__',
                 $this->themeColorDefaults['badge-danger-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-danger-color']
-                ] 
+                ]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'badge-warning-bg',
                 '__badge-warning-bg__',
                 $this->themeColorDefaults['badge-warning-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-warning-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5373,21 +5375,21 @@ SHOPWARE_EOD;
                 '__badge-warning-color__',
                 $this->themeColorDefaults['badge-warning-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-warning-color']
-                ] 
+                ]
             )
-        );		
-		
+        );
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'badge-success-bg',
                 '__badge-success-bg__',
                 $this->themeColorDefaults['badge-success-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-success-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5396,21 +5398,21 @@ SHOPWARE_EOD;
                 '__badge-success-color__',
                 $this->themeColorDefaults['badge-success-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-success-color']
-                ] 
+                ]
             )
-        );			
-		
+        );
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'badge-info-bg',
                 '__badge-info-bg__',
                 $this->themeColorDefaults['badge-info-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-info-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5419,21 +5421,21 @@ SHOPWARE_EOD;
                 '__badge-info-color__',
                 $this->themeColorDefaults['badge-info-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-info-color']
-                ] 
+                ]
             )
-        );			
-		
+        );
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'badge-default-bg',
                 '__badge-default-bg__',
                 $this->themeColorDefaults['badge-default-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-default-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5442,12 +5444,12 @@ SHOPWARE_EOD;
                 '__badge-default-color__',
                 $this->themeColorDefaults['badge-default-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@badge-default-color']
-                ] 
+                ]
             )
-        );	
-		
+        );
+
         return $fieldSet;
     }
 
@@ -5459,50 +5461,50 @@ SHOPWARE_EOD;
             '__product_badges_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-discount-bg',
                 '__product-badge-discount-bg__',
                 $this->themeColorDefaults['product-badge-discount-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-discount-bg']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-discount-color',
                 '__product-badge-discount-color__',
                 $this->themeColorDefaults['product-badge-discount-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-discount-color']
-                ] 
+                ]
             )
-        );	
-		
+        );
+
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-newcomer-bg',
                 '__product-badge-newcomer-bg__',
                 $this->themeColorDefaults['product-badge-newcomer-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-newcomer-bg']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-newcomer-color',
                 '__product-badge-newcomer-color__',
                 $this->themeColorDefaults['product-badge-newcomer-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-newcomer-color']
-                ] 
+                ]
             )
         );
 
@@ -5512,22 +5514,22 @@ SHOPWARE_EOD;
                 '__product-badge-recommend-bg__',
                 $this->themeColorDefaults['product-badge-recommend-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-recommend-bg']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-recommend-color',
                 '__product-badge-recommend-color__',
                 $this->themeColorDefaults['product-badge-recommend-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-recommend-color']
-                ] 
+                ]
             )
-        );	
+        );
 
         $fieldSet->addElement(
             $this->createColorPickerField(
@@ -5535,22 +5537,22 @@ SHOPWARE_EOD;
                 '__product-badge-download-bg__',
                 $this->themeColorDefaults['product-badge-download-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-download-bg']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-download-color',
                 '__product-badge-download-color__',
                 $this->themeColorDefaults['product-badge-download-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-download-color']
-                ] 
+                ]
             )
-        );	
+        );
 
         $fieldSet->addElement(
             $this->createColorPickerField(
@@ -5558,20 +5560,20 @@ SHOPWARE_EOD;
                 '__product-badge-soldout-bg__',
                 $this->themeColorDefaults['product-badge-soldout-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-soldout-bg']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-soldout-color',
                 '__product-badge-soldout-color__',
                 $this->themeColorDefaults['product-badge-soldout-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-soldout-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5580,42 +5582,42 @@ SHOPWARE_EOD;
                 '__product-badge-shippingfree-bg__',
                 $this->themeColorDefaults['product-badge-shippingfree-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-shippingfree-bg']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-shippingfree-color',
                 '__product-badge-shippingfree-color__',
                 $this->themeColorDefaults['product-badge-shippingfree-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-shippingfree-color']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-instock-bg',
                 '__product-badge-instock-bg__',
                 $this->themeColorDefaults['product-badge-instock-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-instock-bg']
-                ] 
+                ]
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createColorPickerField(
                 'product-badge-instock-color',
                 '__product-badge-instock-color__',
                 $this->themeColorDefaults['product-badge-instock-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-instock-color']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5624,9 +5626,9 @@ SHOPWARE_EOD;
                 '__product-badge-brand-bg__',
                 $this->themeColorDefaults['product-badge-brand-bg'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-brand-bg']
-                ] 
+                ]
             )
         );
         $fieldSet->addElement(
@@ -5635,15 +5637,15 @@ SHOPWARE_EOD;
                 '__product-badge-brand-color__',
                 $this->themeColorDefaults['product-badge-brand-color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@product-badge-brand-color']
-                ] 
+                ]
             )
         );
-		
+
         return $fieldSet;
     }
-	
+
     private function createMiscTab()
     {
         $tab = $this->createTab(
@@ -5658,13 +5660,13 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
 		$boxShadowsFieldSet = $this->createBoxShadowsFieldSet();
 		$tab->addElement($boxShadowsFieldSet);
 
         return $tab;
     }
-	
+
     private function createBoxShadowsFieldSet()
     {
         $attributes = array_merge($this->fieldSetDefaults);
@@ -5673,7 +5675,7 @@ SHOPWARE_EOD;
             '__box_shadows_field_set__',
             ['attributes' => $attributes]
         );
-		
+
         $fieldSet->addElement(
             $this->createTextField(
                 'box-base-shadow',
@@ -5685,22 +5687,22 @@ SHOPWARE_EOD;
 					]
 				]
             )
-        );	
-		
+        );
+
         $fieldSet->addElement(
             $this->createTextField(
                 'offcanvas-shadow',
                 '@offcanvas-shadow',
                 $this->themeColorDefaults['offcanvas-shadow']
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createTextField(
                 'main-navigation-shadow',
                 '@main-navigation-shadow',
                 $this->themeColorDefaults['main-navigation-shadow']
             )
-        );	
+        );
 
         $fieldSet->addElement(
             $this->createTextField(
@@ -5708,27 +5710,27 @@ SHOPWARE_EOD;
                 '@search-result-shadow',
                 $this->themeColorDefaults['search-result-shadow']
             )
-        );	
+        );
         $fieldSet->addElement(
             $this->createTextField(
                 'step-container-icon-shadow',
                 '@step-container-icon-shadow',
                 $this->themeColorDefaults['step-container-icon-shadow']
             )
-        );	
-		
+        );
+
         $fieldSet->addElement(
             $this->createTextField(
                 'badge-shadow',
                 '@badge-shadow',
                 $this->themeColorDefaults['badge-shadow']
             )
-        );	
+        );
 
-		
+
         return $fieldSet;
     }
-	
+
     private function createMainConfigTab()
     {
         $tab = $this->createTab(
@@ -5756,16 +5758,16 @@ SHOPWARE_EOD;
                 ]
             ]
         );
-		
+
         $fieldSet->addElement(
             $this->createCheckboxField(
                 'offcanvasCart',
                 '__offcanvas_cart__',
-                true,      
+                true,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('offcanvas_cart_description')
-				]				
+				]
             )
         );
 
@@ -5775,12 +5777,12 @@ SHOPWARE_EOD;
                 '__offcanvas_move_method__',
                 true,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('offcanvas_move_method_description')
 				]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createSelectField(
                 'mainNavigationAlignment',
@@ -5792,11 +5794,11 @@ SHOPWARE_EOD;
                     ['value' => 'right', 'text' => '__main_navigation_align_right__']
                 ],
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('main_navigation_align_description', 'supportText')
 				]
             )
-        );		
+        );
 
         $fieldSet->addElement(
             $this->createCheckboxField(
@@ -5804,11 +5806,11 @@ SHOPWARE_EOD;
                 '__sticky_main_navigation_active__',
                 false,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('sticky_main_navigation_description')
 				]
             )
-        );		
+        );
 
         $fieldSet->addElement(
             $this->createCheckboxField(
@@ -5816,7 +5818,7 @@ SHOPWARE_EOD;
                 '__show_home_link__',
                 true,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('show_home_link_description')
 				]
             )
@@ -5828,36 +5830,36 @@ SHOPWARE_EOD;
                 '__display_sidebar__',
                 true,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('display_sidebar_description')
 				]
             )
         );
-	
+
         $fieldSet->addElement(
             $this->createCheckboxField(
                 'sidebarFilter',
                 '__show_filter_in_sidebar__',
                 false,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('show_filter_in_sidebar_description')
 				]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createCheckboxField(
                 'checkoutHeader',
                 '__checkout_header__',
                 false,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('checkout_header_description')
 				]
             )
         );
-		
+
 
         $fieldSet->addElement(
             $this->createCheckboxField(
@@ -5865,7 +5867,7 @@ SHOPWARE_EOD;
                 '__checkout_footer__',
                 false,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('checkout_footer_description')
 				]
             )
@@ -5877,7 +5879,7 @@ SHOPWARE_EOD;
                 '__enable_infinite_scrolling__',
                 true,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('enable_infinite_scrolling_description')
 				]
             )
@@ -5889,7 +5891,7 @@ SHOPWARE_EOD;
                 '__infinite_threshold__',
                 4,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('infinite_threshold_description', 'supportText')
 				]
             )
@@ -5908,7 +5910,7 @@ SHOPWARE_EOD;
                     ['value' => 5, 'text' => '__lightbox_zoom_factor_5x__']
                 ],
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('lightbox_zoom_factor_description', 'supportText')
 				]
             )
@@ -5934,7 +5936,7 @@ SHOPWARE_EOD;
                 ]]
             )
         );
-		
+
         $fieldSet->addElement(
             $this->createCheckboxField(
                 'asyncJavascriptLoading',
@@ -5945,7 +5947,7 @@ SHOPWARE_EOD;
                     'boxLabel' => Shopware()->Snippets()->getNamespace('themes/views/backend/config')->get('async_javascript_loading_description'),
                 ]]
             )
-        );		
+        );
 
         $tab->addElement($fieldSet);
 
@@ -5984,7 +5986,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     /**
      * Helper function to create the logo and icon tab ("Icons & Logos")
      * @return Form\Container\Tab
@@ -6028,13 +6030,13 @@ SHOPWARE_EOD;
                 ['attributes' => ['lessCompatible' => false]]
             )
         );
-        
+
         $fieldSet->addElement(
             $this->createTextField(
                 'header-logo-width-phone',
                 '__header-logo-width-phone__',
                 $this->themeConfigDefaults['header-logo-width-phone'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6047,7 +6049,7 @@ SHOPWARE_EOD;
                 'header-logo-height-phone',
                 '__header-logo-height-phone__',
                 $this->themeConfigDefaults['header-logo-height-phone'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6064,13 +6066,13 @@ SHOPWARE_EOD;
                 ['attributes' => ['lessCompatible' => false, 'margin' => '30 15 5 0']]
             )
         );
-        
+
         $fieldSet->addElement(
             $this->createTextField(
                 'header-logo-width-tablet',
                 '__header-logo-width-tablet__',
                 $this->themeConfigDefaults['header-logo-width-tablet'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6083,14 +6085,14 @@ SHOPWARE_EOD;
                 'header-logo-height-tablet',
                 '__header-logo-height-tablet__',
                 $this->themeConfigDefaults['header-logo-height-tablet'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
                     ]
                 ]
             )
-        );        
+        );
 
         $fieldSet->addElement(
             $this->createMediaField(
@@ -6100,13 +6102,13 @@ SHOPWARE_EOD;
                 ['attributes' => ['lessCompatible' => false, 'margin' => '30 15 5 0']]
             )
         );
-        
+
         $fieldSet->addElement(
             $this->createTextField(
                 'header-logo-width-tablet-landscape',
                 '__header-logo-width-tablet-landscape__',
                 $this->themeConfigDefaults['header-logo-width-tablet-landscape'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6119,15 +6121,15 @@ SHOPWARE_EOD;
                 'header-logo-height-tablet-landscape',
                 '__header-logo-height-tablet-landscape__',
                 $this->themeConfigDefaults['header-logo-height-tablet-landscape'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
                     ]
                 ]
             )
-        );        
-        
+        );
+
         $fieldSet->addElement(
             $this->createMediaField(
                 'desktopLogo',
@@ -6136,13 +6138,13 @@ SHOPWARE_EOD;
                 ['attributes' => ['lessCompatible' => false, 'margin' => '30 15 5 0']]
             )
         );
-        
+
         $fieldSet->addElement(
             $this->createTextField(
                 'header-logo-width-desktop',
                 '__header-logo-width-desktop__',
                 $this->themeConfigDefaults['header-logo-width-desktop'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6155,14 +6157,14 @@ SHOPWARE_EOD;
                 'header-logo-height-desktop',
                 '__header-logo-height-desktop__',
                 $this->themeConfigDefaults['header-logo-height-desktop'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
                     ]
                 ]
             )
-        );         
+        );
 
         $tab->addElement($fieldSet);
 
@@ -6222,7 +6224,7 @@ SHOPWARE_EOD;
 
         return $tab;
     }
-	
+
     public function createCustomTabPanel()
     {
         $tabPanel = $this->createTabPanel(
@@ -6243,13 +6245,13 @@ SHOPWARE_EOD;
 		$tabPanel->addTab($this->createScrollToTopTab());
 		$tabPanel->addTab($this->createCookiePermissionTab());
 		$tabPanel->addTab($this->createProductOptionsTab());
-		
+
         return $tabPanel;
     }
-	
+
     public function createHeaderOptionsTab()
     {
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'header_options_tab',
@@ -6261,13 +6263,13 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
+		);
+
         $tab->addElement($this->createHeaderListingOptionsFieldset());
-        
+
 		return $tab;
 	}
-    
+
     public function createHeaderListingOptionsFieldset()
     {
 
@@ -6288,7 +6290,7 @@ SHOPWARE_EOD;
                 )
             )
         );
-        
+
         $fieldset->addElement(
             $this->createSelectField(
                 'header_listing_active',
@@ -6299,7 +6301,7 @@ SHOPWARE_EOD;
                     ['value' => 'all', 'text' => '__header-listing-active-true__'],
                     ['value' => 'listing', 'text' => '__header-listing-active-listing__']
                 ],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => false, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6307,13 +6309,13 @@ SHOPWARE_EOD;
                 ]
             )
         );
-        
+
         $fieldset->addElement(
             $this->createCheckboxField(
                 'header_listing_content_active',
                 '__header_listing_content_active__',
                 $this->themeConfigDefaults['header_listing_content_active'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => false, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6321,13 +6323,13 @@ SHOPWARE_EOD;
                 ]
             )
         );
-        
+
         $fieldset->addElement(
             $this->createMediaField(
                 'header-listing-default-image',
                 '__header-listing-default-image__',
                 '',
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true,
                         'helpText' => '__header-listing-default-image-description__'
@@ -6335,7 +6337,7 @@ SHOPWARE_EOD;
                 ]
             )
         );
-        
+
         $fieldset->addElement(
             $this->createSelectField(
                 'header-listing-image-position-horizontal',
@@ -6346,7 +6348,7 @@ SHOPWARE_EOD;
                     ['value' => 'center', 'text' => '__header-listing-image-position-horizontal-center__'],
                     ['value' => 'right', 'text' => '__header-listing-image-position-horizontal-right__']
                 ],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6354,7 +6356,7 @@ SHOPWARE_EOD;
                 ]
             )
         );
-        
+
         $fieldset->addElement(
             $this->createSelectField(
                 'header-listing-image-position-vertical',
@@ -6365,7 +6367,7 @@ SHOPWARE_EOD;
                     ['value' => 'center', 'text' => '__header-listing-image-position-vertical-center__'],
                     ['value' => 'bottom', 'text' => '__header-listing-image-position-vertical-bottom__']
                 ],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6373,13 +6375,13 @@ SHOPWARE_EOD;
                 ]
             )
         );
-        
+
         $fieldset->addElement(
             $this->createTextField(
                 'header-listing-category-teaser-headline-size',
                 '__header-listing-category-teaser-headline-size__',
                 $this->themeConfigDefaults['header-listing-category-teaser-headline-size'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6392,7 +6394,7 @@ SHOPWARE_EOD;
                 'header-listing-category-teaser-headline-color',
                 '__header-listing-category-teaser-headline-color__',
                 $this->themeConfigDefaults['header-listing-category-teaser-headline-color'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6405,7 +6407,7 @@ SHOPWARE_EOD;
                 'header-listing-category-teaser-text-size',
                 '__header-listing-category-teaser-text-size__',
                 $this->themeConfigDefaults['header-listing-category-teaser-text-size'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6418,7 +6420,7 @@ SHOPWARE_EOD;
                 'header-listing-category-teaser-text-color',
                 '__header-listing-category-teaser-text-color__',
                 $this->themeConfigDefaults['header-listing-category-teaser-text-color'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6426,13 +6428,13 @@ SHOPWARE_EOD;
                 ]
             )
         );
-        
+
         $fieldset->addElement(
             $this->createTextField(
                 'header-listing-category-teaser-height-phone',
                 '__header-listing-category-teaser-height-phone__',
                 $this->themeConfigDefaults['header-listing-category-teaser-height-phone'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6445,7 +6447,7 @@ SHOPWARE_EOD;
                 'header-listing-category-teaser-height-phone-landscape',
                 '__header-listing-category-teaser-height-phone-landscape__',
                 $this->themeConfigDefaults['header-listing-category-teaser-height-phone-landscape'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6458,7 +6460,7 @@ SHOPWARE_EOD;
                 'header-listing-category-teaser-height-tablet',
                 '__header-listing-category-teaser-height-tablet__',
                 $this->themeConfigDefaults['header-listing-category-teaser-height-tablet'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6471,7 +6473,7 @@ SHOPWARE_EOD;
                 'header-listing-category-teaser-height-tablet-landscape',
                 '__header-listing-category-teaser-height-tablet-landscape__',
                 $this->themeConfigDefaults['header-listing-category-teaser-height-tablet-landscape'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
@@ -6484,22 +6486,22 @@ SHOPWARE_EOD;
                 'header-listing-category-teaser-height-desktop',
                 '__header-listing-category-teaser-height-desktop__',
                 $this->themeConfigDefaults['header-listing-category-teaser-height-desktop'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => true, 'columnWidth' => 0.5
                         //'helpText' => '__header-listing-default-image-description__'
                     ]
                 ]
             )
-        );        
+        );
 
 
         return $fieldset;
     }
-    
+
     public function createPaymentShippingOptionsTab()
     {
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'payment_shipping_options_tab',
@@ -6511,18 +6513,18 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
-		
+		);
+
+
 		$tab->addElement($this->createPaymentOptionsFieldset());
 		$tab->addElement($this->createShippingOptionsFieldset());
-		
+
 		return $tab;
 	}
-	
+
     public function createPaymentOptionsFieldset()
     {
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'payment_options',
@@ -6547,21 +6549,21 @@ SHOPWARE_EOD;
 			'__payment_options_active_label__',
 			false,
 			[
-				'attributes' => 
+				'attributes' =>
 					[
 						'lessCompatible' => false,
 						'columnWidth' => 1
 					]
 			]
 		);
-		
+
 		// Create Sofort Überweisung checkbkox
 		$prepayCheckbox = $this->createCheckboxField(
 			'payment_option_prepayment',
 			'__payment_options_prepayment_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$lastschriftCheckbox = $this->createCheckboxField(
@@ -6569,7 +6571,7 @@ SHOPWARE_EOD;
 			'__payment_option_lastschrift_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$cashCheckbox = $this->createCheckboxField(
@@ -6577,7 +6579,7 @@ SHOPWARE_EOD;
 			'__payment_options_cash_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$cashondelieveryCheckbox = $this->createCheckboxField(
@@ -6585,7 +6587,7 @@ SHOPWARE_EOD;
 			'__payment_options_cashondelievery_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$billCheckbox = $this->createCheckboxField(
@@ -6593,8 +6595,8 @@ SHOPWARE_EOD;
 			'__payment_options_bill_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create Sofort Überweisung checkbkox
 		$visaCheckbox = $this->createCheckboxField(
 			'payment_option_visa',
@@ -6610,7 +6612,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-		
+
 		// Create Sofort Überweisung checkbkox
 		$amexCheckbox = $this->createCheckboxField(
 			'payment_option_amex',
@@ -6618,7 +6620,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-		
+
 		// Create PayPal checkbkox
 		$paypalCheckbox = $this->createCheckboxField(
 			'payment_option_paypal',
@@ -6626,7 +6628,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-		
+
 		// Create Stripe checkbkox
 		$stripeCheckbox = $this->createCheckboxField(
 			'payment_option_stripe',
@@ -6641,7 +6643,7 @@ SHOPWARE_EOD;
 			'__payment_options_amazon_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$sofortpayCheckbox = $this->createCheckboxField(
@@ -6649,7 +6651,7 @@ SHOPWARE_EOD;
 			'__payment_options_sofort_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);		
+		);
 
 		// Create Bitcoin checkbkox
 		$bitcoinCheckbox = $this->createCheckboxField(
@@ -6658,15 +6660,15 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-        
+
 		// Create Klarna checkbkox
 		$klarnaCheckbox = $this->createCheckboxField(
 			'payment_option_klarna',
 			'__payment_options_klarna_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
-        
+		);
+
 		// Create Skrill checkbkox
 		$skrillCheckbox = $this->createCheckboxField(
 			'payment_option_skrill',
@@ -6674,23 +6676,23 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-        
+
 		// Create Giropay checkbkox
 		$giropayCheckbox = $this->createCheckboxField(
 			'payment_option_giropay',
 			'__payment_options_giropay_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
-        
+		);
+
 		// Create Paysafecard checkbkox
 		$paysafecardCheckbox = $this->createCheckboxField(
 			'payment_option_paysafecard',
 			'__payment_options_paysafecard_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Adding the fields to the fieldset
 		$fieldset->addElement($paymentsActiveCheckbox);
 		$fieldset->addElement($prepayCheckbox);
@@ -6713,10 +6715,10 @@ SHOPWARE_EOD;
 
 		return $fieldset;
 	}
-	
+
     public function createShippingOptionsFieldset()
     {
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'shipping_options',
@@ -6742,14 +6744,14 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false, 'columnWidth' => 1]]
 		);
-		
+
 		// Create Sofort Überweisung checkbkox
 		$dhlCheckbox = $this->createCheckboxField(
 			'shipping_option_dhl',
 			'__shipping_options_dhl_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$dpdCheckbox = $this->createCheckboxField(
@@ -6757,7 +6759,7 @@ SHOPWARE_EOD;
 			'__shipping_options_dpd_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$hermesCheckbox = $this->createCheckboxField(
@@ -6765,7 +6767,7 @@ SHOPWARE_EOD;
 			'__shipping_options_hermes_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
+		);
 
 		// Create Sofort Überweisung checkbkox
 		$glsCheckbox = $this->createCheckboxField(
@@ -6773,8 +6775,8 @@ SHOPWARE_EOD;
 			'__shipping_options_gls_label__',
 			false,
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create Sofort Überweisung checkbkox
 		$upsCheckbox = $this->createCheckboxField(
 			'shipping_option_ups',
@@ -6782,7 +6784,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-		
+
 		// Create Sofort Überweisung checkbkox
 		$fedexCheckbox = $this->createCheckboxField(
 			'shipping_option_fedex',
@@ -6790,7 +6792,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-		
+
 		// Create Austria Mail Überweisung checkbkox
 		$austriamailCheckbox = $this->createCheckboxField(
 			'shipping_option_austriamail',
@@ -6798,7 +6800,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-        
+
 		// Create Swiss Mail Überweisung checkbkox
 		$swissmailCheckbox = $this->createCheckboxField(
 			'shipping_option_swissmail',
@@ -6806,7 +6808,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-        
+
 		// Create Liefery Überweisung checkbkox
 		$lieferyCheckbox = $this->createCheckboxField(
 			'shipping_option_liefery',
@@ -6814,7 +6816,7 @@ SHOPWARE_EOD;
 			false,
 			['attributes' => ['lessCompatible' => false]]
 		);
-	
+
 		// Adding the fields to the fieldset
 		$fieldset->addElement($shippingsActiveCheckbox);
 		$fieldset->addElement($dhlCheckbox);
@@ -6829,10 +6831,10 @@ SHOPWARE_EOD;
 
 		return $fieldset;
 	}
-	
+
     public function createSocialsOptionsTab()
     {
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'socials_options_tab',
@@ -6844,17 +6846,17 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
-		
+		);
+
+
 		$tab->addElement($this->createSocialsOptionsFieldset());
-		
+
 		return $tab;
 	}
-	
+
     public function createSocialsOptionsFieldset()
     {
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'socials_options',
@@ -6879,56 +6881,56 @@ SHOPWARE_EOD;
 			"__socials_option_facebook_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create Twitter URL
 		$socialsTwitterUrl = $this->createTextField(
 			"socials_option_twitter",
 			"__socials_option_twitter_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create Instagram URL
 		$socialsInstagramUrl = $this->createTextField(
 			"socials_option_instagram",
 			"__socials_option_instagram_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create YouTube URL
 		$socialsYoutubeUrl = $this->createTextField(
 			"socials_option_youtube",
 			"__socials_option_youtube_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create Google+ URL
 		$socialsGoogleplusUrl = $this->createTextField(
 			"socials_option_googleplus",
 			"__socials_option_googleplus_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create Pinterest URL
 		$socialsPinterestUrl = $this->createTextField(
 			"socials_option_pinterest",
 			"__socials_option_pinterest_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Create Xing URL
 		$socialsXingUrl = $this->createTextField(
 			"socials_option_xing",
 			"__socials_option_xing_label__",
 			'',
 			['attributes' => ['lessCompatible' => false]]
-		);	
-		
+		);
+
 		// Adding the fields to the fieldset
 		$fieldset->addElement($socialsFacebookUrl);
 		$fieldset->addElement($socialsTwitterUrl);
@@ -6940,10 +6942,10 @@ SHOPWARE_EOD;
 
 		return $fieldset;
 	}
-	
+
     public function createUspBarTab()
     {
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'usb_bar_tab',
@@ -6955,20 +6957,20 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
+		);
+
         $tab->addElement($this->createUspBarDisplayFieldset());
 		$tab->addElement($this->createUspBarFirstContentFieldset());
 		$tab->addElement($this->createUspBarSecondContentFieldset());
 		$tab->addElement($this->createUspBarThirdContentFieldset());
 		$tab->addElement($this->createUspBarFourthContentFieldset());
-		
+
 		return $tab;
 	}
-	
+
 	public function createUspBarDisplayFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'usp_bar_display_options',
@@ -6995,7 +6997,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false, 'columnWidth' => 1]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createCheckboxField(
 				'usp_bar_footer_active',
@@ -7012,7 +7014,7 @@ SHOPWARE_EOD;
 				$this->themeColorDefaults['usp-bar-bg']
             )
         );
-		
+
 		$fieldset->addElement(
             $this->createColorPickerField(
                 'usp-bar-text-color',
@@ -7020,7 +7022,7 @@ SHOPWARE_EOD;
 				$this->themeColorDefaults['usp-bar-text-color']
             )
         );
-		
+
 		$fieldset->addElement(
             $this->createTextField(
                 'usp-bar-icon-size',
@@ -7028,13 +7030,13 @@ SHOPWARE_EOD;
 				$this->themeColorDefaults['usp-bar-icon-size']
             )
         );
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createUspBarFirstContentFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'usp_bar_first_content',
@@ -7061,7 +7063,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextField(
 				'usp_bar_first_content_text',
@@ -7070,7 +7072,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createMediaField(
 				'usp_bar_first_content_icon',
@@ -7079,7 +7081,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextAreaField(
 				'usp_bar_first_content_description',
@@ -7088,13 +7090,13 @@ SHOPWARE_EOD;
 				['attributes' => ['xtype' => 'textarea','height' => 100,'lessCompatible' => false]]
 			)
 		);
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createUspBarSecondContentFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'usp_bar_second_content',
@@ -7121,7 +7123,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextField(
 				'usp_bar_second_content_text',
@@ -7130,7 +7132,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createMediaField(
 				'usp_bar_second_content_icon',
@@ -7139,7 +7141,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextAreaField(
 				'usp_bar_second_content_description',
@@ -7148,13 +7150,13 @@ SHOPWARE_EOD;
 				['attributes' => ['xtype' => 'textarea','height' => 100,'lessCompatible' => false]]
 			)
 		);
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createUspBarThirdContentFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'usp_bar_third_content',
@@ -7181,7 +7183,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextField(
 				'usp_bar_third_content_text',
@@ -7190,7 +7192,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createMediaField(
 				'usp_bar_third_content_icon',
@@ -7199,7 +7201,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextAreaField(
 				'usp_bar_third_content_description',
@@ -7208,13 +7210,13 @@ SHOPWARE_EOD;
 				['attributes' => ['xtype' => 'textarea','height' => 100,'lessCompatible' => false]]
 			)
 		);
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createUspBarFourthContentFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'usp_bar_fourth_content',
@@ -7241,7 +7243,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextField(
 				'usp_bar_fourth_content_text',
@@ -7250,7 +7252,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createMediaField(
 				'usp_bar_fourth_content_icon',
@@ -7259,7 +7261,7 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createTextAreaField(
 				'usp_bar_fourth_content_description',
@@ -7268,13 +7270,13 @@ SHOPWARE_EOD;
 				['attributes' => ['xtype' => 'textarea','height' => 100,'lessCompatible' => false]]
 			)
 		);
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createScrollToTopTab()
 	{
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'scroll_to_top_tab',
@@ -7286,16 +7288,16 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
+		);
+
 		$tab->addElement($this->createScrollToTopDisplayFieldset());
 
 		return $tab;
 	}
-		
+
 	public function createScrollToTopDisplayFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'scroll_to_top_display_options',
@@ -7318,26 +7320,26 @@ SHOPWARE_EOD;
 			$this->createCheckboxField(
 				'scroll_to_top_active',
 				'__scroll_to_top_active__',
-				false,      
-				['attributes' => ['columnWidth' => 1,'lessCompatible' => false]]				
+				false,
+				['attributes' => ['columnWidth' => 1,'lessCompatible' => false]]
 			)
 		);
-		
+
 		$fieldset->addElement(
             $this->createTextField(
                 'scroll-totop-button-size',
                 '__scroll-totop-button-size__',
 				$this->themeColorDefaults['scroll-totop-button-size']
             )
-        );		
+        );
 		$fieldset->addElement(
             $this->createTextField(
                 'scroll-totop-button-icon-size',
                 '__scroll-totop-button-icon-size__',
 				$this->themeColorDefaults['scroll-totop-button-icon-size']
             )
-        );		
-		
+        );
+
 		$fieldset->addElement(
             $this->createColorPickerField(
                 'scroll-totop-button-bg',
@@ -7352,43 +7354,43 @@ SHOPWARE_EOD;
 				$this->themeColorDefaults['scroll-totop-button-color']
             )
         );
-		
+
 		$fieldset->addElement(
             $this->createTextField(
                 'scroll-totop-position-bottom',
                 '__scroll-totop-position-bottom__',
 				$this->themeColorDefaults['scroll-totop-position-bottom']
             )
-        );	
+        );
 		$fieldset->addElement(
             $this->createTextField(
                 'scroll-totop-position-right',
                 '__scroll-totop-position-right__',
 				$this->themeColorDefaults['scroll-totop-position-right']
             )
-        );	
-		
+        );
+
 		$fieldset->addElement(
             $this->createTextField(
                 'scroll-totop-button-radius',
                 '__scroll-totop-button-radius__',
 				$this->themeColorDefaults['scroll-totop-button-radius']
             )
-        );	
+        );
 		$fieldset->addElement(
             $this->createTextField(
                 'scroll-totop-button-shadow',
                 '__scroll-totop-button-shadow__',
 				$this->themeColorDefaults['scroll-totop-button-shadow']
             )
-        );	
-		
+        );
+
 		return $fieldset;
 	}
-    
+
 	public function createCookiePermissionTab()
 	{
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'cookie_permission_tab',
@@ -7400,16 +7402,16 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
+		);
+
 		$tab->addElement($this->createCookiePermissionDisplayFieldset());
 
 		return $tab;
 	}
-	
+
 	public function createCookiePermissionDisplayFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'cookie_permission_display_options',
@@ -7440,9 +7442,9 @@ SHOPWARE_EOD;
                     ['value' => 'success', 'text' => '__cookie_permission_button_state_success__'],
                     ['value' => 'warning', 'text' => '__cookie_permission_button_state_warning__'],
                     ['value' => 'danger', 'text' => '__cookie_permission_button_state_danger__'],
-                ]			
+                ]
 			)
-		);        
+		);
 		$fieldset->addElement(
             $this->createColorPickerField(
                 'cookie-permission-bg',
@@ -7471,13 +7473,13 @@ SHOPWARE_EOD;
 				$this->themeColorDefaults['cookie-permission-color']
             )
         );
-		
+
 		return $fieldset;
 	}
-    
+
 	public function createProductOptionsTab()
 	{
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'product_options_tab',
@@ -7489,17 +7491,17 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
+		);
+
 		$tab->addElement($this->createProductBoxDeliveryDisplay());
 		$tab->addElement($this->createProductBoxAdvancedBadges());
 
 		return $tab;
 	}
-	
+
 	public function createProductBoxDeliveryDisplay()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'product_box_delivery_display_options',
@@ -7524,18 +7526,18 @@ SHOPWARE_EOD;
                 '__product_box_delivery_display_active__',
                 true,
 				[
-					'attributes' => 
+					'attributes' =>
 						$this->getLabelAttribute('product_box_delivery_display_active_description')
 				]
             )
-        );	     
-		
+        );
+
 		return $fieldset;
 	}
-	
+
 	public function createProductBoxAdvancedBadges()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'product_box_advanced_badges_options',
@@ -7560,28 +7562,28 @@ SHOPWARE_EOD;
                 '__product_box_free_shipping_active__',
                 true
             )
-        );	
+        );
         $fieldset->addElement(
             $this->createCheckboxField(
                 'product_box_in_stock_active',
                 '__product_box_in_stock_active__',
                 true
             )
-        );	  
+        );
         $fieldset->addElement(
             $this->createCheckboxField(
                 'product_box_brand_active',
                 '__product_box_brand_active__',
                 true
             )
-        );	     
-		
+        );
+
 		return $fieldset;
 	}
-    
+
 	public function createLayoutOptionsTab()
 	{
-		
+
 		// Create the Tab
 		$tab = $this->createTab(
 			'layout_options_tab',
@@ -7593,18 +7595,18 @@ SHOPWARE_EOD;
 					'autoScroll' => true,
 				)
 			)
-		);	
-		
+		);
+
 		$tab->addElement($this->createLayoutGeneralOptionsFieldset());
 		$tab->addElement($this->createSearchLayoutOptionsFieldset());
 		$tab->addElement($this->createPagepreloadOptionsFieldset());
 
 		return $tab;
 	}
-	
+
 	public function createLayoutGeneralOptionsFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'layout_options_general',
@@ -7632,10 +7634,10 @@ SHOPWARE_EOD;
                     ['value' => 'fullWidth', 'text' => '__page_wrap_layout_full_width__'],
                     ['value' => 'boxedWidth', 'text' => '__page_wrap_layout_boxed_width__']
                     //['value' => 'fluidWidth', 'text' => '__main_navigation_align_right__']
-                ]			
+                ]
 			)
 		);
-		
+
 		$fieldset->addElement(
 			$this->createMediaField(
 				'body_background_image',
@@ -7644,13 +7646,13 @@ SHOPWARE_EOD;
 				['attributes' => ['lessCompatible' => false]]
 			)
 		);
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createSearchLayoutOptionsFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'search_layout_options',
@@ -7679,16 +7681,16 @@ SHOPWARE_EOD;
                     ['value' => 'minimal', 'text' => '__search_layout_product_box_minimal__'],
                     ['value' => 'image', 'text' => '__search_layout_product_box_image__'],
                     ['value' => 'list', 'text' => '__search_layout_product_box_list__']
-                ]			
+                ]
 			)
 		);
-		
+
 		return $fieldset;
 	}
-	
+
 	public function createPagepreloadOptionsFieldset()
 	{
-		
+
 		// Create the fieldset which is the container of our field
 		$fieldset = $this->createFieldSet(
 			'page_preload_options',
@@ -7706,13 +7708,13 @@ SHOPWARE_EOD;
 				)
 			)
 		);
-		
+
         $fieldset->addElement(
             $this->createCheckboxField(
                 'page_preload_active',
                 '__page_preload_active__',
                 $this->themeConfigDefaults['page_preload_active'],
-                ['attributes' => 
+                ['attributes' =>
                     [
                         'lessCompatible' => false, 'columnWidth' => 1,
 						'supportText' => '__page_preload_active_description__'
@@ -7720,22 +7722,22 @@ SHOPWARE_EOD;
                 ]
             )
         );
-		
+
         $fieldset->addElement(
             $this->createColorPickerField(
                 'page_preload_bg_color',
                 '__page_preload_bg_color__',
 				$this->themeConfigDefaults['page_preload_bg_color'],
                 [
-                    'attributes' => 
+                    'attributes' =>
                         ['supportText' => '@page_preload_bg_color']
-                ]  
+                ]
             )
         );
-		
+
 		return $fieldset;
 	}
-		
+
 	    /**
      * Helper function to get the attribute of a checkbox field which shows a description label
      * @param $snippetName
@@ -7746,7 +7748,7 @@ SHOPWARE_EOD;
         $description = Shopware()->Snippets()->getNamespace('themes/views/backend/config')->get($snippetName);
         return [$labelType => $description];
     }
-	
+
     /**
      * Helper function to merge default theme colors with color schemes
      * @param ArrayCollection $collection
@@ -7763,7 +7765,7 @@ SHOPWARE_EOD;
             )
         );
         $collection->add($set);
-        
+
         $set = new ConfigSet();
         $set->setName('__theme_views_scheme_red_magic__')->setDescription(
             '__theme_views_scheme_red_magic_description__'
@@ -7782,7 +7784,7 @@ SHOPWARE_EOD;
 					'text-color-secondary' => '#99534c',
 					'text-color-info' => '#d6620d',
 					'link-color' => '#e08e87'
-					
+
                 ],
                 $this->themeConfigDefaults
             )
@@ -7807,7 +7809,7 @@ SHOPWARE_EOD;
 					'text-color-secondary' => '#7f4c99',
 					//'text-color-info' => '#d6620d',
 					'link-color' => '#c287e0'
-					
+
                 ],
                 $this->themeConfigDefaults
             )
@@ -7832,13 +7834,13 @@ SHOPWARE_EOD;
 					'text-color-secondary' => '#86994c',
 					//'text-color-info' => '#d6620d',
 					'link-color' => '#cae087'
-					
+
                 ],
                 $this->themeConfigDefaults
             )
         );
         $collection->add($set);
-		
+
         $set = new ConfigSet();
         $set->setName('__theme_views_scheme_graphit_green__')->setDescription(
             '__theme_views_scheme_graphit_green_description__'
@@ -7858,13 +7860,13 @@ SHOPWARE_EOD;
 					//text colors
 					'text-color-secondary' => '@brand-primary-dark',
 					'link-color' => '@brand-primary-light'
-					
+
                 ],
                 $this->themeConfigDefaults
             )
         );
         $collection->add($set);
-		
+
         $set = new ConfigSet();
         $set->setName('__theme_views_scheme_red_wedding__')->setDescription(
             '__theme_views_scheme_red_wedding_description__'
@@ -7912,7 +7914,7 @@ SHOPWARE_EOD;
 					//text colors
 					'text-color' => '#888888',
 					'text-color-light' => '@brand-primary-light',
-					'text-color-dark' => '@brand-primary-dark',					
+					'text-color-dark' => '@brand-primary-dark',
 					'text-color-secondary' => '@brand-primary-dark',
 					'link-color' => '@brand-primary-dark',
 					//icon colors
@@ -7963,5 +7965,5 @@ SHOPWARE_EOD;
         );
         $collection->add($set);
     }
-	
+
 }

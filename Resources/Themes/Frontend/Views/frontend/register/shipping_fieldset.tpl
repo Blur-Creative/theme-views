@@ -180,9 +180,11 @@
 				</option>
 
 				{foreach from=$country_list item=country}
-					<option value="{$country.id}"{if $country.id eq $form_data.country} selected="selected"{/if}>
-						{$country.countryname}
-					</option>
+					{if $country.allowShipping}
+					    <option value="{$country.id}"{if $country.id eq $form_data.country} selected="selected"{/if}>
+						   {$country.countryname}
+					    </option>
+					{/if}
 				{/foreach}
 
 			</select>
