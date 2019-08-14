@@ -17,11 +17,8 @@
 		display: block;
 		
 		.steps--list {
+			&:extend( .justify-content-lg-center );
 			.flexbox-container();
-
-			@media (min-width: @tabletLandscapeViewportWidth) {
-				.flexbox-justify(center);
-			}
 			
 			.steps--entry {
 				display: block;

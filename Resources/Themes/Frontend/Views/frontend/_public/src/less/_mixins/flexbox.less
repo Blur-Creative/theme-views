@@ -1,8 +1,7 @@
 /* MIXINS */
 
 .flexbox-container(@direction:row;@justify:flex-start;@align:stretch;@wrap:nowrap;) {
-    display: -webkit-flex;
-    display: flex;
+    &:extend( .d-flex );
 	
 	.flexbox-direction(@direction); // row | row-reverse | column | column-reverse
 	.flexbox-justify(@justify); // flex-start | flex-end | center | space-between | space-around

@@ -7,9 +7,8 @@
 	}
 		
 	.main-search--button {
+		&:extend( .px-base );
 		.unify(font-size, @search-icon-size);
-		.unify(padding-left, @padding-base-horizontal);
-		.unify(padding-right, @padding-base-horizontal);
 		.position(absolute, 0, 0, 0, auto);
 		color: @search-icon-color;
 	}

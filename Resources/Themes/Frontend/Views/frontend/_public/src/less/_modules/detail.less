@@ -506,13 +506,10 @@
 		}
 		
 		.buybox--button-container {
+			&:extend( .flex-sm-nowrap );
 			.flexbox-container(@wrap: wrap);
 			width: 100%;
 			line-height: 1;
-            
-            @media (min-width: @phoneLandscapeViewportWidth) {
-                .flexbox-wrap(nowrap);
-            }
 			
             &:after,
             &:before {
@@ -602,22 +599,16 @@
 	}
 	
 	.product--actions {
-		.unify(padding-top, @padding-md-vertical);	
-		.unify(padding-bottom, @padding-md-vertical);	
-		.unify(margin-left, -@padding-base-horizontal);	
-		.unify(margin-right, -@padding-base-horizontal);	
+		&:extend( .justify-content-lg-start );
+		&:extend( .mx-base-reverse );
+		&:extend( .py-md );
 		margin-bottom: 0;
 		border: 0;
 		.flexbox-container(@align:center,@justify:center);
-
-		@media (min-width: @phoneLandscapeViewportWidth) {
-			.flexbox-justify(flex-start);
-		}
 		
 		.action--link {
+			&:extend( .px-base );
 			.unify(font-size, @font-size-sm);	
-			.unify(padding-left, @padding-base-horizontal);	
-			.unify(padding-right, @padding-base-horizontal);	
 			color: @text-color-light;
 			display: block;
 			float: none;
