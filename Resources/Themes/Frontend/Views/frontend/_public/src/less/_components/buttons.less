@@ -1,4 +1,15 @@
 /* Button colors */
+.btn--default {
+	background-color: @button-default-bg;
+	background-image: none;
+	.background-gardient(@button-default-gardient-start, @button-default-gardient-end);
+	color:@button-default-color;
+	
+	&:hover {
+		background-color: @button-default-bg;
+	}
+}
+
 .btn--primary {
 	background-color: @button-primary-bg;
 	background-image: none;
@@ -54,17 +65,6 @@
 	}
 }
 
-.btn--default {
-	background-color: @button-default-bg;
-	background-image: none;
-	.background-gardient(@button-default-gardient-start, @button-default-gardient-end);
-	color:@button-default-color;
-	
-	&:hover {
-		background-color: @button-default-bg;
-	}
-}
-
 .btn--link {
 	background:transparent none;
 	box-shadow:none;
@@ -79,7 +79,6 @@
 .btn--hover {
 	&:hover {
 		background-image: none;
-		background-color: @button-default-bg;
 	}
 }
 
@@ -132,13 +131,13 @@
 
 /* Button layout */
 .btn--block {
-	display: block;
+	&:extend( .d-flex );
 	width: 100%;
 	white-space: normal;
 }
 
 .btn--inline {
-	display: inline-block;
+	&:extend( .d-inline-flex );
 	width: auto;
 	white-space: nowrap;
 }
@@ -244,15 +243,14 @@
 }
 
 .btn {
-    display: inline-block;
+	&:extend( .d-inline-flex );
+	&:extend( .justify-content-center );
+	&:extend( .align-items-center );
+	&:extend( .btn--default all );
 	.unify-padding(@button-base-padding-vertical, @button-base-padding-horizontal);
 	.unify(font-size, @button-base-font-size);
 	.unify(border-radius, @button-base-border-radius);
-	color: @button-default-color;
 	.box-shadow(@button-box-shadow);
-	background-color: @button-default-bg;
-	background-image: none;
-	.background-gardient(@button-default-gardient-start, @button-default-gardient-end);
     margin-bottom: 0;
     font-weight: @font-semibold-weight;
     line-height: @button-base-line-height;
@@ -270,85 +268,84 @@
     user-select: none;
 	
 	&.is--primary	{
-		.btn--primary;
+		&:extend( .btn--primary all );
 	}
 	
 	&.is--danger {
-		.btn--danger;
+		&:extend( .btn--danger all );
 	}
 	
 	&.is--warning {
-		.btn--warning;
+		&:extend( .btn--warning all );
 	}
 	
 	&.is--success {
-		.btn--success;
+		&:extend( .btn--success all );
 	}
 	
 	&.is--info {
-		.btn--info;
+		&:extend( .btn--info all );
 	}
 	
 	&.is--default {
-		.btn--default;
+		&:extend( .btn--default all );
 	}
 	
 	&.is--link {
-		.btn--link;
+		&:extend( .btn--link all );
 	}
 	
 	&.is--small	{
-		.btn--sm;
+		&:extend( .btn--sm );
 	}
 	
 	&.is--large	{
-		.btn--lg;
+		&:extend( .btn--lg );
 	}
 	
 	&.is--block	{
-		.btn--block;
+		&:extend( .btn--block );
 	}
 	
-	.btn--hover;
+	&:extend( .btn--hover all );
 	
-	.btn--active;
+	&:extend( .btn--active all );
 	
-	.btn--disabled;
+	&:extend( .btn--disabled all );
     
     .icon-node {
         
         ~ .text-node {
-            .unify(margin-left, @padding-sm-horizontal);
+            .unify( margin-left , @padding-sm-horizontal );
         }
     }
 
 	&.is--border {
-		.btn--border;
+		&:extend( .btn--border );
 
 		&.is--primary {
-			.btn--border-primary;
+			&:extend( .btn--border-primary all );
 		}
 		&.is--danger {
-			.btn--border-danger;
+			&:extend( .btn--border-danger all );
 		}
 		&.is--warning {
-			.btn--border-warning;
+			&:extend( .btn--border-warning all );
 		}
 		&.is--success {
-			.btn--border-success;
+			&:extend( .btn--border-success all );
 		}
 		&.is--default {
-			.btn--border-default;
+			&:extend( .btn--border-default all );
 		}
 		&.is--info {
-			.btn--border-info;
+			&:extend( .btn--border-info all );
 		}		
-		
 		&.is--small {
-			.btn--border-sm;
+			&:extend( .btn--border-sm );
 		}
 		&.is--large {
-			.btn--border-lg;	
+			&:extend( .btn--border-lg );	
 		}
 		
 	}
